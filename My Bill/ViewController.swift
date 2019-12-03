@@ -77,7 +77,7 @@ class ViewController: UIViewController {
     
     private func setupNavigationBarItems() {
         let titleImageView = UIImageView(image: UIImage(named: "title_icon-1"))
-        titleImageView.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        titleImageView.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
         titleImageView.contentMode = .scaleAspectFit
         
         navigationItem.titleView = titleImageView
