@@ -24,15 +24,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="plate-2"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b36-oh-xdk">
-                                <rect key="frame" x="225" y="84" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="1g8-QE-EyR"/>
-                                    <constraint firstAttribute="width" constant="100" id="GXp-2F-g1R"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="dessert-2-1"/>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="сумма, руб" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6Oz-s3-ldv">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6Oz-s3-ldv">
                                 <rect key="frame" x="36" y="192" width="129.5" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129.5" id="d9n-Y5-eas"/>
@@ -41,7 +33,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="сумма, руб" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MQ6-Hi-ulS">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MQ6-Hi-ulS">
                                 <rect key="frame" x="209.5" y="192" width="129.5" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129.5" id="X5J-Eg-wth"/>
@@ -66,7 +58,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="alco-1"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="сумма, руб" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4XE-5X-hOO">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4XE-5X-hOO">
                                 <rect key="frame" x="36" y="373" width="129.5" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129.5" id="NuG-Xc-6tN"/>
@@ -75,7 +67,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="сумма, руб" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sOC-lU-rPk">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sOC-lU-rPk">
                                 <rect key="frame" x="209.5" y="373" width="129.5" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129.5" id="QPz-Zb-vSA"/>
@@ -84,38 +76,41 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="36" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-kS-q4h">
-                                <rect key="frame" x="100" y="473" width="175" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="36" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-kS-q4h">
+                                <rect key="frame" x="100" y="437" width="175" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="чаевые %" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oln-gH-4Dw">
-                                <rect key="frame" x="100" y="524" width="175" height="35"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tip %" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oln-gH-4Dw">
+                                <rect key="frame" x="100" y="488" width="175" height="35"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQj-pU-Su4">
-                                <rect key="frame" x="118.5" y="567" width="138" height="30"/>
-                                <state key="normal" title="Рассчитать чаевые"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQj-pU-Su4">
+                                <rect key="frame" x="100" y="531" width="175" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Calculate tips">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.40434630220000001" blue="0.34411464279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obl-gK-Geb">
-                                <rect key="frame" x="100" y="605" width="175" height="26.5"/>
+                                <rect key="frame" x="100" y="583" width="175" height="26.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="w2y-hy-V2s">
-                                <rect key="frame" x="0.0" y="421" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w2y-hy-V2s" id="bs2-LE-kPN">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dessert" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yGa-hn-1AH">
+                                <rect key="frame" x="225" y="84" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FUl-Y2-rql"/>
+                                    <constraint firstAttribute="height" constant="100" id="sXK-bb-ETb"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="yGa-hn-1AH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="1kD-JW-W9t"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yvz-gd-cSI" secondAttribute="trailing" constant="50" id="28B-L2-y5R"/>
                             <constraint firstItem="4XE-5X-hOO" firstAttribute="top" secondItem="ase-kq-j2B" secondAttribute="bottom" constant="8" id="3bJ-gU-d19"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sOC-lU-rPk" secondAttribute="trailing" constant="36" id="4lz-rc-0P7"/>
@@ -126,31 +121,34 @@
                             <constraint firstItem="4XE-5X-hOO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="BHv-2G-xaq"/>
                             <constraint firstItem="CQj-pU-Su4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BfJ-Ib-kAj"/>
                             <constraint firstItem="sOC-lU-rPk" firstAttribute="top" secondItem="Yvz-gd-cSI" secondAttribute="bottom" constant="8" id="Ch9-oY-dIi"/>
+                            <constraint firstItem="MQ6-Hi-ulS" firstAttribute="top" secondItem="yGa-hn-1AH" secondAttribute="bottom" constant="8" id="EPE-gj-SWg"/>
                             <constraint firstItem="uBn-Dm-d9y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="ETU-AH-odD"/>
                             <constraint firstItem="JAt-kS-q4h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ezv-sC-iZY"/>
                             <constraint firstItem="oln-gH-4Dw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Ghh-pr-DNo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Obl-gK-Geb" secondAttribute="trailing" constant="100" id="IkN-Ar-A0O"/>
                             <constraint firstItem="uBn-Dm-d9y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Izi-jj-DDU"/>
-                            <constraint firstItem="b36-oh-xdk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="MUh-S9-fGF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CQj-pU-Su4" secondAttribute="trailing" constant="100" id="NiJ-q2-ppC"/>
                             <constraint firstItem="Obl-gK-Geb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ruq-Kc-TYt"/>
+                            <constraint firstItem="CQj-pU-Su4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="S0b-ja-zLf"/>
                             <constraint firstItem="ase-kq-j2B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Sg0-6i-fXg"/>
                             <constraint firstItem="Obl-gK-Geb" firstAttribute="top" secondItem="CQj-pU-Su4" secondAttribute="bottom" constant="8" id="SyT-1F-7rb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b36-oh-xdk" secondAttribute="trailing" constant="50" id="aO1-ww-ima"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oln-gH-4Dw" secondAttribute="trailing" constant="100" id="acB-sY-I28"/>
                             <constraint firstItem="Yvz-gd-cSI" firstAttribute="top" secondItem="MQ6-Hi-ulS" secondAttribute="bottom" constant="39" id="fj9-YI-F3c"/>
                             <constraint firstItem="ase-kq-j2B" firstAttribute="top" secondItem="6Oz-s3-ldv" secondAttribute="bottom" constant="39" id="hfb-jd-ZGQ"/>
                             <constraint firstItem="6Oz-s3-ldv" firstAttribute="top" secondItem="uBn-Dm-d9y" secondAttribute="bottom" constant="8" id="htq-kq-WjT"/>
                             <constraint firstItem="CQj-pU-Su4" firstAttribute="top" secondItem="oln-gH-4Dw" secondAttribute="bottom" constant="8" id="i0j-RL-7L6"/>
-                            <constraint firstItem="JAt-kS-q4h" firstAttribute="top" secondItem="sOC-lU-rPk" secondAttribute="bottom" constant="66" id="j15-J0-f93"/>
+                            <constraint firstItem="JAt-kS-q4h" firstAttribute="top" secondItem="sOC-lU-rPk" secondAttribute="bottom" constant="30" id="j15-J0-f93"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yGa-hn-1AH" secondAttribute="trailing" constant="50" id="kSy-xj-zls"/>
                             <constraint firstItem="6Oz-s3-ldv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="kWy-QF-eGr"/>
-                            <constraint firstItem="MQ6-Hi-ulS" firstAttribute="top" secondItem="b36-oh-xdk" secondAttribute="bottom" constant="8" id="mDY-tZ-yTl"/>
                             <constraint firstItem="oln-gH-4Dw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p7M-zf-bme"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MQ6-Hi-ulS" secondAttribute="trailing" constant="36" id="zr8-zr-rYf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Bill" id="fks-Wg-CQu">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="icon.png" id="RrL-Pz-bkV"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="niN-uQ-6yz">
+                            <color key="tintColor" red="0.98039215690000003" green="0.40434630220000001" blue="0.34411464279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="onn-WZ-TxO">
                             <color key="tintColor" red="0.98039215690000003" green="0.40434630220000001" blue="0.34411464279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
@@ -190,8 +188,7 @@
     <resources>
         <image name="alco-1" width="625.5" height="625.5"/>
         <image name="coffee-1" width="625.5" height="625.5"/>
-        <image name="dessert-2-1" width="625.5" height="625.5"/>
-        <image name="icon.png" width="72" height="72"/>
+        <image name="dessert" width="200" height="200"/>
         <image name="plate-2" width="625.5" height="625.5"/>
     </resources>
 </document>

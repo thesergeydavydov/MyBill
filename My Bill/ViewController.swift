@@ -82,11 +82,12 @@ class ViewController: UIViewController {
         
         navigationItem.titleView = titleImageView
         
-        let followButton = UIButton(type: .system)
-        followButton.setImage(UIImage(named: "history-1"), for: .normal)
-        followButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: followButton)
+//        let followButton = UIButton(type: .system)
+//        followButton.setImage(UIImage(named: "history-1"), for: .normal)
+//        followButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+//        followButton.contentMode = .scaleAspectFit
+//
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: followButton)
     }
     
     
