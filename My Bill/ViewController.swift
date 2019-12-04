@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var coffieTextLable: UITextField!
     @IBOutlet weak var alcoTextField: UITextField!
     @IBOutlet weak var tipTextField: UITextField!
-    @IBOutlet weak var plateTapped: UIButton!
+    @IBOutlet weak var calculateTapped: UIButton!
+    @IBOutlet weak var saveTapped: UIButton!
     
     
     override func viewDidLoad() {
@@ -28,6 +29,8 @@ class ViewController: UIViewController {
         alcoTextField.addToolBar()
         tipTextField.addToolBar()
         
+        calculateTapped.layer.cornerRadius = calculateTapped.frame.size.height / 2
+        saveTapped.layer.cornerRadius = saveTapped.frame.size.height / 2
 
         
         setupNavigationBarItems()

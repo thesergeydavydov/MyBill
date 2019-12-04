@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="height" constant="34" id="dVB-g1-bk3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MQ6-Hi-ulS">
                                 <rect key="frame" x="209.5" y="182" width="129.5" height="34"/>
@@ -32,7 +32,7 @@
                                     <constraint firstAttribute="height" constant="34" id="o9W-2P-Ijr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4XE-5X-hOO">
                                 <rect key="frame" x="36" y="363" width="129.5" height="34"/>
@@ -41,7 +41,7 @@
                                     <constraint firstAttribute="height" constant="34" id="mkv-lU-bfr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sOC-lU-rPk">
                                 <rect key="frame" x="209.5" y="363" width="129.5" height="34"/>
@@ -50,7 +50,7 @@
                                     <constraint firstAttribute="height" constant="34" id="RcH-xb-tZa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="36" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-kS-q4h">
                                 <rect key="frame" x="100" y="417" width="175" height="43"/>
@@ -64,7 +64,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obl-gK-Geb">
-                                <rect key="frame" x="100" y="561" width="175" height="26.5"/>
+                                <rect key="frame" x="100" y="558" width="175" height="26.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -98,17 +98,17 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FH-6f-TeK">
-                                <rect key="frame" x="120" y="595.5" width="135" height="42"/>
+                                <rect key="frame" x="120" y="592.5" width="135" height="39"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.91033118960000003" green="0.93782466649999996" blue="0.96153682470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qS6-5C-BCX">
-                                <rect key="frame" x="100" y="511" width="175" height="42"/>
+                                <rect key="frame" x="100" y="511" width="175" height="39"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.40434630220000001" blue="0.34411464279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Calculate tips">
                                     <color key="titleColor" red="0.91033118960000003" green="0.93782466649999996" blue="0.96153682470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -157,15 +157,17 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="niN-uQ-6yz">
                             <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="onn-WZ-TxO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="onn-WZ-TxO">
                             <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="alcoTextField" destination="sOC-lU-rPk" id="CSS-M0-gPa"/>
+                        <outlet property="calculateTapped" destination="qS6-5C-BCX" id="DAG-nH-Da2"/>
                         <outlet property="coffieTextLable" destination="4XE-5X-hOO" id="rfb-y0-00k"/>
                         <outlet property="dessertTextLable" destination="MQ6-Hi-ulS" id="RO3-bd-Ull"/>
                         <outlet property="plateTextField" destination="6Oz-s3-ldv" id="Y8x-3A-Un3"/>
+                        <outlet property="saveTapped" destination="7FH-6f-TeK" id="HCF-mE-X19"/>
                         <outlet property="tipTextField" destination="oln-gH-4Dw" id="vhK-P0-fcn"/>
                     </connections>
                 </viewController>
