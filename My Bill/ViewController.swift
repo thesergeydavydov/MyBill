@@ -10,6 +10,8 @@ import UIKit
 
 
 class ViewController: UIViewController {
+    
+    var plate = ""
 
     @IBOutlet weak var plateTextField: UITextField!
     @IBOutlet weak var dessertTextField: UITextField!
@@ -49,6 +51,9 @@ class ViewController: UIViewController {
         
         navigationItem.titleView = titleImageView
         
+    }
+    @IBAction func addPlateTapped(_ sender: Any) {
+        performSegue(withIdentifier: "BillList", sender: nil)
     }
     
     
