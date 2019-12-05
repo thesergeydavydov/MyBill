@@ -10,9 +10,7 @@ import UIKit
 
 
 class ViewController: UIViewController {
-    
-    var plate = ""
-
+     
     @IBOutlet weak var plateTextField: UITextField!
     @IBOutlet weak var dessertTextField: UITextField!
     @IBOutlet weak var coffeeTextField: UITextField!
@@ -21,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var calculateTapped: UIButton!
     @IBOutlet weak var saveTapped: UIButton!
     
+    var items = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,9 +52,15 @@ class ViewController: UIViewController {
         
     }
     @IBAction func addPlateTapped(_ sender: Any) {
-        performSegue(withIdentifier: "BillList", sender: nil)
+        self.items = plateTextField.text!
+        performSegue(withIdentifier: "BillList", sender: self)
+        
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let billListTVC = segue.destination as! BillListTableViewController
+        billListTVC.billItem = self.items
+    }
     
 }
 
