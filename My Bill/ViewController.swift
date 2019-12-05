@@ -11,6 +11,7 @@ import UIKit
 
 class ViewController: UIViewController {
      
+    @IBOutlet var itemsTextField: [UITextField]!
     @IBOutlet weak var plateTextField: UITextField!
     @IBOutlet weak var dessertTextField: UITextField!
     @IBOutlet weak var coffeeTextField: UITextField!
@@ -21,14 +22,20 @@ class ViewController: UIViewController {
     
     var items = ""
     
+    var vc : BillListTableViewController? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        plateTextField.addToolBar()
-        dessertTextField.addToolBar()
-        coffeeTextField.addToolBar()
-        alcoTextField.addToolBar()
-        tipTextField.addToolBar()
+        
+        for textField in itemsTextField {
+            textField.addToolBar()
+        }
+//        plateTextField.addToolBar()
+//        dessertTextField.addToolBar()
+//        coffeeTextField.addToolBar()
+//        alcoTextField.addToolBar()
+//        tipTextField.addToolBar()
         
         calculateTapped.layer.cornerRadius = calculateTapped.frame.size.height / 2
         saveTapped.layer.cornerRadius = saveTapped.frame.size.height / 2
@@ -52,14 +59,15 @@ class ViewController: UIViewController {
         
     }
     @IBAction func addPlateTapped(_ sender: Any) {
-        self.items = plateTextField.text!
+        //self.items = plateTextField.text!
+        //vc?.billItem.append(items)
         performSegue(withIdentifier: "BillList", sender: self)
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let billListTVC = segue.destination as! BillListTableViewController
-        billListTVC.billItem = self.items
+        billListTVC.billItem = self.itemsTextField
     }
     
 }

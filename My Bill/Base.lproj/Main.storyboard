@@ -161,6 +161,10 @@
                         <outlet property="plateTextField" destination="6Oz-s3-ldv" id="Y8x-3A-Un3"/>
                         <outlet property="saveTapped" destination="7FH-6f-TeK" id="HCF-mE-X19"/>
                         <outlet property="tipTextField" destination="oln-gH-4Dw" id="vhK-P0-fcn"/>
+                        <outletCollection property="itemsTextField" destination="6Oz-s3-ldv" collectionClass="NSMutableArray" id="xRI-0I-3zh"/>
+                        <outletCollection property="itemsTextField" destination="MQ6-Hi-ulS" collectionClass="NSMutableArray" id="8Bb-wN-w2R"/>
+                        <outletCollection property="itemsTextField" destination="4XE-5X-hOO" collectionClass="NSMutableArray" id="zm9-6b-RW0"/>
+                        <outletCollection property="itemsTextField" destination="sOC-lU-rPk" collectionClass="NSMutableArray" id="fyu-E6-voz"/>
                         <segue destination="ypD-Dp-vYe" kind="show" identifier="BillList" id="aP6-fc-ejQ"/>
                     </connections>
                 </viewController>
@@ -177,7 +181,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cfd-KY-fku">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BillRow" id="cfd-KY-fku">
                                 <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cfd-KY-fku" id="l1P-z5-AC9">
