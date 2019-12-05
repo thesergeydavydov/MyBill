@@ -30,18 +30,3 @@ extension UITextField {
     }
 
 }
-//extension UIButton {
-//    func addButtonToolBar() {
-//        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 44))
-//            let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-//            let done = UIBarButtonItem(title: "Готово", style: .plain, target: self, action: #selector(clikedDone))
-//            
-//            
-//            toolBar.setItems([flexSpace,done], animated: true)
-//            
-//            self.inputAccessoryView = toolBar
-//        }
-//        @objc func clikedDone() {
-//            self.endEditing(true)
-//        }
-//}

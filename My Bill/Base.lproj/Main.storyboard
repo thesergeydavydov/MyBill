@@ -154,6 +154,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Bill" id="fks-Wg-CQu">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="xrj-ZP-maF"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="niN-uQ-6yz">
                             <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
@@ -164,21 +165,51 @@
                     <connections>
                         <outlet property="alcoTextField" destination="sOC-lU-rPk" id="CSS-M0-gPa"/>
                         <outlet property="calculateTapped" destination="qS6-5C-BCX" id="DAG-nH-Da2"/>
-                        <outlet property="coffieTextLable" destination="4XE-5X-hOO" id="rfb-y0-00k"/>
-                        <outlet property="dessertTextLable" destination="MQ6-Hi-ulS" id="RO3-bd-Ull"/>
+                        <outlet property="coffeeTextField" destination="4XE-5X-hOO" id="yqv-Gs-O0c"/>
+                        <outlet property="dessertTextField" destination="MQ6-Hi-ulS" id="gQa-4G-WZj"/>
                         <outlet property="plateTextField" destination="6Oz-s3-ldv" id="Y8x-3A-Un3"/>
                         <outlet property="saveTapped" destination="7FH-6f-TeK" id="HCF-mE-X19"/>
                         <outlet property="tipTextField" destination="oln-gH-4Dw" id="vhK-P0-fcn"/>
+                        <segue destination="ypD-Dp-vYe" kind="show" id="aP6-fc-ejQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1071.2" y="138.98050974512745"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="dBP-Ta-lDP">
+            <objects>
+                <tableViewController id="ypD-Dp-vYe" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Tq-Vm-35Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cfd-KY-fku">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cfd-KY-fku" id="l1P-z5-AC9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ypD-Dp-vYe" id="PrV-HA-Rlb"/>
+                            <outlet property="delegate" destination="ypD-Dp-vYe" id="Q65-4I-5rw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="PPH-FI-SHA"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qaa-ml-cf2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1841" y="139"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="8YR-DK-Yfv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WAN-cE-nYK" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="WAN-cE-nYK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nm4-Jm-wFg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
