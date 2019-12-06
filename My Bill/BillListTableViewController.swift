@@ -10,11 +10,13 @@ import UIKit
 
 class BillListTableViewController: UITableViewController {
 
-    var billItem:[UITextField] = []
+//    var billItem : [Item] = []
+    var delegate: ViewController?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //title = billItem
+        
         
        
         
@@ -36,16 +38,17 @@ class BillListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return billItem.count
+        return delegate!.items.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BillRow", for: indexPath)
-        cell.textLabel?.text = billItem[indexPath.row].text
+        cell.textLabel?.text = delegate!.items[indexPath.row].price
         // Configure the cell...
 
         return cell
     }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -55,17 +58,17 @@ class BillListTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            delegate!.items.remove(at: indexPath.row)
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
+
     }
-    */
+
 
     /*
     // Override to support rearranging the table view.

@@ -89,20 +89,30 @@
                                 <rect key="frame" x="50" y="74" width="100" height="100"/>
                                 <state key="normal" image="plate"/>
                                 <connections>
-                                    <action selector="addPlateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eJN-ho-UHg"/>
+                                    <action selector="addPlateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idC-e8-fmS"/>
+                                    <segue destination="ypD-Dp-vYe" kind="show" identifier="BillList_1" id="Myf-hI-iCZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4W-QB-yWw">
                                 <rect key="frame" x="225" y="74" width="100" height="100"/>
                                 <state key="normal" image="dessert"/>
+                                <connections>
+                                    <segue destination="ypD-Dp-vYe" kind="show" identifier="BillList_2" id="gbR-qe-B9A"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhs-Pe-Dfb">
                                 <rect key="frame" x="50" y="255" width="100" height="100"/>
                                 <state key="normal" image="coffee"/>
+                                <connections>
+                                    <segue destination="ypD-Dp-vYe" kind="show" identifier="BillList_3" id="N5R-iw-NvS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaU-B7-xMG">
                                 <rect key="frame" x="225" y="255" width="100" height="100"/>
                                 <state key="normal" image="alco"/>
+                                <connections>
+                                    <segue destination="ypD-Dp-vYe" kind="show" identifier="BillList_4" id="X2U-uz-Uxy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -154,18 +164,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="alcoTextField" destination="sOC-lU-rPk" id="CSS-M0-gPa"/>
+                        <outlet property="alcoTextField" destination="sOC-lU-rPk" id="xdy-8v-GGV"/>
                         <outlet property="calculateTapped" destination="qS6-5C-BCX" id="DAG-nH-Da2"/>
-                        <outlet property="coffeeTextField" destination="4XE-5X-hOO" id="yqv-Gs-O0c"/>
-                        <outlet property="dessertTextField" destination="MQ6-Hi-ulS" id="gQa-4G-WZj"/>
-                        <outlet property="plateTextField" destination="6Oz-s3-ldv" id="Y8x-3A-Un3"/>
+                        <outlet property="coffeeTextField" destination="4XE-5X-hOO" id="IXt-QE-IgE"/>
+                        <outlet property="dessertTextField" destination="MQ6-Hi-ulS" id="OUJ-vg-Rzb"/>
+                        <outlet property="plateTextField" destination="6Oz-s3-ldv" id="flQ-dm-eio"/>
                         <outlet property="saveTapped" destination="7FH-6f-TeK" id="HCF-mE-X19"/>
                         <outlet property="tipTextField" destination="oln-gH-4Dw" id="vhK-P0-fcn"/>
-                        <outletCollection property="itemsTextField" destination="6Oz-s3-ldv" collectionClass="NSMutableArray" id="xRI-0I-3zh"/>
-                        <outletCollection property="itemsTextField" destination="MQ6-Hi-ulS" collectionClass="NSMutableArray" id="8Bb-wN-w2R"/>
-                        <outletCollection property="itemsTextField" destination="4XE-5X-hOO" collectionClass="NSMutableArray" id="zm9-6b-RW0"/>
-                        <outletCollection property="itemsTextField" destination="sOC-lU-rPk" collectionClass="NSMutableArray" id="fyu-E6-voz"/>
-                        <segue destination="ypD-Dp-vYe" kind="show" identifier="BillList" id="aP6-fc-ejQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -180,9 +185,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KgE-LH-gvh">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="136"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BillRow" id="cfd-KY-fku">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <rect key="frame" x="0.0" y="164" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cfd-KY-fku" id="l1P-z5-AC9">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -199,7 +211,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qaa-ml-cf2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1841" y="139"/>
+            <point key="canvasLocation" x="1840.8" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8YR-DK-Yfv">
@@ -226,4 +238,7 @@
         <image name="dessert" width="100" height="100"/>
         <image name="plate" width="100" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="X2U-uz-Uxy"/>
+    </inferredMetricsTieBreakers>
 </document>
