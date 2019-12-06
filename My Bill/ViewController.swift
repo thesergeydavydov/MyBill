@@ -26,10 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-//        for textField in itemsTextField {
-//            textField.addToolBar()
-//        }
+
         plateTextField.addToolBar()
         dessertTextField.addToolBar()
         coffeeTextField.addToolBar()
@@ -39,7 +36,6 @@ class ViewController: UIViewController {
         calculateTapped.layer.cornerRadius = calculateTapped.frame.size.height / 2
         saveTapped.layer.cornerRadius = saveTapped.frame.size.height / 2
 
-        
         setupNavigationBarItems()
     }
     
@@ -59,32 +55,41 @@ class ViewController: UIViewController {
         if let text = plateTextField.text, !text.isEmpty {
             let newItem = Item()
             newItem.price = plateTextField.text!
+            newItem.image = UIImage(named: "plate-mini")!
             self.items.append(newItem)
             plateTextField.text = nil
         }
     }
-    
-    
-    
-//    @IBAction func addPlateTapped(_ sender: Any) {
-//        self.items = plateTextField.text!
-//        //vc?.billItem.append(items)
-//        performSegue(withIdentifier: "BillList", sender: self)
-//
-//    }
+    @IBAction func addDessertTapped(_ sender: Any) {
+        if let text = dessertTextField.text, !text.isEmpty {
+                  let newItem = Item()
+                  newItem.price = dessertTextField.text!
+                  newItem.image = UIImage(named: "dessert-mini")!
+                  self.items.append(newItem)
+                  dessertTextField.text = nil
+              }
+    }
+    @IBAction func addCoffeeTapped(_ sender: Any) {
+        if let text = coffeeTextField.text, !text.isEmpty {
+                  let newItem = Item()
+                  newItem.price = coffeeTextField.text!
+                  newItem.image = UIImage(named: "coffee-mini")!
+                  self.items.append(newItem)
+                  coffeeTextField.text = nil
+              }
+    }
+    @IBAction func addAlcoTapped(_ sender: Any) {
+        if let text = alcoTextField.text, !text.isEmpty {
+                  let newItem = Item()
+                  newItem.price = alcoTextField.text!
+                  newItem.image = UIImage(named: "alco-mini")!
+                  self.items.append(newItem)
+                  alcoTextField.text = nil
+              }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let billListTVC = segue.destination as! BillListTableViewController
-        
-//        if segue.identifier == "BillList_1" {
-//
-//        } else if segue.identifier == "BillList_2" {
-//
-//        } else if segue.identifier == "BillList_3" {
-//
-//        }
-        
-//        billListTVC.billItem = self.items
         billListTVC.delegate = self
     }
     

@@ -13,8 +13,8 @@ extension UITextField {
 
         let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 44))
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let done = UIBarButtonItem(title: "Готово", style: .plain, target: self, action: #selector(clikedDone))
-        let clear = UIBarButtonItem(title: "Сброс", style: .plain, target: self, action: #selector(clikedClear))
+        let done = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(clikedDone))
+        let clear = UIBarButtonItem(title: "Clear", style: .plain, target: self, action: #selector(clikedClear))
 
         toolBar.setItems([clear, flexSpace,done], animated: true)
 

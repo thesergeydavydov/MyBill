@@ -10,9 +10,7 @@ import UIKit
 
 class BillListTableViewController: UITableViewController {
 
-//    var billItem : [Item] = []
     var delegate: ViewController?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +42,7 @@ class BillListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BillRow", for: indexPath)
         cell.textLabel?.text = delegate!.items[indexPath.row].price
+        cell.imageView?.image = delegate!.items[indexPath.row].image
         // Configure the cell...
 
         return cell

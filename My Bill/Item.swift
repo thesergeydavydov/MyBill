@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
 class Item {
     var price = ""
+    var image = UIImage()
 }
