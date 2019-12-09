@@ -84,6 +84,9 @@
                                 <state key="normal" title="Calculate tips">
                                     <color key="titleColor" red="0.91033118960000003" green="0.93782466649999996" blue="0.96153682470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="calculateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KHO-st-KBV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCE-bb-Sie">
                                 <rect key="frame" x="50" y="74" width="100" height="100"/>
@@ -168,11 +171,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="alcoTextField" destination="sOC-lU-rPk" id="xdy-8v-GGV"/>
+                        <outlet property="billLabel" destination="JAt-kS-q4h" id="NY4-uQ-UtP"/>
                         <outlet property="calculateTapped" destination="qS6-5C-BCX" id="DAG-nH-Da2"/>
                         <outlet property="coffeeTextField" destination="4XE-5X-hOO" id="IXt-QE-IgE"/>
                         <outlet property="dessertTextField" destination="MQ6-Hi-ulS" id="OUJ-vg-Rzb"/>
                         <outlet property="plateTextField" destination="6Oz-s3-ldv" id="flQ-dm-eio"/>
                         <outlet property="saveTapped" destination="7FH-6f-TeK" id="HCF-mE-X19"/>
+                        <outlet property="tipLabel" destination="Obl-gK-Geb" id="eVL-WR-WNV"/>
                         <outlet property="tipTextField" destination="oln-gH-4Dw" id="vhK-P0-fcn"/>
                     </connections>
                 </viewController>
@@ -212,6 +217,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Bill" id="PPH-FI-SHA"/>
+                    <connections>
+                        <outlet property="totalLabel" destination="wAr-QA-4Go" id="QaO-M8-AEV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qaa-ml-cf2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,16 +10,27 @@ import UIKit
 
 class BillListTableViewController: UITableViewController {
 
+    @IBOutlet weak var totalLabel: UILabel!
+    
     var delegate: ViewController?
+    
+    
+    func sum() {
+        var total = 0
+        if let items = delegate?.items {
+            for item in items {
+                total += Int(item.price)!
+            }
+        }
+        
+        totalLabel.text = "Total: \(String(total))"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-       
-        
-        
-        
+        sum()
+         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -64,6 +75,8 @@ class BillListTableViewController: UITableViewController {
             delegate!.items.remove(at: indexPath.row)
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
+
+            sum()
         }
 
     }

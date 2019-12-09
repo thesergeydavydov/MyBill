@@ -16,8 +16,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var coffeeTextField: UITextField!
     @IBOutlet weak var alcoTextField: UITextField!
     
+    @IBOutlet weak var billLabel: UILabel!
     @IBOutlet weak var tipTextField: UITextField!
     @IBOutlet weak var calculateTapped: UIButton!
+    @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var saveTapped: UIButton!
     
     var items : [Item] = []
@@ -37,6 +39,7 @@ class ViewController: UIViewController {
         saveTapped.layer.cornerRadius = saveTapped.frame.size.height / 2
 
         setupNavigationBarItems()
+        
     }
     
    override func viewDidAppear(_ animated: Bool) {
@@ -58,6 +61,7 @@ class ViewController: UIViewController {
             newItem.image = UIImage(named: "plate-mini")!
             self.items.append(newItem)
             plateTextField.text = nil
+            
         }
     }
     @IBAction func addDessertTapped(_ sender: Any) {
@@ -88,11 +92,25 @@ class ViewController: UIViewController {
               }
     }
     
+    @IBAction func calculateTapped(_ sender: Any) {
+        
+        print(billLabel.text!)
+        print(tipTextField.text!)
+        
+        let bill = Double(billLabel.text!)!
+        let tipPercetage = Double(tipTextField.text!)!
+        
+        let tip = bill * (tipPercetage / 100)
+        
+        tipLabel.text = "Tip: $\(Int(tip))"
+        
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let billListTVC = segue.destination as! BillListTableViewController
         billListTVC.delegate = self
     }
     
+
 }
 
 
