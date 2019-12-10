@@ -85,27 +85,21 @@ class BillListTableViewController: UITableViewController {
         }
 
     }
-//    @IBAction func backTapped(_ sender: Any) {
-//        delegateTotal?.textTotal(text: totalLabel?.text)
-//        navigationController?.popViewController(animated: true)
-//    }
-    
-    func backButtonClicked(sender: UIBarButtonItem) {
-    // Perform your custom actions
-    // ...
-    // Go back to the previous ViewController
-    
-    self.navigationController?.popViewController(animated: true)
-    }
-    
+
     override func willMove(toParent parent: UIViewController?) {
         super.willMove(toParent: parent)
+        
         if parent == nil {
             delegateTotal?.textTotal(text: totalLabel?.text)
             
         }
     }
+   
+    func backButtonClicked(sender: UIBarButtonItem) {
     
+    self.navigationController?.popViewController(animated: true)
+        
+    }
     
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

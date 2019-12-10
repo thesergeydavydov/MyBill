@@ -35,8 +35,8 @@ class ViewController: UIViewController, DataDelegate {
 //        alcoTextField.addToolBar()
 //        tipTextField.addToolBar()
         
-        calculateTapped.layer.cornerRadius = calculateTapped.frame.size.height / 2
-        saveTapped.layer.cornerRadius = saveTapped.frame.size.height / 2
+        calculateTapped.layer.cornerRadius = calculateTapped.frame.size.height / 6
+        saveTapped.layer.cornerRadius = saveTapped.frame.size.height / 6
 
         setupNavigationBarItems()
         
