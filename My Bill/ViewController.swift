@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, DataDelegate {
      
     @IBOutlet weak var plateTextField: UITextField!
     @IBOutlet weak var dessertTextField: UITextField!
@@ -23,22 +23,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var saveTapped: UIButton!
     
     var items : [Item] = []
-    
+//    var delegate: BillListTableViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        plateTextField.addToolBar()
-        dessertTextField.addToolBar()
-        coffeeTextField.addToolBar()
-        alcoTextField.addToolBar()
-        tipTextField.addToolBar()
+//        plateTextField.addToolBar()
+//        dessertTextField.addToolBar()
+//        coffeeTextField.addToolBar()
+//        alcoTextField.addToolBar()
+//        tipTextField.addToolBar()
         
         calculateTapped.layer.cornerRadius = calculateTapped.frame.size.height / 2
         saveTapped.layer.cornerRadius = saveTapped.frame.size.height / 2
 
         setupNavigationBarItems()
+        
+//        billLabel = delegate?.totalLabel
         
     }
     
@@ -94,11 +96,11 @@ class ViewController: UIViewController {
     
     @IBAction func calculateTapped(_ sender: Any) {
         
-        print(billLabel.text!)
-        print(tipTextField.text!)
+//        print(billLabel.text!)
+//        print(tipTextField.text!)
         
-        let bill = Double(billLabel.text!)!
-        let tipPercetage = Double(tipTextField.text!)!
+        let bill = Int(billLabel.text!)!
+        let tipPercetage = Int(tipTextField.text!)!
         
         let tip = bill * (tipPercetage / 100)
         
@@ -108,6 +110,11 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let billListTVC = segue.destination as! BillListTableViewController
         billListTVC.delegate = self
+        billListTVC.delegateTotal = self
+    }
+    
+    func textTotal(text:String?) {
+        billLabel.text = text
     }
     
 

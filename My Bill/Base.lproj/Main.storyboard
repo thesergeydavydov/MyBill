@@ -53,7 +53,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="36" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-kS-q4h">
-                                <rect key="frame" x="100" y="417" width="175" height="43"/>
+                                <rect key="frame" x="50" y="417" width="275" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -124,11 +124,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sOC-lU-rPk" secondAttribute="trailing" constant="36" id="4lz-rc-0P7"/>
-                            <constraint firstItem="JAt-kS-q4h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="5L9-0S-gMK"/>
+                            <constraint firstItem="JAt-kS-q4h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="5L9-0S-gMK"/>
                             <constraint firstItem="oln-gH-4Dw" firstAttribute="top" secondItem="JAt-kS-q4h" secondAttribute="bottom" constant="8" id="69L-Tm-RM1"/>
                             <constraint firstItem="7FH-6f-TeK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="8mx-qI-umR"/>
                             <constraint firstItem="MQ6-Hi-ulS" firstAttribute="top" secondItem="Q4W-QB-yWw" secondAttribute="bottom" constant="8" id="9Gx-iC-gHr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JAt-kS-q4h" secondAttribute="trailing" constant="100" id="9mc-gy-51z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JAt-kS-q4h" secondAttribute="trailing" constant="50" id="9mc-gy-51z"/>
                             <constraint firstItem="Obl-gK-Geb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="AmX-dY-xNK"/>
                             <constraint firstItem="4XE-5X-hOO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="BHv-2G-xaq"/>
                             <constraint firstItem="JAt-kS-q4h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ezv-sC-iZY"/>
@@ -216,7 +216,13 @@
                             <outlet property="delegate" destination="ypD-Dp-vYe" id="Q65-4I-5rw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Bill" id="PPH-FI-SHA"/>
+                    <navigationItem key="navigationItem" title="Bill" id="PPH-FI-SHA">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="reply" id="rtC-br-DI0">
+                            <connections>
+                                <action selector="backTapped:" destination="ypD-Dp-vYe" id="tnG-cp-egb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="totalLabel" destination="wAr-QA-4Go" id="QaO-M8-AEV"/>
                     </connections>

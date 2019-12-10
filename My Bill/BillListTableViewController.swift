@@ -8,12 +8,16 @@
 
 import UIKit
 
+protocol DataDelegate: class {
+    func textTotal(text:String?)
+}
+
 class BillListTableViewController: UITableViewController {
 
     @IBOutlet weak var totalLabel: UILabel!
     
     var delegate: ViewController?
-    
+    var delegateTotal: DataDelegate?
     
     func sum() {
         var total = 0
@@ -80,6 +84,15 @@ class BillListTableViewController: UITableViewController {
         }
 
     }
+    @IBAction func backTapped(_ sender: Any) {
+        delegateTotal?.textTotal(text: totalLabel?.text)
+        navigationController?.popViewController(animated: true)
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let vc = segue.destination as! ViewController
+//        vc.delegate = totalLabel.text!
+//    }
 
 
     /*
