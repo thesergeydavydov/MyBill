@@ -216,13 +216,7 @@
                             <outlet property="delegate" destination="ypD-Dp-vYe" id="Q65-4I-5rw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Bill" id="PPH-FI-SHA">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="reply" id="rtC-br-DI0">
-                            <connections>
-                                <action selector="backTapped:" destination="ypD-Dp-vYe" id="tnG-cp-egb"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Bill" id="PPH-FI-SHA"/>
                     <connections>
                         <outlet property="totalLabel" destination="wAr-QA-4Go" id="QaO-M8-AEV"/>
                     </connections>
