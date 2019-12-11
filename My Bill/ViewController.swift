@@ -25,6 +25,7 @@ class ViewController: UIViewController, DataDelegate {
     var items : [Item] = []
 //    var delegate: BillListTableViewController?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -104,7 +105,7 @@ class ViewController: UIViewController, DataDelegate {
         
         let tip = bill * (tipPercetage / 100)
         
-        tipLabel.text = "Tip: $\(Int(tip))"
+        tipLabel.text = "Tip:\(Int(tip))"
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

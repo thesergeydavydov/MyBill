@@ -81,19 +81,11 @@
                                 <rect key="frame" x="36" y="490" width="303" height="39"/>
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.40434630220000001" blue="0.34411464279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="Calculate tips">
+                                <state key="normal" title="CALCULATE TIP">
                                     <color key="titleColor" red="0.91033118960000003" green="0.93782466649999996" blue="0.96153682470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="calculateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KHO-st-KBV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCE-bb-Sie">
-                                <rect key="frame" x="50" y="74" width="100" height="100"/>
-                                <state key="normal" image="plate"/>
-                                <connections>
-                                    <action selector="addPlateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idC-e8-fmS"/>
-                                    <segue destination="ypD-Dp-vYe" kind="show" identifier="" id="Myf-hI-iCZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4W-QB-yWw">
@@ -118,6 +110,14 @@
                                 <connections>
                                     <action selector="addAlcoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wpE-UK-OJC"/>
                                     <segue destination="ypD-Dp-vYe" kind="show" identifier="BillList_4" id="X2U-uz-Uxy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCE-bb-Sie">
+                                <rect key="frame" x="50" y="74" width="100" height="100"/>
+                                <state key="normal" image="plate"/>
+                                <connections>
+                                    <action selector="addPlateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idC-e8-fmS"/>
+                                    <segue destination="ypD-Dp-vYe" kind="show" identifier="" id="Myf-hI-iCZ"/>
                                 </connections>
                             </button>
                         </subviews>

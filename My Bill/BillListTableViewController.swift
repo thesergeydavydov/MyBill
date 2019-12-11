@@ -28,7 +28,7 @@ class BillListTableViewController: UITableViewController {
             }
         }
         
-        totalLabel.text = "Total: \(String(total))"
+        totalLabel.text = "\(String(total))"
     }
     
     override func viewDidLoad() {
