@@ -11,6 +11,8 @@ import UIKit
 
 class ViewController: UIViewController, DataDelegate {
      
+    @IBOutlet weak var menuPadView: UIView!
+    @IBOutlet weak var menuPadImage: UIImageView!
     @IBOutlet weak var plateTextField: UITextField!
     @IBOutlet weak var dessertTextField: UITextField!
     @IBOutlet weak var coffeeTextField: UITextField!
@@ -41,7 +43,23 @@ class ViewController: UIViewController, DataDelegate {
 
         setupNavigationBarItems()
         
+        menuPadView.clipsToBounds = false
+        menuPadView.layer.shadowColor = UIColor.lightGray.cgColor
+        menuPadView.layer.shadowOpacity = 0.4
+        menuPadView.layer.shadowOffset = CGSize.zero
+        menuPadView.layer.shadowRadius = 10
+        menuPadView.layer.shadowPath = UIBezierPath(roundedRect: menuPadView.bounds, cornerRadius: 10).cgPath
+        
+        menuPadImage.backgroundColor = UIColor.white
+        menuPadImage.clipsToBounds = true
+        menuPadImage.layer.cornerRadius = 10
+//        menuPadImage.layer.shadowColor = UIColor.darkGray.cgColor
+//        menuPadImage.layer.shadowRadius = 10
+//        menuPadImage.layer.shadowOpacity = 1
+//        menuPadImage.layer.shadowOffset = CGSize(width: 10, height: 10)
+        
 //        billLabel = delegate?.totalLabel
+       
         
     }
     
@@ -97,17 +115,19 @@ class ViewController: UIViewController, DataDelegate {
     
     @IBAction func calculateTapped(_ sender: Any) {
         
-//        print(billLabel.text!)
-//        print(tipTextField.text!)
-        
-        let bill = Int(billLabel.text!)!
-        let tipPercetage = Int(tipTextField.text!)!
-        
-        let tip = bill * (tipPercetage / 100)
-        
-        tipLabel.text = "Tip:\(Int(tip))"
+        print(billLabel.text!)
+        print(tipTextField.text!)
+                
+                let bill = Double(billLabel.text!)!
+                let tipPercetage = Double(tipTextField.text!)!
+                
+                let tip = bill * (tipPercetage / 100)
+                
+                tipLabel.text = "Tip: \(Double(tip))"
+        print(tip)
         
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let billListTVC = segue.destination as! BillListTableViewController
         billListTVC.delegate = self
