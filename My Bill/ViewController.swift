@@ -123,7 +123,7 @@ class ViewController: UIViewController, DataDelegate {
                 
                 let tip = bill * (tipPercetage / 100)
                 
-                tipLabel.text = "Tip: \(Double(tip))"
+                tipLabel.text = "\(Int(tip))"
         print(tip)
         
     }
