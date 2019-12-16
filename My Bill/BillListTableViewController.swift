@@ -20,21 +20,21 @@ class BillListTableViewController: UITableViewController {
     var delegate: ViewController?
 //    var delegateTotal: DataDelegate?
     
-//    func sum() {
-//        var total = 0
-//        if let items = delegate?.items {
-//            for item in items {
-//                total += Int(item.price)!
-//            }
-//        }
-//
-//        totalLabel.text = "\(String(total))"
-//    }
+    func sumTVC() {
+        var total = 0
+        if let items = delegate?.items {
+            for item in items {
+                total += Int(item.price)!
+            }
+        }
+
+        totalLabel.text = "\(String(total))"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        sum()
+        sumTVC()
          
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -42,6 +42,7 @@ class BillListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
 
     // MARK: - Table view data source
 
@@ -81,7 +82,7 @@ class BillListTableViewController: UITableViewController {
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
 
-//            sum()
+            sumTVC()
             
         }
 

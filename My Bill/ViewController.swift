@@ -64,9 +64,13 @@ class ViewController: UIViewController {
         
     }
     
-   override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
     
-}
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        sum()
+    }
     
     private func setupNavigationBarItems() {
         let titleImageView = UIImageView(image: UIImage(named: "title_icon-1"))
