@@ -24,8 +24,6 @@ class ViewController: UIViewController, DataDelegate {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var saveTapped: UIButton!
     
-    @IBOutlet weak var refTap: UIBarButtonItem!
-    
     var items : [Item] = []
 //    var delegate: BillListTableViewController?
     

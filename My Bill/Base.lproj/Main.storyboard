@@ -215,7 +215,6 @@
                             <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="refreshTapped:" destination="BYZ-38-t0r" id="FYp-4V-8fZ"/>
-                                <segue destination="ypD-Dp-vYe" kind="show" id="cr3-6p-eF5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -228,7 +227,6 @@
                         <outlet property="menuPadImage" destination="ztU-2I-uIN" id="oOX-4M-7Te"/>
                         <outlet property="menuPadView" destination="zPV-YB-mMb" id="20E-FY-fzZ"/>
                         <outlet property="plateTextField" destination="6Oz-s3-ldv" id="flQ-dm-eio"/>
-                        <outlet property="refTap" destination="onn-WZ-TxO" id="FHx-LO-dC6"/>
                         <outlet property="saveTapped" destination="7FH-6f-TeK" id="HCF-mE-X19"/>
                         <outlet property="tipLabel" destination="Obl-gK-Geb" id="eVL-WR-WNV"/>
                         <outlet property="tipTextField" destination="oln-gH-4Dw" id="vhK-P0-fcn"/>
@@ -269,9 +267,7 @@
                             <outlet property="delegate" destination="ypD-Dp-vYe" id="Q65-4I-5rw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Bill" id="PPH-FI-SHA">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="jpc-vb-dDS"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Bill" id="PPH-FI-SHA"/>
                     <connections>
                         <outlet property="totalLabel" destination="wAr-QA-4Go" id="QaO-M8-AEV"/>
                     </connections>
