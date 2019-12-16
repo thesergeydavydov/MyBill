@@ -133,7 +133,6 @@
                                 <state key="normal" image="alco"/>
                                 <connections>
                                     <action selector="addAlcoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wpE-UK-OJC"/>
-                                    <segue destination="ypD-Dp-vYe" kind="show" identifier="" id="X2U-uz-Uxy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCE-bb-Sie">
@@ -302,6 +301,6 @@
         <image name="plate" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="X2U-uz-Uxy"/>
+        <segue reference="Myf-hI-iCZ"/>
     </inferredMetricsTieBreakers>
 </document>

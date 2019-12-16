@@ -8,33 +8,33 @@
 
 import UIKit
 
-protocol DataDelegate: class {
-    func textTotal(text:String?)
-    
-}
+//protocol DataDelegate: class {
+//    func textTotal(text:String?)
+//    
+//}
 
 class BillListTableViewController: UITableViewController {
 
     @IBOutlet weak var totalLabel: UILabel!
     
     var delegate: ViewController?
-    var delegateTotal: DataDelegate?
+//    var delegateTotal: DataDelegate?
     
-    func sum() {
-        var total = 0
-        if let items = delegate?.items {
-            for item in items {
-                total += Int(item.price)!
-            }
-        }
-        
-        totalLabel.text = "\(String(total))"
-    }
+//    func sum() {
+//        var total = 0
+//        if let items = delegate?.items {
+//            for item in items {
+//                total += Int(item.price)!
+//            }
+//        }
+//
+//        totalLabel.text = "\(String(total))"
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sum()
+//        sum()
          
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -81,26 +81,26 @@ class BillListTableViewController: UITableViewController {
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
 
-            sum()
+//            sum()
             
         }
 
     }
 
-    override func willMove(toParent parent: UIViewController?) {
-        super.willMove(toParent: parent)
-        
-        if parent == nil {
-            delegateTotal?.textTotal(text: totalLabel?.text)
-            
-        }
-    }
-   
-    func backButtonClicked(sender: UIBarButtonItem) {
-    
-    self.navigationController?.popViewController(animated: true)
-        
-    }
+//    override func willMove(toParent parent: UIViewController?) {
+//        super.willMove(toParent: parent)
+//
+//        if parent == nil {
+//            delegateTotal?.textTotal(text: totalLabel?.text)
+//
+//        }
+//    }
+//
+//    func backButtonClicked(sender: UIBarButtonItem) {
+//
+//    self.navigationController?.popViewController(animated: true)
+//
+//    }
     
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

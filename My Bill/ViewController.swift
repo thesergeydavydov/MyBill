@@ -140,12 +140,12 @@ class ViewController: UIViewController, DataDelegate {
         billLabel.text = text
     }
     
-    func refreshButton() {
-        navigationController?.popToRootViewController(animated: true)
-    }
+//    func refreshButton() {
+//        navigationController?.popToRootViewController(animated: true)
+//    }
     
     @IBAction func refreshTapped(_ sender: Any) {
-        refreshButton()
+//        refreshButton()
         loadView()
         viewDidLoad()
         items.removeAll()
