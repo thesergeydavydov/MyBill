@@ -70,6 +70,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         sum()
+        
     }
     
     private func setupNavigationBarItems() {
@@ -87,9 +88,10 @@ class ViewController: UIViewController {
             newItem.image = UIImage(named: "plate-mini")!
             self.items.append(newItem)
             plateTextField.text = nil
-            
         }
+        sum()
     }
+    
     @IBAction func addDessertTapped(_ sender: Any) {
         if let text = dessertTextField.text, !text.isEmpty {
                   let newItem = Item()
@@ -98,7 +100,9 @@ class ViewController: UIViewController {
                   self.items.append(newItem)
                   dessertTextField.text = nil
               }
+        sum()
     }
+    
     @IBAction func addCoffeeTapped(_ sender: Any) {
         if let text = coffeeTextField.text, !text.isEmpty {
                   let newItem = Item()
@@ -107,7 +111,9 @@ class ViewController: UIViewController {
                   self.items.append(newItem)
                   coffeeTextField.text = nil
               }
+        sum()
     }
+    
     @IBAction func addAlcoTapped(_ sender: Any) {
         if let text = alcoTextField.text, !text.isEmpty {
                   let newItem = Item()
@@ -138,6 +144,10 @@ class ViewController: UIViewController {
         let billListTVC = segue.destination as! BillListTableViewController
         billListTVC.delegate = self
 //        billListTVC.delegateTotal = self
+        
+    }
+    
+    func calculateTip() {
         
     }
     
