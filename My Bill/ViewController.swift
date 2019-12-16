@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ViewController: UIViewController, DataDelegate {
+class ViewController: UIViewController {
      
     @IBOutlet weak var menuPadView: UIView!
     @IBOutlet weak var menuPadImage: UIImageView!
@@ -112,6 +112,7 @@ class ViewController: UIViewController, DataDelegate {
                   self.items.append(newItem)
                   alcoTextField.text = nil
               }
+        sum()
     }
     
     @IBAction func calculateTapped(_ sender: Any) {
@@ -132,13 +133,23 @@ class ViewController: UIViewController, DataDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let billListTVC = segue.destination as! BillListTableViewController
         billListTVC.delegate = self
-        billListTVC.delegateTotal = self
+//        billListTVC.delegateTotal = self
         
     }
     
-    func textTotal(text:String?) {
-        billLabel.text = text
-    }
+    func sum() {
+        var total = 0
+        for item in items {
+            total += Int(item.price)!
+            }
+            billLabel.text = "\(String(total))"
+        }
+    
+            
+    
+//    func textTotal(text:String?) {
+//        billLabel.text = text
+//    }
     
 //    func refreshButton() {
 //        navigationController?.popToRootViewController(animated: true)
