@@ -148,6 +148,7 @@ class ViewController: UIViewController, DataDelegate {
         refreshButton()
         loadView()
         viewDidLoad()
+        items.removeAll()
     }
 }
 
