@@ -82,6 +82,7 @@ class BillListTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
 
             sum()
+            
         }
 
     }

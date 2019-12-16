@@ -24,6 +24,8 @@ class ViewController: UIViewController, DataDelegate {
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var saveTapped: UIButton!
     
+    @IBOutlet weak var refTap: UIBarButtonItem!
+    
     var items : [Item] = []
 //    var delegate: BillListTableViewController?
     
@@ -58,8 +60,9 @@ class ViewController: UIViewController, DataDelegate {
 //        menuPadImage.layer.shadowOpacity = 1
 //        menuPadImage.layer.shadowOffset = CGSize(width: 10, height: 10)
         
-//        billLabel = delegate?.totalLabel
-       
+//        billLabel = delegate?.totalLabel.
+        
+
         
     }
     
@@ -132,13 +135,22 @@ class ViewController: UIViewController, DataDelegate {
         let billListTVC = segue.destination as! BillListTableViewController
         billListTVC.delegate = self
         billListTVC.delegateTotal = self
+        
     }
     
     func textTotal(text:String?) {
         billLabel.text = text
     }
     
-
+    func refreshButton() {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func refreshTapped(_ sender: Any) {
+        refreshButton()
+        loadView()
+        viewDidLoad()
+    }
 }
 
 
