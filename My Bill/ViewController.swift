@@ -27,10 +27,9 @@ class ViewController: UIViewController {
     var items : [Item] = []
 //    var delegate: BillListTableViewController?
     
-    var currentDateTime = Date()
-    
+    let date = Date()
+    let dateFormatter = DateFormatter()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -40,6 +39,10 @@ class ViewController: UIViewController {
 //        coffeeTextField.addToolBar()
 //        alcoTextField.addToolBar()
 //        tipTextField.addToolBar()
+        
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        
         
         calculateTapped.layer.cornerRadius = calculateTapped.frame.size.height / 6
         saveTapped.layer.cornerRadius = saveTapped.frame.size.height / 6
@@ -125,12 +128,14 @@ class ViewController: UIViewController {
             let newItem = Item()
             newItem.price = alcoTextField.text!
             newItem.image = UIImage(named: "alco-mini")!
-            newItem.date = "\(currentDateTime)"
+            newItem.date = "\(dateFormatter.string(from: date))"
             self.items.append(newItem)
             alcoTextField.text = nil
+            print(newItem.date)
         }
         sum()
         calculateTip()
+
     }
     
     @IBAction func calculateTapped(_ sender: Any) {
