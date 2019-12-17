@@ -65,11 +65,11 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-    
     }
     
     override func viewWillAppear(_ animated: Bool) {
         sum()
+        calculateTip()
         
     }
     
@@ -90,6 +90,7 @@ class ViewController: UIViewController {
             plateTextField.text = nil
         }
         sum()
+        calculateTip()
     }
     
     @IBAction func addDessertTapped(_ sender: Any) {
@@ -101,6 +102,7 @@ class ViewController: UIViewController {
                   dessertTextField.text = nil
               }
         sum()
+        calculateTip()
     }
     
     @IBAction func addCoffeeTapped(_ sender: Any) {
@@ -112,6 +114,7 @@ class ViewController: UIViewController {
                   coffeeTextField.text = nil
               }
         sum()
+        calculateTip()
     }
     
     @IBAction func addAlcoTapped(_ sender: Any) {
@@ -123,20 +126,21 @@ class ViewController: UIViewController {
                   alcoTextField.text = nil
               }
         sum()
+        calculateTip()
     }
     
     @IBAction func calculateTapped(_ sender: Any) {
-        
-        print(billLabel.text!)
-        print(tipTextField.text!)
-                
-                let bill = Double(billLabel.text!)!
-                let tipPercetage = Double(tipTextField.text!)!
-                
-                let tip = bill * (tipPercetage / 100)
-                
-                tipLabel.text = "\(Int(tip))"
-        print(tip)
+        calculateTip()
+//        print(billLabel.text!)
+//        print(tipTextField.text!)
+//
+//                let bill = Double(billLabel.text!)!
+//                let tipPercetage = Double(tipTextField.text!)!
+//
+//                let tip = bill * (tipPercetage / 100)
+//
+//                tipLabel.text = "\(Int(tip))"
+//        print(tip)
         
     }
     
@@ -148,6 +152,16 @@ class ViewController: UIViewController {
     }
     
     func calculateTip() {
+        print(billLabel.text!)
+        print(tipTextField.text!)
+                
+                let bill = Double(billLabel.text!)!
+                let tipPercetage = Double(tipTextField.text!)!
+                
+                let tip = bill * (tipPercetage / 100)
+                
+                tipLabel.text = "\(Int(tip))"
+        print(tip)
         
     }
     
