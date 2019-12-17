@@ -27,6 +27,9 @@ class ViewController: UIViewController {
     var items : [Item] = []
 //    var delegate: BillListTableViewController?
     
+    var currentDateTime = Date()
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,12 +122,13 @@ class ViewController: UIViewController {
     
     @IBAction func addAlcoTapped(_ sender: Any) {
         if let text = alcoTextField.text, !text.isEmpty {
-                  let newItem = Item()
-                  newItem.price = alcoTextField.text!
-                  newItem.image = UIImage(named: "alco-mini")!
-                  self.items.append(newItem)
-                  alcoTextField.text = nil
-              }
+            let newItem = Item()
+            newItem.price = alcoTextField.text!
+            newItem.image = UIImage(named: "alco-mini")!
+            newItem.date = "\(currentDateTime)"
+            self.items.append(newItem)
+            alcoTextField.text = nil
+        }
         sum()
         calculateTip()
     }
@@ -145,8 +149,8 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let billListTVC = segue.destination as! BillListTableViewController
-        billListTVC.delegate = self
+        let billListTVC = segue.destination as? BillListTableViewController
+        billListTVC?.delegate = self
 //        billListTVC.delegateTotal = self
         
     }

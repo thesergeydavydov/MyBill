@@ -1,73 +1,46 @@
 //
-//  BillListTableViewController.swift
+//  HistoryTableViewController.swift
 //  My Bill
 //
-//  Created by Sergey Davydov on 05/12/2019.
+//  Created by Sergey Davydov on 17/12/2019.
 //  Copyright © 2019 Sergey Davydov. All rights reserved.
 //
 
 import UIKit
 
-//protocol DataDelegate: class {
-//    func textTotal(text:String?)
-//    
-//}
+class HistoryTableViewController: UITableViewController {
 
-class BillListTableViewController: UITableViewController {
-
-    @IBOutlet weak var totalLabel: UILabel!
-    
-    var delegate: ViewController?
-//    var delegateTotal: DataDelegate?
-    
-    func sumTVC() {
-        var total = 0
-        if let items = delegate?.items {
-            for item in items {
-                total += Int(item.price)!
-            }
-        }
-
-        totalLabel.text = "\(String(total))"
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        sumTVC()
-         
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
 
     // MARK: - Table view data source
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 0
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return delegate!.items.count
+        return 0
     }
 
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "BillRow", for: indexPath)
-        let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "BillRow")
-        cell.detailTextLabel?.text = delegate!.items[indexPath.row].date
-        cell.textLabel?.text = delegate!.items[indexPath.row].price
-        cell.imageView?.image = delegate!.items[indexPath.row].image
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
         // Configure the cell...
 
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -77,41 +50,17 @@ class BillListTableViewController: UITableViewController {
     }
     */
 
-
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            delegate!.items.remove(at: indexPath.row)
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
-
-            sumTVC()
-            
-        }
-
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }    
     }
-
-//    override func willMove(toParent parent: UIViewController?) {
-//        super.willMove(toParent: parent)
-//
-//        if parent == nil {
-//            delegateTotal?.textTotal(text: totalLabel?.text)
-//
-//        }
-//    }
-//
-//    func backButtonClicked(sender: UIBarButtonItem) {
-//
-//    self.navigationController?.popViewController(animated: true)
-//
-//    }
-    
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let vc = segue.destination as! ViewController
-//        vc.delegate = totalLabel.text!
-//    }
-
+    */
 
     /*
     // Override to support rearranging the table view.

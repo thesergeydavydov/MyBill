@@ -11,4 +11,5 @@ import UIKit
 class Item {
     var price = ""
     var image = UIImage()
+    var date = ""
 }
