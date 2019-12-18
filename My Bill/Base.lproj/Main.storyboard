@@ -96,7 +96,7 @@
                                     <segue destination="ypD-Dp-vYe" kind="show" id="gbe-LR-gxV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="36" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-kS-q4h">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-kS-q4h">
                                 <rect key="frame" x="20" y="407" width="335" height="33.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
@@ -120,6 +120,9 @@
                                 <state key="normal" title="SAVE">
                                     <color key="titleColor" red="0.91033118960000003" green="0.93782466649999996" blue="0.96153682470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="KE1-U3-3Lk" kind="show" id="pKR-Bw-v2q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qS6-5C-BCX">
                                 <rect key="frame" x="20" y="490" width="335" height="39"/>
@@ -254,6 +257,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KeL-ah-wXA">
+                            <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eN7-9n-gCE">
                                 <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
@@ -270,10 +280,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="8Qq-GB-TVO"/>
+                    <connections>
+                        <outlet property="saveBillLabel" destination="KeL-ah-wXA" id="lCb-Q2-ePG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLs-S0-ZTP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071" y="886"/>
+            <point key="canvasLocation" x="1069.5999999999999" y="884.70764617691157"/>
         </scene>
         <!--Bill-->
         <scene sceneID="dBP-Ta-lDP">
@@ -340,4 +353,7 @@
         <image name="dessert" width="100" height="100"/>
         <image name="plate" width="100" height="100"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="sdl-P8-xUX"/>
+    </inferredMetricsTieBreakers>
 </document>

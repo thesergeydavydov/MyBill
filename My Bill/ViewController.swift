@@ -145,6 +145,8 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let billListTVC = segue.destination as? BillListTableViewController
         billListTVC?.delegate = self
+        let historyTVC = segue.destination as? HistoryTableViewController
+        historyTVC?.saveBill = billLabel.text!
 //        billListTVC.delegateTotal = self
         
     }
@@ -162,7 +164,7 @@ class ViewController: UIViewController {
         for item in items {
             total += Int(item.price)!
             }
-            billLabel.text = "\(String(total))"
+            billLabel.text = "\(total)"
         }
     
             

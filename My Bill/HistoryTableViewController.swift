@@ -9,9 +9,15 @@
 import UIKit
 
 class HistoryTableViewController: UITableViewController {
+    
+    @IBOutlet weak var saveBillLabel: UILabel!
+    
+//    var delegate: ViewController?
+    var saveBill = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveBillLabel.text = saveBill
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -22,10 +28,10 @@ class HistoryTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
