@@ -60,6 +60,10 @@ class ViewController: UIViewController {
 //        coffeeTextField.addToolBar()
 //        alcoTextField.addToolBar()
 //        tipTextField.addToolBar()
+        plateTextField.layer.cornerRadius = plateTextField.frame.size.height / 2
+        plateTextField.layer.borderWidth = 0.5
+        plateTextField.layer.borderColor = UIColor.lightGray.cgColor
+        plateTextField.clipsToBounds = true
         
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
