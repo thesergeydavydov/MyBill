@@ -8,11 +8,31 @@
 
 import UIKit
 
+class roundImageView: UIImageView {
+    override func didMoveToWindow() {
+        self.backgroundColor = UIColor.white
+        self.clipsToBounds = true
+        self.layer.cornerRadius = 10
+    }
+}
+
+class roundView: UIView {
+    override func didMoveToWindow() {
+        self.clipsToBounds = false
+        self.layer.shadowColor = UIColor.lightGray.cgColor
+        self.layer.shadowOpacity = 0.4
+        self.layer.shadowOffset = CGSize.zero
+        self.layer.shadowRadius = 10
+        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: 10).cgPath
+    }
+}
+
 
 class ViewController: UIViewController {
      
-    @IBOutlet weak var menuPadView: UIView!
+    @IBOutlet weak var menuPadView: roundView!
     @IBOutlet weak var menuPadImage: UIImageView!
+    
     @IBOutlet weak var plateTextField: UITextField!
     @IBOutlet weak var dessertTextField: UITextField!
     @IBOutlet weak var coffeeTextField: UITextField!
@@ -27,7 +47,7 @@ class ViewController: UIViewController {
     var items : [Item] = []
 //    var delegate: BillListTableViewController?
     
-    let date = Date()
+    let currentdate = Date()
     let dateFormatter = DateFormatter()
 
     override func viewDidLoad() {
@@ -49,34 +69,13 @@ class ViewController: UIViewController {
 
         setupNavigationBarItems()
         
-        menuPadView.clipsToBounds = false
-        menuPadView.layer.shadowColor = UIColor.lightGray.cgColor
-        menuPadView.layer.shadowOpacity = 0.4
-        menuPadView.layer.shadowOffset = CGSize.zero
-        menuPadView.layer.shadowRadius = 10
-        menuPadView.layer.shadowPath = UIBezierPath(roundedRect: menuPadView.bounds, cornerRadius: 10).cgPath
-        
-        menuPadImage.backgroundColor = UIColor.white
-        menuPadImage.clipsToBounds = true
-        menuPadImage.layer.cornerRadius = 10
-//        menuPadImage.layer.shadowColor = UIColor.darkGray.cgColor
-//        menuPadImage.layer.shadowRadius = 10
-//        menuPadImage.layer.shadowOpacity = 1
-//        menuPadImage.layer.shadowOffset = CGSize(width: 10, height: 10)
-        
 //        billLabel = delegate?.totalLabel.
-        
 
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
     }
     
     override func viewWillAppear(_ animated: Bool) {
         sum()
         calculateTip()
-        
     }
     
     private func setupNavigationBarItems() {
@@ -101,24 +100,24 @@ class ViewController: UIViewController {
     
     @IBAction func addDessertTapped(_ sender: Any) {
         if let text = dessertTextField.text, !text.isEmpty {
-                  let newItem = Item()
-                  newItem.price = dessertTextField.text!
-                  newItem.image = UIImage(named: "dessert-mini")!
-                  self.items.append(newItem)
-                  dessertTextField.text = nil
-              }
+            let newItem = Item()
+            newItem.price = dessertTextField.text!
+            newItem.image = UIImage(named: "dessert-mini")!
+            self.items.append(newItem)
+            dessertTextField.text = nil
+        }
         sum()
         calculateTip()
     }
     
     @IBAction func addCoffeeTapped(_ sender: Any) {
         if let text = coffeeTextField.text, !text.isEmpty {
-                  let newItem = Item()
-                  newItem.price = coffeeTextField.text!
-                  newItem.image = UIImage(named: "coffee-mini")!
-                  self.items.append(newItem)
-                  coffeeTextField.text = nil
-              }
+            let newItem = Item()
+            newItem.price = coffeeTextField.text!
+            newItem.image = UIImage(named: "coffee-mini")!
+            self.items.append(newItem)
+            coffeeTextField.text = nil
+        }
         sum()
         calculateTip()
     }
@@ -128,7 +127,7 @@ class ViewController: UIViewController {
             let newItem = Item()
             newItem.price = alcoTextField.text!
             newItem.image = UIImage(named: "alco-mini")!
-            newItem.date = "\(dateFormatter.string(from: date))"
+            newItem.date = "\(dateFormatter.string(from: currentdate))"
             self.items.append(newItem)
             alcoTextField.text = nil
             print(newItem.date)
@@ -140,17 +139,7 @@ class ViewController: UIViewController {
     
     @IBAction func calculateTapped(_ sender: Any) {
         calculateTip()
-//        print(billLabel.text!)
-//        print(tipTextField.text!)
-//
-//                let bill = Double(billLabel.text!)!
-//                let tipPercetage = Double(tipTextField.text!)!
-//
-//                let tip = bill * (tipPercetage / 100)
-//
-//                tipLabel.text = "\(Int(tip))"
-//        print(tip)
-        
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -161,16 +150,10 @@ class ViewController: UIViewController {
     }
     
     func calculateTip() {
-        print(billLabel.text!)
-        print(tipTextField.text!)
-                
-                let bill = Double(billLabel.text!)!
-                let tipPercetage = Double(tipTextField.text!)!
-                
-                let tip = bill * (tipPercetage / 100)
-                
-                tipLabel.text = "\(Int(tip))"
-        print(tip)
+        let bill = Double(billLabel.text!)!
+        let tipPercetage = Double(tipTextField.text!)!
+        let tip = bill * (tipPercetage / 100)
+        tipLabel.text = "\(Int(tip))"
         
     }
     
