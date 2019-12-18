@@ -31,7 +31,7 @@ class roundView: UIView {
 class ViewController: UIViewController {
      
     @IBOutlet weak var menuPadView: roundView!
-    @IBOutlet weak var menuPadImage: UIImageView!
+    @IBOutlet weak var menuPadImage: roundImageView!
     
     @IBOutlet weak var plateTextField: UITextField!
     @IBOutlet weak var dessertTextField: UITextField!
@@ -46,6 +46,7 @@ class ViewController: UIViewController {
     
     var items : [Item] = []
 //    var delegate: BillListTableViewController?
+    var totalBills : [TotalBill] = []
     
     let currentdate = Date()
     let dateFormatter = DateFormatter()
@@ -127,7 +128,6 @@ class ViewController: UIViewController {
             let newItem = Item()
             newItem.price = alcoTextField.text!
             newItem.image = UIImage(named: "alco-mini")!
-            newItem.date = "\(dateFormatter.string(from: currentdate))"
             self.items.append(newItem)
             alcoTextField.text = nil
             print(newItem.date)
@@ -142,11 +142,24 @@ class ViewController: UIViewController {
 
     }
     
+    @IBAction func saveTapped(_ sender: Any) {
+        let sumBT = TotalBill()
+        sumBT.priceTB = String(Int(billLabel.text!)! + Int(tipLabel.text!)!)
+        sumBT.imageTB = UIImage(named: "alco-mini")!
+        sumBT.dateTB = "\(dateFormatter.string(from: currentdate))"
+        self.totalBills.append(sumBT)
+        print(sumBT.priceTB)
+        loadView()
+        viewDidLoad()
+        items.removeAll()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let billListTVC = segue.destination as? BillListTableViewController
         billListTVC?.delegate = self
         let historyTVC = segue.destination as? HistoryTableViewController
-        historyTVC?.saveBill = billLabel.text!
+        historyTVC?.delegateTB = self
+//        historyTVC?.saveBill = billLabel.text!
 //        billListTVC.delegateTotal = self
         
     }

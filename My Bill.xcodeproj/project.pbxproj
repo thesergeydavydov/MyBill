@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		291B746E23AA2A980066E749 /* TotalBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291B746D23AA2A980066E749 /* TotalBill.swift */; };
 		2943B7C4238D29CA00E2D3A9 /* TextFieldExtantions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2943B7C3238D29CA00E2D3A9 /* TextFieldExtantions.swift */; };
 		294C78B623A8E15500A67E11 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294C78B523A8E15500A67E11 /* HistoryTableViewController.swift */; };
 		29912647239A4403001508B7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29912646239A4403001508B7 /* Item.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		291B746D23AA2A980066E749 /* TotalBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalBill.swift; sourceTree = "<group>"; };
 		2943B7C3238D29CA00E2D3A9 /* TextFieldExtantions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtantions.swift; sourceTree = "<group>"; };
 		294C78B523A8E15500A67E11 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		29912646239A4403001508B7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				29EAC6EA239923D500A126CC /* BillListTableViewController.swift */,
 				294C78B523A8E15500A67E11 /* HistoryTableViewController.swift */,
 				2943B7C3238D29CA00E2D3A9 /* TextFieldExtantions.swift */,
+				291B746D23AA2A980066E749 /* TotalBill.swift */,
 				29912646239A4403001508B7 /* Item.swift */,
 				29DF75A123858D6400F8DF30 /* Main.storyboard */,
 				29DF75A723858D6500F8DF30 /* Assets.xcassets */,
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29DF75A623858D6400F8DF30 /* My_Bill.xcdatamodeld in Sources */,
+				291B746E23AA2A980066E749 /* TotalBill.swift in Sources */,
 				29DF75A023858D6400F8DF30 /* ViewController.swift in Sources */,
 				29EAC6EB239923D500A126CC /* BillListTableViewController.swift in Sources */,
 				2943B7C4238D29CA00E2D3A9 /* TextFieldExtantions.swift in Sources */,

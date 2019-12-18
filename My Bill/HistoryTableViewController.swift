@@ -10,14 +10,16 @@ import UIKit
 
 class HistoryTableViewController: UITableViewController {
     
-    @IBOutlet weak var saveBillLabel: UILabel!
+    @IBOutlet weak var sumBillsLabel: UILabel!
     
-//    var delegate: ViewController?
-    var saveBill = ""
+    var delegateTB: ViewController?
+//    var saveBill = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        saveBillLabel.text = saveBill
+        
+        sumBillsHTVC()
+//        saveBillLabel.text = saveBill
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -35,18 +37,19 @@ class HistoryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return delegateTB!.totalBills.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "TotalBillSaved", for: indexPath)
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "TotalBillSaved")
+        cell.detailTextLabel?.text = delegateTB!.totalBills[indexPath.row].dateTB
+        cell.textLabel?.text = delegateTB!.totalBills[indexPath.row].priceTB
+        cell.imageView?.image = delegateTB!.totalBills[indexPath.row].imageTB
         // Configure the cell...
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -67,7 +70,17 @@ class HistoryTableViewController: UITableViewController {
         }    
     }
     */
+    
+    func sumBillsHTVC() {
+        var total = 0
+        if let totalBills = delegateTB?.totalBills {
+            for totalBill in totalBills {
+                total += Int(totalBill.priceTB)!
+            }
+        }
 
+        sumBillsLabel.text = "\(total)"
+    }
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {

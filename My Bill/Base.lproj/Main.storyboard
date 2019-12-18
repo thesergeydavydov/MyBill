@@ -121,6 +121,7 @@
                                     <color key="titleColor" red="0.91033118960000003" green="0.93782466649999996" blue="0.96153682470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="saveTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="APc-ZF-mlv"/>
                                     <segue destination="KE1-U3-3Lk" kind="show" id="pKR-Bw-v2q"/>
                                 </connections>
                             </button>
@@ -249,7 +250,7 @@
             </objects>
             <point key="canvasLocation" x="1071.2" y="138.98050974512745"/>
         </scene>
-        <!--History Table View Controller-->
+        <!--History-->
         <scene sceneID="ksK-6B-zPT">
             <objects>
                 <tableViewController id="KE1-U3-3Lk" customClass="HistoryTableViewController" customModule="My_Bill" customModuleProvider="target" sceneMemberID="viewController">
@@ -257,15 +258,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KeL-ah-wXA">
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RcI-sd-K4O">
                             <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="eN7-9n-gCE">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TotalBillSaved" id="eN7-9n-gCE">
                                 <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eN7-9n-gCE" id="bPC-xX-rKZ">
@@ -279,9 +280,9 @@
                             <outlet property="delegate" destination="KE1-U3-3Lk" id="NGH-5J-YWH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8Qq-GB-TVO"/>
+                    <navigationItem key="navigationItem" title="History" id="8Qq-GB-TVO"/>
                     <connections>
-                        <outlet property="saveBillLabel" destination="KeL-ah-wXA" id="lCb-Q2-ePG"/>
+                        <outlet property="sumBillsLabel" destination="RcI-sd-K4O" id="UDT-ZO-I9v"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLs-S0-ZTP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
