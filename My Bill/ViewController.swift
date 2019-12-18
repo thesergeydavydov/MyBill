@@ -145,7 +145,7 @@ class ViewController: UIViewController {
     @IBAction func saveTapped(_ sender: Any) {
         let sumBT = TotalBill()
         sumBT.priceTB = String(Int(billLabel.text!)! + Int(tipLabel.text!)!)
-        sumBT.imageTB = UIImage(named: "alco-mini")!
+        sumBT.imageTB = UIImage(named: "app-mini")!
         sumBT.dateTB = "\(dateFormatter.string(from: currentdate))"
         self.totalBills.append(sumBT)
         print(sumBT.priceTB)
