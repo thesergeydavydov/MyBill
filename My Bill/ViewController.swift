@@ -27,6 +27,15 @@ class roundView: UIView {
     }
 }
 
+class roundTextField: UITextField {
+    override func didMoveToWindow() {
+        self.layer.cornerRadius = self.frame.size.height / 2
+        self.layer.borderWidth = 0.5
+        self.layer.borderColor = UIColor.lightGray.cgColor
+        self.clipsToBounds = true
+    }
+}
+
 
 class ViewController: UIViewController {
      
@@ -60,17 +69,17 @@ class ViewController: UIViewController {
 //        coffeeTextField.addToolBar()
 //        alcoTextField.addToolBar()
 //        tipTextField.addToolBar()
-        plateTextField.layer.cornerRadius = plateTextField.frame.size.height / 2
-        plateTextField.layer.borderWidth = 0.5
-        plateTextField.layer.borderColor = UIColor.lightGray.cgColor
-        plateTextField.clipsToBounds = true
+//        plateTextField.layer.cornerRadius = plateTextField.frame.size.height / 2
+//        plateTextField.layer.borderWidth = 0.5
+//        plateTextField.layer.borderColor = UIColor.lightGray.cgColor
+//        plateTextField.clipsToBounds = true
         
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         
         
-        calculateTapped.layer.cornerRadius = calculateTapped.frame.size.height / 6
-        saveTapped.layer.cornerRadius = saveTapped.frame.size.height / 6
+        calculateTapped.layer.cornerRadius = calculateTapped.frame.size.height / 2
+        saveTapped.layer.cornerRadius = saveTapped.frame.size.height / 2
 
         setupNavigationBarItems()
         

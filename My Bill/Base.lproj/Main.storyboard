@@ -22,7 +22,6 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ztU-2I-uIN" customClass="roundImageView" customModule="My_Bill" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="335"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="335" id="8Dr-1V-oiK"/>
                                             <constraint firstAttribute="height" constant="335" id="8st-VB-5Lk"/>
                                         </constraints>
                                     </imageView>
@@ -33,7 +32,7 @@
                                             <action selector="addDessertTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UFG-Sx-6Hr"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="MQ6-Hi-ulS">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="..." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="MQ6-Hi-ulS" customClass="roundTextField" customModule="My_Bill" customModuleProvider="target">
                                         <rect key="frame" x="215" y="128" width="100" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="X5J-Eg-wth"/>
@@ -49,6 +48,17 @@
                                             <action selector="addCoffeeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9G-0p-f2D"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJy-sU-5gQ">
+                                        <rect key="frame" x="142.5" y="142" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Ulg-F2-x7J"/>
+                                            <constraint firstAttribute="width" constant="50" id="tCT-LF-FPX"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="info"/>
+                                        <connections>
+                                            <segue destination="ypD-Dp-vYe" kind="show" id="r6B-I6-59L"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="leading" secondItem="Bhs-Pe-Dfb" secondAttribute="trailing" constant="-120" id="3tI-LQ-ngW"/>
@@ -56,7 +66,7 @@
                                     <constraint firstAttribute="trailing" secondItem="ztU-2I-uIN" secondAttribute="trailing" id="96C-5S-5u2"/>
                                     <constraint firstItem="MQ6-Hi-ulS" firstAttribute="leading" secondItem="ztU-2I-uIN" secondAttribute="trailing" constant="-120" id="EP2-n1-9lL"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="top" secondItem="zPV-YB-mMb" secondAttribute="top" id="FKk-84-dqW"/>
-                                    <constraint firstAttribute="width" constant="335" id="QHy-xw-jfp"/>
+                                    <constraint firstItem="LJy-sU-5gQ" firstAttribute="centerX" secondItem="zPV-YB-mMb" secondAttribute="centerX" id="FMO-kk-Kzf"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="leading" secondItem="zPV-YB-mMb" secondAttribute="leading" id="Ttj-s6-HOv"/>
                                     <constraint firstItem="MQ6-Hi-ulS" firstAttribute="top" secondItem="Q4W-QB-yWw" secondAttribute="bottom" constant="8" id="Z6Y-FX-ahb"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="top" secondItem="Q4W-QB-yWw" secondAttribute="bottom" constant="-120" id="cg0-gb-AtZ"/>
@@ -65,7 +75,7 @@
                                     <constraint firstItem="Q4W-QB-yWw" firstAttribute="leading" secondItem="ztU-2I-uIN" secondAttribute="trailing" constant="-120" id="zeO-dQ-mmP"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="..." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="6Oz-s3-ldv">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="..." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="6Oz-s3-ldv" customClass="roundTextField" customModule="My_Bill" customModuleProvider="target">
                                 <rect key="frame" x="40" y="192" width="100" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="d9n-Y5-eas"/>
@@ -74,7 +84,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="4XE-5X-hOO">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="..." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="4XE-5X-hOO" customClass="roundTextField" customModule="My_Bill" customModuleProvider="target">
                                 <rect key="frame" x="40" y="345" width="100" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="NuG-Xc-6tN"/>
@@ -83,7 +93,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$$$" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="sOC-lU-rPk">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="..." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="sOC-lU-rPk" customClass="roundTextField" customModule="My_Bill" customModuleProvider="target">
                                 <rect key="frame" x="235" y="345" width="100" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="QPz-Zb-vSA"/>
@@ -106,6 +116,10 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15" borderStyle="roundedRect" placeholder="%" textAlignment="center" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="oln-gH-4Dw">
                                 <rect key="frame" x="312" y="448.5" width="43" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="7yB-7Z-Z3G"/>
+                                    <constraint firstAttribute="width" constant="43" id="uqc-U7-gEh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
@@ -170,22 +184,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJy-sU-5gQ">
-                                <rect key="frame" x="162.5" y="216" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Ulg-F2-x7J"/>
-                                    <constraint firstAttribute="width" constant="50" id="tCT-LF-FPX"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="info"/>
-                                <connections>
-                                    <segue destination="ypD-Dp-vYe" kind="show" id="r6B-I6-59L"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ztU-2I-uIN" firstAttribute="leading" secondItem="lCE-bb-Sie" secondAttribute="trailing" constant="-120" id="09h-dT-Wrr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wvn-wP-Xrr" secondAttribute="trailing" constant="20" id="0BD-oW-yHv"/>
+                            <constraint firstItem="zPV-YB-mMb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1H6-Dv-Gck"/>
                             <constraint firstItem="ztU-2I-uIN" firstAttribute="leading" secondItem="6Oz-s3-ldv" secondAttribute="trailing" constant="-120" id="2bt-bK-UNo"/>
                             <constraint firstItem="oln-gH-4Dw" firstAttribute="top" secondItem="JAt-kS-q4h" secondAttribute="bottom" constant="8" id="69L-Tm-RM1"/>
                             <constraint firstItem="JAt-kS-q4h" firstAttribute="top" secondItem="ztU-2I-uIN" secondAttribute="bottom" constant="8" id="6F0-q2-OqA"/>
@@ -199,7 +203,6 @@
                             <constraint firstItem="Wvn-wP-Xrr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EyP-ao-Ivl"/>
                             <constraint firstItem="JAt-kS-q4h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ezv-sC-iZY"/>
                             <constraint firstItem="ztU-2I-uIN" firstAttribute="top" secondItem="lCE-bb-Sie" secondAttribute="bottom" constant="-120" id="GCG-VH-E7e"/>
-                            <constraint firstItem="oln-gH-4Dw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="312" id="Ghh-pr-DNo"/>
                             <constraint firstItem="hHp-tv-ip8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Hd1-Si-1aT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Obl-gK-Geb" secondAttribute="trailing" constant="20" id="IkN-Ar-A0O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7FH-6f-TeK" secondAttribute="bottom" constant="20" id="JFo-Zn-6LU"/>
@@ -209,11 +212,11 @@
                             <constraint firstItem="6Oz-s3-ldv" firstAttribute="top" secondItem="lCE-bb-Sie" secondAttribute="bottom" constant="8" id="RHQ-Sc-Qpd"/>
                             <constraint firstItem="Obl-gK-Geb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ruq-Kc-TYt"/>
                             <constraint firstItem="sOC-lU-rPk" firstAttribute="top" secondItem="ztU-2I-uIN" secondAttribute="bottom" constant="-54" id="TkR-Dm-1Jd"/>
-                            <constraint firstItem="LJy-sU-5gQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UdR-3L-Rfk"/>
                             <constraint firstItem="ztU-2I-uIN" firstAttribute="leading" secondItem="4XE-5X-hOO" secondAttribute="trailing" constant="-120" id="Z5s-YT-IKY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oln-gH-4Dw" secondAttribute="trailing" constant="20" id="acB-sY-I28"/>
                             <constraint firstItem="hHp-tv-ip8" firstAttribute="top" secondItem="ztU-2I-uIN" secondAttribute="bottom" constant="8" id="aiC-R3-O5O"/>
                             <constraint firstItem="Wvn-wP-Xrr" firstAttribute="top" secondItem="ztU-2I-uIN" secondAttribute="bottom" constant="15" id="cF1-0K-HvY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zPV-YB-mMb" secondAttribute="trailing" constant="20" id="cJ0-Ac-u7d"/>
                             <constraint firstItem="AaU-B7-xMG" firstAttribute="leading" secondItem="ztU-2I-uIN" secondAttribute="trailing" constant="-120" id="d69-Gh-ppa"/>
                             <constraint firstItem="sOC-lU-rPk" firstAttribute="top" secondItem="AaU-B7-xMG" secondAttribute="bottom" constant="8" id="dMO-cm-dyU"/>
                             <constraint firstItem="pih-q4-p1t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="k7B-Ex-M8F"/>
@@ -227,7 +230,6 @@
                             <constraint firstItem="sOC-lU-rPk" firstAttribute="leading" secondItem="ztU-2I-uIN" secondAttribute="trailing" constant="-120" id="usN-mi-hQu"/>
                             <constraint firstItem="pih-q4-p1t" firstAttribute="top" secondItem="hHp-tv-ip8" secondAttribute="bottom" constant="8" id="vDv-dw-fVl"/>
                             <constraint firstItem="6ib-Yc-Kla" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wkS-Te-DbC"/>
-                            <constraint firstItem="LJy-sU-5gQ" firstAttribute="top" secondItem="MQ6-Hi-ulS" secondAttribute="bottom" constant="-10" id="yL7-lM-Azn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
