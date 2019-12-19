@@ -55,7 +55,7 @@ class ViewController: UIViewController {
     
     var items : [Item] = []
 //    var delegate: BillListTableViewController?
-    var totalBills : [TotalBill] = []
+    var totalBills : [BillsEntity] = []
     
     let currentdate = Date()
     let dateFormatter = DateFormatter()
@@ -156,15 +156,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveTapped(_ sender: Any) {
-        let sumBT = TotalBill()
-        sumBT.priceTB = String(Int(billLabel.text!)! + Int(tipLabel.text!)!)
-        sumBT.imageTB = UIImage(named: "app-mini")!
-        sumBT.dateTB = "\(dateFormatter.string(from: currentdate))"
-        self.totalBills.append(sumBT)
-        print(sumBT.priceTB)
-        loadView()
-        viewDidLoad()
-        items.removeAll()
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let sumBT = BillsEntity(context: context)
+            sumBT.price = String(Int(billLabel.text!)! + Int(tipLabel.text!)!)
+//            sumBT.image = UIImage(named: "app-mini")
+            sumBT.date = "\(dateFormatter.string(from: currentdate))"
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+            loadView()
+            viewDidLoad()
+            items.removeAll()
+            
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -48,8 +48,8 @@
                                             <action selector="addCoffeeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9G-0p-f2D"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJy-sU-5gQ">
-                                        <rect key="frame" x="142.5" y="142" width="50" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJy-sU-5gQ">
+                                        <rect key="frame" x="142.5" y="142.5" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Ulg-F2-x7J"/>
                                             <constraint firstAttribute="width" constant="50" id="tCT-LF-FPX"/>
@@ -67,6 +67,7 @@
                                     <constraint firstItem="MQ6-Hi-ulS" firstAttribute="leading" secondItem="ztU-2I-uIN" secondAttribute="trailing" constant="-120" id="EP2-n1-9lL"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="top" secondItem="zPV-YB-mMb" secondAttribute="top" id="FKk-84-dqW"/>
                                     <constraint firstItem="LJy-sU-5gQ" firstAttribute="centerX" secondItem="zPV-YB-mMb" secondAttribute="centerX" id="FMO-kk-Kzf"/>
+                                    <constraint firstItem="LJy-sU-5gQ" firstAttribute="centerY" secondItem="zPV-YB-mMb" secondAttribute="centerY" id="Ikp-0O-neC"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="leading" secondItem="zPV-YB-mMb" secondAttribute="leading" id="Ttj-s6-HOv"/>
                                     <constraint firstItem="MQ6-Hi-ulS" firstAttribute="top" secondItem="Q4W-QB-yWw" secondAttribute="bottom" constant="8" id="Z6Y-FX-ahb"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="top" secondItem="Q4W-QB-yWw" secondAttribute="bottom" constant="-120" id="cg0-gb-AtZ"/>
@@ -114,15 +115,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15" borderStyle="roundedRect" placeholder="%" textAlignment="center" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="oln-gH-4Dw">
-                                <rect key="frame" x="312" y="448.5" width="43" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="7yB-7Z-Z3G"/>
-                                    <constraint firstAttribute="width" constant="43" id="uqc-U7-gEh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obl-gK-Geb">
                                 <rect key="frame" x="20" y="537" width="335" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -184,6 +176,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15" borderStyle="roundedRect" placeholder="%" textAlignment="center" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="oln-gH-4Dw">
+                                <rect key="frame" x="312" y="445.5" width="43" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="7yB-7Z-Z3G"/>
+                                    <constraint firstAttribute="width" constant="43" id="uqc-U7-gEh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -191,7 +192,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wvn-wP-Xrr" secondAttribute="trailing" constant="20" id="0BD-oW-yHv"/>
                             <constraint firstItem="zPV-YB-mMb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1H6-Dv-Gck"/>
                             <constraint firstItem="ztU-2I-uIN" firstAttribute="leading" secondItem="6Oz-s3-ldv" secondAttribute="trailing" constant="-120" id="2bt-bK-UNo"/>
-                            <constraint firstItem="oln-gH-4Dw" firstAttribute="top" secondItem="JAt-kS-q4h" secondAttribute="bottom" constant="8" id="69L-Tm-RM1"/>
+                            <constraint firstItem="oln-gH-4Dw" firstAttribute="top" secondItem="JAt-kS-q4h" secondAttribute="bottom" constant="5" id="69L-Tm-RM1"/>
                             <constraint firstItem="JAt-kS-q4h" firstAttribute="top" secondItem="ztU-2I-uIN" secondAttribute="bottom" constant="8" id="6F0-q2-OqA"/>
                             <constraint firstItem="qS6-5C-BCX" firstAttribute="top" secondItem="pih-q4-p1t" secondAttribute="bottom" constant="8" id="7Gj-Pb-znf"/>
                             <constraint firstItem="Wvn-wP-Xrr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7cV-cj-zwq"/>

@@ -18,7 +18,7 @@ class HistoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sumBillsHTVC()
+//        sumBillsHTVC()
 //        saveBillLabel.text = saveBill
 
         // Uncomment the following line to preserve selection between presentations
@@ -29,7 +29,21 @@ class HistoryTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+      getCoreDataInfo()
+        
+    }
+    
+    func getCoreDataInfo() {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            if let coreDataBill = try? context.fetch(BillsEntity.fetchRequest()) as? [BillsEntity]{
+                delegateTB?.totalBills = coreDataBill
+                tableView.reloadData()
+            }
+        }
+        
+    }
 //    override func numberOfSections(in tableView: UITableView) -> Int {
 //        // #warning Incomplete implementation, return the number of sections
 //        return 0
@@ -43,9 +57,9 @@ class HistoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "TotalBillSaved", for: indexPath)
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "TotalBillSaved")
-        cell.detailTextLabel?.text = delegateTB!.totalBills[indexPath.row].dateTB
-        cell.textLabel?.text = delegateTB!.totalBills[indexPath.row].priceTB
-        cell.imageView?.image = delegateTB!.totalBills[indexPath.row].imageTB
+        cell.detailTextLabel?.text = delegateTB!.totalBills[indexPath.row].date
+        cell.textLabel?.text = delegateTB!.totalBills[indexPath.row].price
+        cell.imageView?.image = UIImage(named: "app-mini")
         // Configure the cell...
 
         return cell
@@ -63,26 +77,32 @@ class HistoryTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            delegateTB!.totalBills.remove(at: indexPath.row)
+            let totalBill = delegateTB!.totalBills[indexPath.row]
+            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            context.delete(totalBill)
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+             getCoreDataInfo()
             // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
 
-            sumBillsHTVC()
-            
-        }
-
-    }
-    
-    func sumBillsHTVC() {
-        var total = 0
-        if let totalBills = delegateTB?.totalBills {
-            for totalBill in totalBills {
-                total += Int(totalBill.priceTB)!
+//            sumBillsHTVC()
             }
         }
-
-        sumBillsLabel.text = "\(total)"
     }
+    
+//    func sumBillsHTVC() {
+//        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+//        var total = 0
+//        if let totalBills = delegateTB?.totalBills {
+//            for totalBill in totalBills {
+//                total += Int(totalBill.price)!
+//            }
+//        }
+//
+//        sumBillsLabel.text = "\(total)"
+//        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+//        }
+//    }
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
