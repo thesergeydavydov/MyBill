@@ -18,7 +18,7 @@ class HistoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        sumBillsHTVC()
+        sumBillsHTVC()
 //        saveBillLabel.text = saveBill
 
         // Uncomment the following line to preserve selection between presentations
@@ -31,7 +31,8 @@ class HistoryTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func viewWillAppear(_ animated: Bool) {
-      getCoreDataInfo()
+        getCoreDataInfo()
+        sumBillsHTVC()
         
     }
     
@@ -85,24 +86,24 @@ class HistoryTableViewController: UITableViewController {
             // Delete the row from the data source
 //            tableView.deleteRows(at: [indexPath], with: .fade)
 
-//            sumBillsHTVC()
+            sumBillsHTVC()
             }
         }
     }
     
-//    func sumBillsHTVC() {
+    func sumBillsHTVC() {
 //        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-//        var total = 0
-//        if let totalBills = delegateTB?.totalBills {
-//            for totalBill in totalBills {
-//                total += Int(totalBill.price)!
-//            }
-//        }
-//
-//        sumBillsLabel.text = "\(total)"
+        var total = 0
+        if let totalBills = delegateTB?.totalBills {
+            for totalBill in totalBills {
+                total += Int(totalBill.price!)!
+            }
+        }
+
+        sumBillsLabel.text = "\(total)"
 //        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
 //        }
-//    }
+    }
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
