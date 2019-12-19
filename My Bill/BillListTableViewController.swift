@@ -8,17 +8,11 @@
 
 import UIKit
 
-//protocol DataDelegate: class {
-//    func textTotal(text:String?)
-//    
-//}
-
 class BillListTableViewController: UITableViewController {
 
     @IBOutlet weak var totalLabel: UILabel!
     
     var delegate: ViewController?
-//    var delegateTotal: DataDelegate?
     
     func sumTVC() {
         var total = 0
@@ -43,7 +37,6 @@ class BillListTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-
     // MARK: - Table view data source
 
 //    override func numberOfSections(in tableView: UITableView) -> Int {
@@ -57,7 +50,6 @@ class BillListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "BillRow", for: indexPath)
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "BillRow")
         cell.detailTextLabel?.text = delegate!.items[indexPath.row].date
         cell.textLabel?.text = delegate!.items[indexPath.row].price
@@ -68,7 +60,6 @@ class BillListTableViewController: UITableViewController {
         return cell
     }
     
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -76,7 +67,6 @@ class BillListTableViewController: UITableViewController {
         return true
     }
     */
-
 
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -86,33 +76,10 @@ class BillListTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
 
             sumTVC()
-            
         }
 
     }
-
-//    override func willMove(toParent parent: UIViewController?) {
-//        super.willMove(toParent: parent)
-//
-//        if parent == nil {
-//            delegateTotal?.textTotal(text: totalLabel?.text)
-//
-//        }
-//    }
-//
-//    func backButtonClicked(sender: UIBarButtonItem) {
-//
-//    self.navigationController?.popViewController(animated: true)
-//
-//    }
     
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let vc = segue.destination as! ViewController
-//        vc.delegate = totalLabel.text!
-//    }
-
-
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
@@ -137,5 +104,5 @@ class BillListTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
