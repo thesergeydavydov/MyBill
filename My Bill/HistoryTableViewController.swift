@@ -13,13 +13,11 @@ class HistoryTableViewController: UITableViewController {
     @IBOutlet weak var sumBillsLabel: UILabel!
     
     var delegateTB: ViewController?
-//    var saveBill = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         sumBillsHTVC()
-//        saveBillLabel.text = saveBill
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,7 +31,6 @@ class HistoryTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         getCoreDataInfo()
         sumBillsHTVC()
-        
     }
     
     func getCoreDataInfo() {
@@ -43,7 +40,6 @@ class HistoryTableViewController: UITableViewController {
                 tableView.reloadData()
             }
         }
-        
     }
 //    override func numberOfSections(in tableView: UITableView) -> Int {
 //        // #warning Incomplete implementation, return the number of sections
@@ -56,7 +52,6 @@ class HistoryTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "TotalBillSaved", for: indexPath)
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "TotalBillSaved")
         cell.detailTextLabel?.text = delegateTB!.totalBills[indexPath.row].date
         cell.textLabel?.text = delegateTB!.totalBills[indexPath.row].price
@@ -92,18 +87,15 @@ class HistoryTableViewController: UITableViewController {
     }
     
     func sumBillsHTVC() {
-//        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
         var total = 0
         if let totalBills = delegateTB?.totalBills {
             for totalBill in totalBills {
                 total += Int(totalBill.price!)!
             }
         }
-
         sumBillsLabel.text = "\(total)"
-//        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-//        }
     }
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+//import IQKeyboardManagerSwift
+//import Foundation
 
 class roundImageView: UIImageView {
     override func didMoveToWindow() {
@@ -54,7 +56,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var saveTapped: UIButton!
     
     var items : [Item] = []
-//    var delegate: BillListTableViewController?
+
     var totalBills : [BillsEntity] = []
     
     let currentdate = Date()
@@ -69,10 +71,7 @@ class ViewController: UIViewController {
 //        coffeeTextField.addToolBar()
 //        alcoTextField.addToolBar()
 //        tipTextField.addToolBar()
-//        plateTextField.layer.cornerRadius = plateTextField.frame.size.height / 2
-//        plateTextField.layer.borderWidth = 0.5
-//        plateTextField.layer.borderColor = UIColor.lightGray.cgColor
-//        plateTextField.clipsToBounds = true
+//        IQKeyboardManager.shared.toolbarDoneBarButtonItemImage = UIImage(named: "app-mini")
         
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
@@ -82,9 +81,11 @@ class ViewController: UIViewController {
         saveTapped.layer.cornerRadius = saveTapped.frame.size.height / 2
 
         setupNavigationBarItems()
+    }
+    
+    
+    @objc func doneButtonClicked(_ sender: Any) {
         
-//        billLabel = delegate?.totalLabel.
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,7 +101,20 @@ class ViewController: UIViewController {
         navigationItem.titleView = titleImageView
         
     }
+    
     @IBAction func addPlateTapped(_ sender: Any) {
+        if let text = plateTextField.text, !text.isEmpty {
+            let newItem = Item()
+            newItem.price = plateTextField.text!
+            newItem.image = UIImage(named: "plate-mini")!
+            self.items.append(newItem)
+            plateTextField.text = nil
+        }
+        sum()
+        calculateTip()
+    }
+    
+    @IBAction func addPlateTF(_ sender: Any) {
         if let text = plateTextField.text, !text.isEmpty {
             let newItem = Item()
             newItem.price = plateTextField.text!
@@ -124,8 +138,32 @@ class ViewController: UIViewController {
         calculateTip()
     }
     
+    @IBAction func addDessertTF(_ sender: Any) {
+        if let text = dessertTextField.text, !text.isEmpty {
+            let newItem = Item()
+            newItem.price = dessertTextField.text!
+            newItem.image = UIImage(named: "dessert-mini")!
+            self.items.append(newItem)
+            dessertTextField.text = nil
+        }
+        sum()
+        calculateTip()
+    }
+    
     @IBAction func addCoffeeTapped(_ sender: Any) {
         if let text = coffeeTextField.text, !text.isEmpty {
+            let newItem = Item()
+            newItem.price = coffeeTextField.text!
+            newItem.image = UIImage(named: "coffee-mini")!
+            self.items.append(newItem)
+            coffeeTextField.text = nil
+        }
+        sum()
+        calculateTip()
+    }
+    
+    @IBAction func addCoffeeTF(_ sender: Any) {
+       if let text = coffeeTextField.text, !text.isEmpty {
             let newItem = Item()
             newItem.price = coffeeTextField.text!
             newItem.image = UIImage(named: "coffee-mini")!
@@ -147,19 +185,29 @@ class ViewController: UIViewController {
         }
         sum()
         calculateTip()
-
+    }
+    
+    @IBAction func addAlcoTF(_ sender: Any) {
+        if let text = alcoTextField.text, !text.isEmpty {
+            let newItem = Item()
+            newItem.price = alcoTextField.text!
+            newItem.image = UIImage(named: "alco-mini")!
+            self.items.append(newItem)
+            alcoTextField.text = nil
+            print(newItem.date)
+        }
+        sum()
+        calculateTip()
     }
     
     @IBAction func calculateTapped(_ sender: Any) {
         calculateTip()
-
     }
     
     @IBAction func saveTapped(_ sender: Any) {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             let sumBT = BillsEntity(context: context)
             sumBT.price = String(Int(billLabel.text!)! + Int(tipLabel.text!)!)
-//            sumBT.image = UIImage(named: "app-mini")
             sumBT.date = "\(dateFormatter.string(from: currentdate))"
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
             loadView()
@@ -174,9 +222,6 @@ class ViewController: UIViewController {
         billListTVC?.delegate = self
         let historyTVC = segue.destination as? HistoryTableViewController
         historyTVC?.delegateTB = self
-//        historyTVC?.saveBill = billLabel.text!
-//        billListTVC.delegateTotal = self
-        
     }
     
     func calculateTip() {
@@ -184,7 +229,6 @@ class ViewController: UIViewController {
         let tipPercetage = Double(tipTextField.text!)!
         let tip = bill * (tipPercetage / 100)
         tipLabel.text = "\(Int(tip))"
-        
     }
     
     func sum() {
@@ -193,24 +237,12 @@ class ViewController: UIViewController {
             total += Int(item.price)!
             }
             billLabel.text = "\(total)"
-        }
-    
-            
-    
-//    func textTotal(text:String?) {
-//        billLabel.text = text
-//    }
-    
-//    func refreshButton() {
-//        navigationController?.popToRootViewController(animated: true)
-//    }
+    }
     
     @IBAction func refreshTapped(_ sender: Any) {
-//        refreshButton()
         loadView()
         viewDidLoad()
         items.removeAll()
     }
+    
 }
-
-

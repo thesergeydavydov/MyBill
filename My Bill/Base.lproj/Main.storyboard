@@ -40,6 +40,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="addDessertTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="V43-lj-rr3"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhs-Pe-Dfb">
                                         <rect key="frame" x="20" y="173" width="100" height="100"/>
@@ -84,6 +87,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="addPlateTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="KUj-Lf-bXU"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="..." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="4XE-5X-hOO" customClass="roundTextField" customModule="My_Bill" customModuleProvider="target">
                                 <rect key="frame" x="40" y="345" width="100" height="34"/>
@@ -93,6 +99,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="addCoffeeTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="yLE-DV-27R"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="..." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="sOC-lU-rPk" customClass="roundTextField" customModule="My_Bill" customModuleProvider="target">
                                 <rect key="frame" x="235" y="345" width="100" height="34"/>
@@ -102,6 +111,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="addAlcoTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Qfz-7a-qrL"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvn-wP-Xrr">
                                 <rect key="frame" x="20" y="414" width="335" height="30"/>
@@ -338,7 +350,9 @@
                             <outlet property="delegate" destination="ypD-Dp-vYe" id="Q65-4I-5rw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Bill" id="PPH-FI-SHA"/>
+                    <navigationItem key="navigationItem" title="Bill" id="PPH-FI-SHA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="n0S-li-3ge"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="totalLabel" destination="wAr-QA-4Go" id="QaO-M8-AEV"/>
                     </connections>
