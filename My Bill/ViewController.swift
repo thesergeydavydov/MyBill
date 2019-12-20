@@ -8,41 +8,12 @@
 
 import UIKit
 //import IQKeyboardManagerSwift
-//import Foundation
-
-class roundImageView: UIImageView {
-    override func didMoveToWindow() {
-        self.backgroundColor = UIColor.white
-        self.clipsToBounds = true
-        self.layer.cornerRadius = 10
-    }
-}
-
-class roundView: UIView {
-    override func didMoveToWindow() {
-        self.clipsToBounds = false
-        self.layer.shadowColor = UIColor.lightGray.cgColor
-        self.layer.shadowOpacity = 0.4
-        self.layer.shadowOffset = CGSize.zero
-        self.layer.shadowRadius = 10
-        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: 10).cgPath
-    }
-}
-
-class roundTextField: UITextField {
-    override func didMoveToWindow() {
-        self.layer.cornerRadius = self.frame.size.height / 2
-        self.layer.borderWidth = 0.5
-        self.layer.borderColor = UIColor.lightGray.cgColor
-        self.clipsToBounds = true
-    }
-}
-
+import Foundation
 
 class ViewController: UIViewController {
      
-    @IBOutlet weak var menuPadView: roundView!
-    @IBOutlet weak var menuPadImage: roundImageView!
+    @IBOutlet weak var menuPadView: UIView!
+    @IBOutlet weak var menuPadImage: UIImageView!
     
     @IBOutlet weak var plateTextField: UITextField!
     @IBOutlet weak var dessertTextField: UITextField!
@@ -83,11 +54,6 @@ class ViewController: UIViewController {
         setupNavigationBarItems()
     }
     
-    
-    @objc func doneButtonClicked(_ sender: Any) {
-        
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         sum()
         calculateTip()
@@ -99,7 +65,6 @@ class ViewController: UIViewController {
         titleImageView.contentMode = .scaleAspectFit
         
         navigationItem.titleView = titleImageView
-        
     }
     
     @IBAction func addPlateTapped(_ sender: Any) {
@@ -213,7 +178,6 @@ class ViewController: UIViewController {
             loadView()
             viewDidLoad()
             items.removeAll()
-            
         }
     }
     
@@ -244,10 +208,5 @@ class ViewController: UIViewController {
         viewDidLoad()
         items.removeAll()
     }
-    
-}
-extension UIColor {
-
-    static let coral = UIColor(red: 1, green: 0.4, blue: 0.4, alpha: 1)
 
 }
