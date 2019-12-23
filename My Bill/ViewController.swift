@@ -30,6 +30,9 @@ class ViewController: UIViewController {
 
     var totalBills : [BillsEntity] = []
     
+    var total = 0
+    var tip = 0
+    
     let currentdate = Date()
     let dateFormatter = DateFormatter()
 
@@ -55,8 +58,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        sum()
-        calculateTip()
+
     }
     
     private func setupNavigationBarItems() {
@@ -165,6 +167,10 @@ class ViewController: UIViewController {
         calculateTip()
     }
     
+    @IBAction func tipTF(_ sender: Any) {
+        calculateTip()
+    }
+    
     @IBAction func calculateTapped(_ sender: Any) {
         calculateTip()
     }
@@ -172,7 +178,7 @@ class ViewController: UIViewController {
     @IBAction func saveTapped(_ sender: Any) {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             let sumBT = BillsEntity(context: context)
-            sumBT.price = String(Int(billLabel.text!)! + Int(tipLabel.text!)!)
+            sumBT.price = String(total + tip)
             sumBT.date = "\(dateFormatter.string(from: currentdate))"
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
             loadView()
@@ -189,19 +195,50 @@ class ViewController: UIViewController {
     }
     
     func calculateTip() {
-        let bill = Double(billLabel.text!)!
-        let tipPercetage = Double(tipTextField.text!)!
-        let tip = bill * (tipPercetage / 100)
-        tipLabel.text = "\(Int(tip))"
+        let tipPercetage = Int(tipTextField.text!)!
+        tip = total * tipPercetage / 100
+        let formatter = NumberFormatter()
+               formatter.maximumFractionDigits = 0
+               formatter.numberStyle = .currency
+               formatter.locale = Locale.current
+               let sumString = formatter.string(from: NSNumber(value: tip))
+               if sumString != nil {
+               tipLabel.text = sumString
+               }
+//        tipLabel.text = "\(tip)".formattedWithSeparator
+//        tipLabel.text = groupSeparator(numb: Int(tip))
+//            tipLabel.text = "\(Int(tip))"
     }
     
     func sum() {
-        var total = 0
+        
+        
         for item in items {
             total += Int(item.price)!
             }
-            billLabel.text = "\(total)"
+        let formatter = NumberFormatter()
+        formatter.maximumFractionDigits = 0
+        formatter.numberStyle = .currency
+        formatter.locale = Locale.current
+        let sumString = formatter.string(from: NSNumber(value: total))
+        if sumString != nil {
+        billLabel.text = sumString
+        }
+//        billLabel.text = "\(total)"
+//        billLabel.text = groupSeparator(numb: total)
+        
     }
+    
+//    func groupSeparator(numb:Int) -> String {
+//        let formatter = NumberFormatter()
+//        formatter.usesGroupingSeparator = true
+//        formatter.numberStyle = .currency
+//        formatter.locale = Locale.current
+//        if let priceSrting =  formatter.string(from: NSNumber(value: numb)) {
+//         return priceSrting
+//        }
+//        return "0"
+//    }
     
     @IBAction func refreshTapped(_ sender: Any) {
         loadView()
@@ -210,3 +247,17 @@ class ViewController: UIViewController {
     }
 
 }
+//extension Formatter {
+//    static let withSeparator: NumberFormatter = {
+//        let formatter = NumberFormatter()
+//        formatter.groupingSeparator = " "
+//        formatter.numberStyle = .decimal
+//        return formatter
+//    }()
+//}
+//
+//extension String {
+//    var formattedWithSeparator: String {
+//        return Formatter.withSeparator.string(for: self) ?? ""
+//    }
+//}
