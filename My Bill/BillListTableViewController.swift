@@ -14,17 +14,6 @@ class BillListTableViewController: UITableViewController {
     
     var delegate: ViewController?
     
-    func sumTVC() {
-        var total = 0
-        if let items = delegate?.items {
-            for item in items {
-                total += Int(item.price)!
-            }
-        }
-
-        totalLabel.text = "\(String(total))"
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -78,6 +67,24 @@ class BillListTableViewController: UITableViewController {
             sumTVC()
         }
 
+    }
+    
+    func convertIntToCurrency(numb:Int) -> String {
+        let formatter = NumberFormatter()
+        formatter.maximumFractionDigits = 0
+        formatter.numberStyle = .currency
+        formatter.locale = Locale.current
+        return formatter.string(from: NSNumber(value: numb))!
+    }
+        
+    func sumTVC() {
+        var total = 0
+        if let items = delegate?.items {
+            for item in items {
+                total += Int(item.price)!
+                }
+            }
+            totalLabel.text = convertIntToCurrency(numb: total)
     }
     
     /*

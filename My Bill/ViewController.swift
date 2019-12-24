@@ -30,9 +30,6 @@ class ViewController: UIViewController {
 
     var totalBills : [BillsEntity] = []
     
-//    var total = 0
-//    var tip = 0
-    
     let currentdate = Date()
     let dateFormatter = DateFormatter()
 
@@ -47,10 +44,8 @@ class ViewController: UIViewController {
 //        tipTextField.addToolBar()
 //        IQKeyboardManager.shared.toolbarDoneBarButtonItemImage = UIImage(named: "app-mini")
 
-        
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
-    
         
         calculateTapped.layer.cornerRadius = calculateTapped.frame.size.height / 2
         saveTapped.layer.cornerRadius = saveTapped.frame.size.height / 2
@@ -199,44 +194,18 @@ class ViewController: UIViewController {
     }
     
     func calculateTip() {
-//        let total = 1000
-//        for item in items {
-//        total += Int(item.price)!
-//        }
         let total = convertCurrencyToInt(input: billLabel.text!)
-        
         let tipPercetage = Int(tipTextField.text!)!
         let tip = total! * tipPercetage / 100
-//        let formatter = NumberFormatter()
-//               formatter.maximumFractionDigits = 0
-//               formatter.numberStyle = .currency
-//               formatter.locale = Locale.current
-//               let sumString = formatter.string(from: NSNumber(value: tip))
-//               if sumString != nil {
-//               tipLabel.text = groupSeparator(numb: tip)
-//               }
-//        tipLabel.text = "\(tip)".formattedWithSeparator
         tipLabel.text = convertIntToCurrency(numb: tip)
-//        tipLabel.text = "\(Int(tip))"
     }
     
     func sum() {
-        
         var total = 0
         for item in items {
             total += Int(item.price)!
             }
-//        let formatter = NumberFormatter()
-//        formatter.maximumFractionDigits = 0
-//        formatter.numberStyle = .currency
-//        formatter.locale = Locale.current
-//        let sumString = formatter.string(from: NSNumber(value: total))
-//        if sumString != nil {
-//        billLabel.text = groupSeparator(numb: total)
-//        }
-//        billLabel.text = "\(total)"
         billLabel.text = convertIntToCurrency(numb: total)
-        
     }
     
     func convertIntToCurrency(numb:Int) -> String {
@@ -244,10 +213,6 @@ class ViewController: UIViewController {
         formatter.maximumFractionDigits = 0
         formatter.numberStyle = .currency
         formatter.locale = Locale.current
-//        if let priceSrting =  formatter.string(from: NSNumber(value: numb)) {
-//         return priceSrting
-//        }
-//        return "0"
         return formatter.string(from: NSNumber(value: numb))!
     }
     
@@ -265,25 +230,3 @@ class ViewController: UIViewController {
     }
 
 }
-//extension Formatter {
-//    static let withSeparator: NumberFormatter = {
-//        let formatter = NumberFormatter()
-//        formatter.groupingSeparator = " "
-//        formatter.numberStyle = .decimal
-//        return formatter
-//    }()
-//}
-//
-//extension UILabel {
-//    var formattedWithSeparator: UILabel {
-//        return Formatter.withSeparator.string(for: self) ?? ""
-//    }
-//}
-//extension UILabel {
-//    func format() {
-//        let formatter = NumberFormatter()
-//        formatter.numberStyle = .currency
-//        formatter.locale = Locale.current
-//        return formatter.currencyGroupingSeparator
-//    }
-//}

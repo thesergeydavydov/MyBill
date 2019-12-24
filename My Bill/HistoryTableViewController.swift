@@ -93,7 +93,15 @@ class HistoryTableViewController: UITableViewController {
                 total += Int(totalBill.price!)!
             }
         }
-        sumBillsLabel.text = "\(total)"
+        sumBillsLabel.text = convertIntToCurrency(numb: total)
+    }
+    
+    func convertIntToCurrency(numb:Int) -> String {
+        let formatter = NumberFormatter()
+        formatter.maximumFractionDigits = 0
+        formatter.numberStyle = .currency
+        formatter.locale = Locale.current
+        return formatter.string(from: NSNumber(value: numb))!
     }
     
     /*
