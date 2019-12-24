@@ -227,6 +227,7 @@ class ViewController: UIViewController {
         loadView()
         viewDidLoad()
         items.removeAll()
+        viewWillAppear(true)
     }
 
 }
