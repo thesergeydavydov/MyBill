@@ -11,7 +11,7 @@ import UIKit
 
 class roundImageView: UIImageView {
     override func didMoveToWindow() {
-        self.backgroundColor = UIColor.white
+//        self.backgroundColor = UIColor.white
         self.clipsToBounds = true
         self.layer.cornerRadius = 10
     }

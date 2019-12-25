@@ -12,7 +12,7 @@ import UIKit
 class roundTextField: UITextField {
     override func didMoveToWindow() {
         self.layer.cornerRadius = self.frame.size.height / 2
-        self.layer.borderWidth = 0.5
+        self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.lightGray.cgColor
         self.clipsToBounds = true
     }

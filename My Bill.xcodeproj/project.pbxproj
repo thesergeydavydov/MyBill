@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2943B7C4238D29CA00E2D3A9 /* TextFieldExtantions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2943B7C3238D29CA00E2D3A9 /* TextFieldExtantions.swift */; };
 		294C78B623A8E15500A67E11 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294C78B523A8E15500A67E11 /* HistoryTableViewController.swift */; };
+		29758B0B23B390F200D7917B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29758B0A23B390F200D7917B /* SceneDelegate.swift */; };
 		29912647239A4403001508B7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29912646239A4403001508B7 /* Item.swift */; };
 		299E3F8723ACE8BB005FC3CC /* UIImageView Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299E3F8623ACE8BB005FC3CC /* UIImageView Round.swift */; };
 		299E3F8923ACE940005FC3CC /* UIView Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299E3F8823ACE940005FC3CC /* UIView Round.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		2943B7C3238D29CA00E2D3A9 /* TextFieldExtantions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtantions.swift; sourceTree = "<group>"; };
 		294C78B523A8E15500A67E11 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		29758B0A23B390F200D7917B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		29912646239A4403001508B7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		299E3F8623ACE8BB005FC3CC /* UIImageView Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView Round.swift"; sourceTree = "<group>"; };
 		299E3F8823ACE940005FC3CC /* UIView Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView Round.swift"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				29DF759B23858D6400F8DF30 /* AppDelegate.swift */,
+				29758B0A23B390F200D7917B /* SceneDelegate.swift */,
 				29DF759F23858D6400F8DF30 /* ViewController.swift */,
 				29EAC6EA239923D500A126CC /* BillListTableViewController.swift */,
 				294C78B523A8E15500A67E11 /* HistoryTableViewController.swift */,
@@ -189,6 +192,7 @@
 				29912647239A4403001508B7 /* Item.swift in Sources */,
 				299E3F8723ACE8BB005FC3CC /* UIImageView Round.swift in Sources */,
 				29DF759C23858D6400F8DF30 /* AppDelegate.swift in Sources */,
+				29758B0B23B390F200D7917B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
