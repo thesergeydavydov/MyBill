@@ -153,10 +153,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addAlcoTF(_ sender: Any) {
-//        let formatter = NumberFormatter()
-//        formatter.locale = Locale.current
         if let text = convertStringToDouble(input: alcoTextField.text!) {
-//        if let text = alcoTextField.text, !text.isEmpty, let myNum = formatter.number(from: text)?.doubleValue {
             let newItem = Item()
             newItem.price = text
             newItem.image = UIImage(named: "alco-mini")!
@@ -219,8 +216,6 @@ class ViewController: UIViewController {
         formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 2
         formatter.minimumFractionDigits = 2
-//        formatter.numberStyle = .currency
-//        formatter.locale = Locale.current
         return formatter.string(from: NSNumber(value: numb))!
     }
     
@@ -231,8 +226,6 @@ class ViewController: UIViewController {
         formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 2
         formatter.minimumFractionDigits = 2
-//        formatter.numberStyle = .currency
-//        formatter.locale = Locale.current
         return formatter.string(from: NSNumber(value: numb))!
     }
     
@@ -243,8 +236,6 @@ class ViewController: UIViewController {
         formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 2
         formatter.minimumFractionDigits = 2
-//        formatter.numberStyle = .currency
-//        formatter.locale = Locale.current
          return formatter.number(from: input)?.intValue
     }
     
@@ -255,15 +246,13 @@ class ViewController: UIViewController {
         formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 2
         formatter.minimumFractionDigits = 2
-//        formatter.numberStyle = .currency
-//        formatter.locale = Locale.current
         return formatter.number(from: input)?.doubleValue
     }
     
     func convertStringToDouble(input: String) -> Double? {
-            let formatter = NumberFormatter()
-            return formatter.number(from: input)?.doubleValue
-        }
+        let formatter = NumberFormatter()
+        return formatter.number(from: input)?.doubleValue
+    }
     
     @IBAction func refreshTapped(_ sender: Any) {
         loadView()

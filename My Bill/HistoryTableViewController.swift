@@ -103,8 +103,6 @@ class HistoryTableViewController: UITableViewController {
         formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 2
         formatter.minimumFractionDigits = 2
-    //        formatter.numberStyle = .currency
-    //        formatter.locale = Locale.current
         return formatter.string(from: NSNumber(value: numb))!
     }
     
