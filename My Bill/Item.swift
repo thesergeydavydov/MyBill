@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class Item {
-    var price = ""
+    var price = Double()
     var image = UIImage()
     var date = ""
 }

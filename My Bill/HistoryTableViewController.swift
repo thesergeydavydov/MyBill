@@ -87,20 +87,24 @@ class HistoryTableViewController: UITableViewController {
     }
     
     func sumBillsHTVC() {
-        var total = 0
+        var total = 0.00
         if let totalBills = delegateTB?.totalBills {
             for totalBill in totalBills {
-                total += Int(totalBill.price!)!
+                total += Double(totalBill.price!)!
             }
         }
-        sumBillsLabel.text = convertIntToCurrency(numb: total)
+        sumBillsLabel.text = convertDoubleToCurrency(numb: total)
     }
     
-    func convertIntToCurrency(numb:Int) -> String {
+    func convertDoubleToCurrency(numb:Double) -> String {
         let formatter = NumberFormatter()
-        formatter.maximumFractionDigits = 0
-        formatter.numberStyle = .currency
-        formatter.locale = Locale.current
+        formatter.groupingSeparator = " "
+        formatter.decimalSeparator = "."
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+    //        formatter.numberStyle = .currency
+    //        formatter.locale = Locale.current
         return formatter.string(from: NSNumber(value: numb))!
     }
     

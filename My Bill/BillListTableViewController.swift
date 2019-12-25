@@ -41,9 +41,9 @@ class BillListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "BillRow")
         cell.detailTextLabel?.text = delegate!.items[indexPath.row].date
-        cell.textLabel?.text = delegate!.items[indexPath.row].price
+        cell.textLabel?.text = String(delegate!.items[indexPath.row].price)
         cell.imageView?.image = delegate!.items[indexPath.row].image
-        
+
         // Configure the cell...
 
         return cell
@@ -69,22 +69,26 @@ class BillListTableViewController: UITableViewController {
 
     }
     
-    func convertIntToCurrency(numb:Int) -> String {
+    func convertDoubleToCurrency(numb:Double) -> String {
         let formatter = NumberFormatter()
-        formatter.maximumFractionDigits = 0
-        formatter.numberStyle = .currency
-        formatter.locale = Locale.current
+        formatter.groupingSeparator = " "
+        formatter.decimalSeparator = "."
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+    //        formatter.numberStyle = .currency
+    //        formatter.locale = Locale.current
         return formatter.string(from: NSNumber(value: numb))!
     }
         
     func sumTVC() {
-        var total = 0
+        var total = 0.00
         if let items = delegate?.items {
             for item in items {
-                total += Int(item.price)!
+                total += Double(item.price)
                 }
             }
-            totalLabel.text = convertIntToCurrency(numb: total)
+            totalLabel.text = convertDoubleToCurrency(numb: total)
     }
     
     /*

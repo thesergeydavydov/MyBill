@@ -51,6 +51,7 @@ class ViewController: UIViewController {
         saveTapped.layer.cornerRadius = saveTapped.frame.size.height / 2
 
         setupNavigationBarItems()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,9 +68,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addPlateTapped(_ sender: Any) {
-        if let text = plateTextField.text, !text.isEmpty {
+       if let text = convertStringToDouble(input: plateTextField.text!) {
             let newItem = Item()
-            newItem.price = plateTextField.text!
+            newItem.price = text
             newItem.image = UIImage(named: "plate-mini")!
             self.items.append(newItem)
             plateTextField.text = nil
@@ -77,11 +78,11 @@ class ViewController: UIViewController {
         sum()
         calculateTip()
     }
-    
+
     @IBAction func addPlateTF(_ sender: Any) {
-        if let text = plateTextField.text, !text.isEmpty {
+        if let text = convertStringToDouble(input: plateTextField.text!) {
             let newItem = Item()
-            newItem.price = plateTextField.text!
+            newItem.price = text
             newItem.image = UIImage(named: "plate-mini")!
             self.items.append(newItem)
             plateTextField.text = nil
@@ -89,11 +90,11 @@ class ViewController: UIViewController {
         sum()
         calculateTip()
     }
-    
+
     @IBAction func addDessertTapped(_ sender: Any) {
-        if let text = dessertTextField.text, !text.isEmpty {
+        if let text = convertStringToDouble(input: dessertTextField.text!) {
             let newItem = Item()
-            newItem.price = dessertTextField.text!
+            newItem.price = text
             newItem.image = UIImage(named: "dessert-mini")!
             self.items.append(newItem)
             dessertTextField.text = nil
@@ -101,11 +102,11 @@ class ViewController: UIViewController {
         sum()
         calculateTip()
     }
-    
+
     @IBAction func addDessertTF(_ sender: Any) {
-        if let text = dessertTextField.text, !text.isEmpty {
+        if let text = convertStringToDouble(input: dessertTextField.text!) {
             let newItem = Item()
-            newItem.price = dessertTextField.text!
+            newItem.price = text
             newItem.image = UIImage(named: "dessert-mini")!
             self.items.append(newItem)
             dessertTextField.text = nil
@@ -113,11 +114,11 @@ class ViewController: UIViewController {
         sum()
         calculateTip()
     }
-    
+
     @IBAction func addCoffeeTapped(_ sender: Any) {
-        if let text = coffeeTextField.text, !text.isEmpty {
+        if let text = convertStringToDouble(input: coffeeTextField.text!) {
             let newItem = Item()
-            newItem.price = coffeeTextField.text!
+            newItem.price = text
             newItem.image = UIImage(named: "coffee-mini")!
             self.items.append(newItem)
             coffeeTextField.text = nil
@@ -125,11 +126,11 @@ class ViewController: UIViewController {
         sum()
         calculateTip()
     }
-    
+
     @IBAction func addCoffeeTF(_ sender: Any) {
-       if let text = coffeeTextField.text, !text.isEmpty {
+        if let text = convertStringToDouble(input: coffeeTextField.text!) {
             let newItem = Item()
-            newItem.price = coffeeTextField.text!
+            newItem.price = text
             newItem.image = UIImage(named: "coffee-mini")!
             self.items.append(newItem)
             coffeeTextField.text = nil
@@ -137,11 +138,11 @@ class ViewController: UIViewController {
         sum()
         calculateTip()
     }
-    
+
     @IBAction func addAlcoTapped(_ sender: Any) {
-        if let text = alcoTextField.text, !text.isEmpty {
+        if let text = convertStringToDouble(input: alcoTextField.text!) {
             let newItem = Item()
-            newItem.price = alcoTextField.text!
+            newItem.price = text
             newItem.image = UIImage(named: "alco-mini")!
             self.items.append(newItem)
             alcoTextField.text = nil
@@ -152,9 +153,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addAlcoTF(_ sender: Any) {
-        if let text = alcoTextField.text, !text.isEmpty {
+//        let formatter = NumberFormatter()
+//        formatter.locale = Locale.current
+        if let text = convertStringToDouble(input: alcoTextField.text!) {
+//        if let text = alcoTextField.text, !text.isEmpty, let myNum = formatter.number(from: text)?.doubleValue {
             let newItem = Item()
-            newItem.price = alcoTextField.text!
+            newItem.price = text
             newItem.image = UIImage(named: "alco-mini")!
             self.items.append(newItem)
             alcoTextField.text = nil
@@ -173,8 +177,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveTapped(_ sender: Any) {
-        let total = convertCurrencyToInt(input: billLabel.text!)
-        let tip = convertCurrencyToInt(input: tipLabel.text!)
+        let total = convertCurrencyToDouble(input: billLabel.text!)
+        let tip = convertCurrencyToDouble(input: tipLabel.text!)
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             let sumBT = BillsEntity(context: context)
             sumBT.price = String(total! + tip!)
@@ -194,34 +198,72 @@ class ViewController: UIViewController {
     }
     
     func calculateTip() {
-        let total = convertCurrencyToInt(input: billLabel.text!)
-        let tipPercetage = Int(tipTextField.text!)!
+        let total = convertCurrencyToDouble(input: billLabel.text!)
+        let tipPercetage = Double(tipTextField.text!)!
         let tip = total! * tipPercetage / 100
-        tipLabel.text = convertIntToCurrency(numb: tip)
+        tipLabel.text = convertDoubleToCurrency(numb: tip)
     }
     
     func sum() {
-        var total = 0
+        var total = 0.00
         for item in items {
-            total += Int(item.price)!
+            total += Double(item.price)
             }
-        billLabel.text = convertIntToCurrency(numb: total)
+        billLabel.text = convertDoubleToCurrency(numb: total)
     }
     
     func convertIntToCurrency(numb:Int) -> String {
         let formatter = NumberFormatter()
-        formatter.maximumFractionDigits = 0
-        formatter.numberStyle = .currency
-        formatter.locale = Locale.current
+        formatter.groupingSeparator = " "
+        formatter.decimalSeparator = "."
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+//        formatter.numberStyle = .currency
+//        formatter.locale = Locale.current
+        return formatter.string(from: NSNumber(value: numb))!
+    }
+    
+    func convertDoubleToCurrency(numb:Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.groupingSeparator = " "
+        formatter.decimalSeparator = "."
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+//        formatter.numberStyle = .currency
+//        formatter.locale = Locale.current
         return formatter.string(from: NSNumber(value: numb))!
     }
     
     func convertCurrencyToInt(input: String) -> Int? {
-         let formatter = NumberFormatter()
-         formatter.numberStyle = .currency
-         formatter.locale = Locale.current
+        let formatter = NumberFormatter()
+        formatter.groupingSeparator = " "
+        formatter.decimalSeparator = "."
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+//        formatter.numberStyle = .currency
+//        formatter.locale = Locale.current
          return formatter.number(from: input)?.intValue
     }
+    
+    func convertCurrencyToDouble(input: String) -> Double? {
+        let formatter = NumberFormatter()
+        formatter.groupingSeparator = " "
+        formatter.decimalSeparator = "."
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+//        formatter.numberStyle = .currency
+//        formatter.locale = Locale.current
+        return formatter.number(from: input)?.doubleValue
+    }
+    
+    func convertStringToDouble(input: String) -> Double? {
+            let formatter = NumberFormatter()
+            return formatter.number(from: input)?.doubleValue
+        }
     
     @IBAction func refreshTapped(_ sender: Any) {
         loadView()
