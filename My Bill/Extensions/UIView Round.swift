@@ -15,7 +15,7 @@ class roundView: UIView {
         self.layer.shadowColor = UIColor.lightGray.cgColor
         self.layer.shadowOpacity = 0.4
         self.layer.shadowOffset = CGSize.zero
-        self.layer.shadowRadius = 10
-        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: 10).cgPath
+        self.layer.shadowRadius = 7
+        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: 7).cgPath
     }
 }
