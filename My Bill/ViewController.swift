@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         
-        calculateTapped.layer.cornerRadius = calculateTapped.frame.size.height / 2
+//        calculateTapped.layer.cornerRadius = calculateTapped.frame.size.height / 2
         saveTapped.layer.cornerRadius = saveTapped.frame.size.height / 2
 
         setupNavigationBarItems()
