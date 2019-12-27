@@ -41,7 +41,7 @@ class BillListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "BillRow")
         cell.detailTextLabel?.text = delegate!.items[indexPath.row].date
-        cell.textLabel?.text = String(delegate!.items[indexPath.row].price)
+        cell.textLabel?.text = String(format: "%g", delegate!.items[indexPath.row].price)
         cell.imageView?.image = delegate!.items[indexPath.row].image
 
         // Configure the cell...

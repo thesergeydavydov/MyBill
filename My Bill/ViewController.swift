@@ -12,8 +12,8 @@ import Foundation
 
 class ViewController: UIViewController {
      
-    @IBOutlet weak var menuPadView: UIView!
-    @IBOutlet weak var menuPadImage: UIImageView!
+    @IBOutlet weak var menuPadView: roundView!
+    @IBOutlet weak var menuPadImage: roundImageView!
     
     @IBOutlet weak var plateTextField: UITextField!
     @IBOutlet weak var dessertTextField: UITextField!
@@ -178,7 +178,7 @@ class ViewController: UIViewController {
         let tip = convertCurrencyToDouble(input: tipLabel.text!)
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             let sumBT = BillsEntity(context: context)
-            sumBT.price = String(total! + tip!)
+            sumBT.price = String(format: "%g", total! + tip!)
             sumBT.date = "\(dateFormatter.string(from: currentdate))"
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
             loadView()
@@ -209,15 +209,15 @@ class ViewController: UIViewController {
         billLabel.text = convertDoubleToCurrency(numb: total)
     }
     
-    func convertIntToCurrency(numb:Int) -> String {
-        let formatter = NumberFormatter()
-        formatter.groupingSeparator = " "
-        formatter.decimalSeparator = "."
-        formatter.numberStyle = .decimal
-        formatter.maximumFractionDigits = 2
-        formatter.minimumFractionDigits = 2
-        return formatter.string(from: NSNumber(value: numb))!
-    }
+//    func convertIntToCurrency(numb:Int) -> String {
+//        let formatter = NumberFormatter()
+//        formatter.groupingSeparator = " "
+//        formatter.decimalSeparator = "."
+//        formatter.numberStyle = .decimal
+//        formatter.maximumFractionDigits = 2
+//        formatter.minimumFractionDigits = 2
+//        return formatter.string(from: NSNumber(value: numb))!
+//    }
     
     func convertDoubleToCurrency(numb:Double) -> String {
         let formatter = NumberFormatter()
@@ -229,15 +229,15 @@ class ViewController: UIViewController {
         return formatter.string(from: NSNumber(value: numb))!
     }
     
-    func convertCurrencyToInt(input: String) -> Int? {
-        let formatter = NumberFormatter()
-        formatter.groupingSeparator = " "
-        formatter.decimalSeparator = "."
-        formatter.numberStyle = .decimal
-        formatter.maximumFractionDigits = 2
-        formatter.minimumFractionDigits = 2
-         return formatter.number(from: input)?.intValue
-    }
+//    func convertCurrencyToInt(input: String) -> Int? {
+//        let formatter = NumberFormatter()
+//        formatter.groupingSeparator = " "
+//        formatter.decimalSeparator = "."
+//        formatter.numberStyle = .decimal
+//        formatter.maximumFractionDigits = 2
+//        formatter.minimumFractionDigits = 2
+//         return formatter.number(from: input)?.intValue
+//    }
     
     func convertCurrencyToDouble(input: String) -> Double? {
         let formatter = NumberFormatter()
