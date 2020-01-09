@@ -22,9 +22,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var billLabel: UILabel!
     @IBOutlet weak var tipTextField: UITextField!
-    @IBOutlet weak var calculateTapped: UIButton!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var saveTapped: UIButton!
+    
+    
     
     var items : [Item] = []
 
@@ -43,7 +44,7 @@ class ViewController: UIViewController {
 //        alcoTextField.addToolBar()
 //        tipTextField.addToolBar()
 //        IQKeyboardManager.shared.toolbarDoneBarButtonItemImage = UIImage(named: "app-mini")
-
+        
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         
@@ -67,15 +68,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addPlateTapped(_ sender: Any) {
-       if let text = convertStringToDouble(input: plateTextField.text!) {
-            let newItem = Item()
-            newItem.price = text
-            newItem.image = UIImage(named: "plate-mini")!
-            self.items.append(newItem)
-            plateTextField.text = nil
-        }
-        sum()
-        calculateTip()
+        plateTextField.becomeFirstResponder()
     }
 
     @IBAction func addPlateTF(_ sender: Any) {
@@ -91,15 +84,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func addDessertTapped(_ sender: Any) {
-        if let text = convertStringToDouble(input: dessertTextField.text!) {
-            let newItem = Item()
-            newItem.price = text
-            newItem.image = UIImage(named: "dessert-mini")!
-            self.items.append(newItem)
-            dessertTextField.text = nil
-        }
-        sum()
-        calculateTip()
+        dessertTextField.becomeFirstResponder()
     }
 
     @IBAction func addDessertTF(_ sender: Any) {
@@ -115,15 +100,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func addCoffeeTapped(_ sender: Any) {
-        if let text = convertStringToDouble(input: coffeeTextField.text!) {
-            let newItem = Item()
-            newItem.price = text
-            newItem.image = UIImage(named: "coffee-mini")!
-            self.items.append(newItem)
-            coffeeTextField.text = nil
-        }
-        sum()
-        calculateTip()
+        coffeeTextField.becomeFirstResponder()
     }
 
     @IBAction func addCoffeeTF(_ sender: Any) {
@@ -139,16 +116,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func addAlcoTapped(_ sender: Any) {
-        if let text = convertStringToDouble(input: alcoTextField.text!) {
-            let newItem = Item()
-            newItem.price = text
-            newItem.image = UIImage(named: "alco-mini")!
-            self.items.append(newItem)
-            alcoTextField.text = nil
-            print(newItem.date)
-        }
-        sum()
-        calculateTip()
+        alcoTextField.becomeFirstResponder()
     }
     
     @IBAction func addAlcoTF(_ sender: Any) {
