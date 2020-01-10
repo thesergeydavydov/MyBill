@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipTextField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var saveTapped: UIButton!
+    @IBOutlet weak var totalLabel: UILabel!
     
     
     
@@ -57,6 +58,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         sum()
         calculateTip()
+        totalSum()
     }
     
     private func setupNavigationBarItems() {
@@ -81,6 +83,7 @@ class ViewController: UIViewController {
         }
         sum()
         calculateTip()
+        totalSum()
     }
 
     @IBAction func addDessertTapped(_ sender: Any) {
@@ -97,6 +100,7 @@ class ViewController: UIViewController {
         }
         sum()
         calculateTip()
+        totalSum()
     }
 
     @IBAction func addCoffeeTapped(_ sender: Any) {
@@ -113,6 +117,7 @@ class ViewController: UIViewController {
         }
         sum()
         calculateTip()
+        totalSum()
     }
 
     @IBAction func addAlcoTapped(_ sender: Any) {
@@ -130,14 +135,12 @@ class ViewController: UIViewController {
         }
         sum()
         calculateTip()
+        totalSum()
     }
     
     @IBAction func tipTF(_ sender: Any) {
         calculateTip()
-    }
-    
-    @IBAction func calculateTapped(_ sender: Any) {
-        calculateTip()
+        totalSum()
     }
     
     @IBAction func saveTapped(_ sender: Any) {
@@ -174,6 +177,13 @@ class ViewController: UIViewController {
             total += Double(item.price)
             }
         billLabel.text = convertDoubleToCurrency(numb: total)
+    }
+    
+    func totalSum() {
+        let total = convertCurrencyToDouble(input: billLabel.text!)
+        let tip = convertCurrencyToDouble(input: tipLabel.text!)
+        let totalSum = total! + tip!
+        totalLabel.text = convertDoubleToCurrency(numb: totalSum)
     }
     
 //    func convertIntToCurrency(numb:Int) -> String {
