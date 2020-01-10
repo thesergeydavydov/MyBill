@@ -150,7 +150,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-kS-q4h">
                                 <rect key="frame" x="15" y="398" width="384" height="32.666666666666686"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -173,8 +173,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHp-tv-ip8">
-                                <rect key="frame" x="14.999999999999996" y="398" width="46.666666666666657" height="32.666666666666686"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <rect key="frame" x="14.999999999999996" y="398" width="44.666666666666657" height="32.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -242,13 +242,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zPV-YB-mMb" secondAttribute="trailing" constant="15" id="cJ0-Ac-u7d"/>
                             <constraint firstItem="pih-q4-p1t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="k7B-Ex-M8F"/>
                             <constraint firstItem="Wvn-wP-Xrr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="kGl-Bz-Ngq"/>
-                            <constraint firstItem="7FH-6f-TeK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NY0-SN-hcZ" secondAttribute="bottom" constant="3" id="lGZ-tl-n9S"/>
+                            <constraint firstItem="7FH-6f-TeK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NY0-SN-hcZ" secondAttribute="bottom" constant="1" id="lGZ-tl-n9S"/>
                             <constraint firstItem="zPV-YB-mMb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="npW-Yt-4Nv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7FH-6f-TeK" secondAttribute="trailing" constant="15" id="s07-Fa-hrc"/>
                             <constraint firstItem="zPV-YB-mMb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tu5-b8-M6L"/>
                             <constraint firstItem="pih-q4-p1t" firstAttribute="top" secondItem="hHp-tv-ip8" secondAttribute="bottom" constant="5" id="vDv-dw-fVl"/>
                             <constraint firstItem="6ib-Yc-Kla" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="wkS-Te-DbC"/>
-                            <constraint firstItem="7FH-6f-TeK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="L26-a9-fLc" secondAttribute="bottom" constant="3" id="ygJ-af-QSs"/>
+                            <constraint firstItem="7FH-6f-TeK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="L26-a9-fLc" secondAttribute="bottom" constant="1" id="ygJ-af-QSs"/>
                             <constraint firstItem="Obl-gK-Geb" firstAttribute="top" secondItem="oln-gH-4Dw" secondAttribute="bottom" constant="5" id="z9R-kz-p43"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
