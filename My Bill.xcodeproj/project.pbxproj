@@ -34,7 +34,7 @@
 		299E3F8823ACE940005FC3CC /* UIView Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView Round.swift"; sourceTree = "<group>"; };
 		299E3F8A23ACE9E2005FC3CC /* UITextField Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField Round.swift"; sourceTree = "<group>"; };
 		299E3F8C23ACEAFD005FC3CC /* UIColor Coral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor Coral.swift"; sourceTree = "<group>"; };
-		29DF759823858D6400F8DF30 /* My Bill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Bill.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29DF759823858D6400F8DF30 /* My Bill - Split & Tip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Bill - Split & Tip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29DF759B23858D6400F8DF30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29DF759F23858D6400F8DF30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		29DF75A223858D6400F8DF30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		29DF759923858D6400F8DF30 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				29DF759823858D6400F8DF30 /* My Bill.app */,
+				29DF759823858D6400F8DF30 /* My Bill - Split & Tip.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,7 +124,7 @@
 				29D4366C23914428003E1668 /* IQKeyboardManagerSwift */,
 			);
 			productName = "My Bill";
-			productReference = 29DF759823858D6400F8DF30 /* My Bill.app */;
+			productReference = 29DF759823858D6400F8DF30 /* My Bill - Split & Tip.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -336,7 +336,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 66K9C8VT35;
 				INFOPLIST_FILE = "My Bill/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -344,8 +345,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.My-Bill";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = sergey.davydov.MyBill;
+				PRODUCT_NAME = "My Bill - Split & Tip";
+				PROVISIONING_PROFILE_SPECIFIER = "MyBill App Store";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -355,7 +357,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 66K9C8VT35;
 				INFOPLIST_FILE = "My Bill/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -363,8 +366,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.My-Bill";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = sergey.davydov.MyBill;
+				PRODUCT_NAME = "My Bill - Split & Tip";
+				PROVISIONING_PROFILE_SPECIFIER = "MyBill App Store";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

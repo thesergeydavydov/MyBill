@@ -165,10 +165,15 @@ class ViewController: UIViewController {
     }
     
     func calculateTip() {
+        if (tipTextField.text!.isEmpty) {
+            let tip = 0.00
+            return tipLabel.text = convertDoubleToCurrency(numb: tip)
+        } else {
         let total = convertCurrencyToDouble(input: billLabel.text!)
         let tipPercetage = Double(tipTextField.text!)!
         let tip = total! * tipPercetage / 100
         tipLabel.text = convertDoubleToCurrency(numb: tip)
+        }
     }
     
     func sum() {
