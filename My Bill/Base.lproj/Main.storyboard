@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hqv-J5-jmo">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -13,28 +13,28 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPV-YB-mMb" customClass="roundView" customModule="My_Bill___Split___Tip" customModuleProvider="target">
-                                <rect key="frame" x="15" y="54" width="345" height="295"/>
+                                <rect key="frame" x="15" y="54" width="290" height="295"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ztU-2I-uIN" customClass="roundImageView" customModule="My_Bill___Split___Tip" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="295"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="295"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="295" id="8st-VB-5Lk"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4W-QB-yWw">
-                                        <rect key="frame" x="250" y="15" width="80" height="80"/>
+                                        <rect key="frame" x="195" y="15" width="80" height="80"/>
                                         <state key="normal" image="dessert"/>
                                         <connections>
                                             <action selector="addDessertTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UFG-Sx-6Hr"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="..." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="MQ6-Hi-ulS" customClass="roundTextField" customModule="My_Bill___Split___Tip" customModuleProvider="target">
-                                        <rect key="frame" x="250" y="103" width="80" height="34"/>
+                                        <rect key="frame" x="195" y="103" width="80" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="X5J-Eg-wth"/>
                                             <constraint firstAttribute="height" constant="34" id="o9W-2P-Ijr"/>
@@ -46,7 +46,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJy-sU-5gQ">
-                                        <rect key="frame" x="152.5" y="127.5" width="40" height="40"/>
+                                        <rect key="frame" x="125" y="127.5" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Ulg-F2-x7J"/>
                                             <constraint firstAttribute="width" constant="40" id="tCT-LF-FPX"/>
@@ -57,7 +57,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaU-B7-xMG">
-                                        <rect key="frame" x="250" y="158" width="80" height="80"/>
+                                        <rect key="frame" x="195" y="158" width="80" height="80"/>
                                         <state key="normal" image="alco"/>
                                         <connections>
                                             <action selector="addAlcoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wpE-UK-OJC"/>
@@ -71,7 +71,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="..." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="sOC-lU-rPk" customClass="roundTextField" customModule="My_Bill___Split___Tip" customModuleProvider="target">
-                                        <rect key="frame" x="250" y="246" width="80" height="34"/>
+                                        <rect key="frame" x="195" y="246" width="80" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="QPz-Zb-vSA"/>
                                             <constraint firstAttribute="height" constant="34" id="RcH-xb-tZa"/>
@@ -142,20 +142,21 @@
                                     <constraint firstItem="Q4W-QB-yWw" firstAttribute="leading" secondItem="ztU-2I-uIN" secondAttribute="trailing" constant="-95" id="zeO-dQ-mmP"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvn-wP-Xrr">
-                                <rect key="frame" x="15" y="354" width="345" height="30"/>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvn-wP-Xrr">
+                                <rect key="frame" x="10" y="355" width="300" height="30"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="ypD-Dp-vYe" kind="show" id="gbe-LR-gxV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-kS-q4h">
-                                <rect key="frame" x="15" y="354" width="345" height="32.5"/>
+                                <rect key="frame" x="15" y="354" width="290" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obl-gK-Geb">
-                                <rect key="frame" x="15" y="432.5" width="345" height="32.5"/>
+                                <rect key="frame" x="15" y="432.5" width="290" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -179,7 +180,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15" borderStyle="roundedRect" placeholder="%" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="oln-gH-4Dw">
-                                <rect key="frame" x="317" y="391.5" width="43" height="36"/>
+                                <rect key="frame" x="262" y="391.5" width="43" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="7yB-7Z-Z3G"/>
                                     <constraint firstAttribute="width" constant="43" id="uqc-U7-gEh"/>
@@ -197,7 +198,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L26-a9-fLc">
-                                <rect key="frame" x="15" y="466" width="345" height="33"/>
+                                <rect key="frame" x="15" y="466" width="290" height="33"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -205,7 +206,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wvn-wP-Xrr" secondAttribute="trailing" constant="15" id="0BD-oW-yHv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wvn-wP-Xrr" secondAttribute="trailing" constant="10" id="0BD-oW-yHv"/>
                             <constraint firstItem="zPV-YB-mMb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="1H6-Dv-Gck"/>
                             <constraint firstItem="oln-gH-4Dw" firstAttribute="top" secondItem="JAt-kS-q4h" secondAttribute="bottom" constant="5" id="69L-Tm-RM1"/>
                             <constraint firstItem="JAt-kS-q4h" firstAttribute="top" secondItem="ztU-2I-uIN" secondAttribute="bottom" constant="5" id="6F0-q2-OqA"/>
@@ -224,10 +225,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oln-gH-4Dw" secondAttribute="trailing" constant="15" id="acB-sY-I28"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L26-a9-fLc" secondAttribute="trailing" constant="15" id="amK-3d-tOW"/>
                             <constraint firstItem="6ib-Yc-Kla" firstAttribute="top" secondItem="pih-q4-p1t" secondAttribute="bottom" constant="5" id="bl1-qb-2kQ"/>
-                            <constraint firstItem="Wvn-wP-Xrr" firstAttribute="top" secondItem="ztU-2I-uIN" secondAttribute="bottom" constant="5" id="cF1-0K-HvY"/>
+                            <constraint firstItem="Wvn-wP-Xrr" firstAttribute="top" secondItem="ztU-2I-uIN" secondAttribute="bottom" constant="6" id="cF1-0K-HvY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zPV-YB-mMb" secondAttribute="trailing" constant="15" id="cJ0-Ac-u7d"/>
                             <constraint firstItem="pih-q4-p1t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="k7B-Ex-M8F"/>
-                            <constraint firstItem="Wvn-wP-Xrr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="kGl-Bz-Ngq"/>
+                            <constraint firstItem="Wvn-wP-Xrr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="kGl-Bz-Ngq"/>
                             <constraint firstItem="zPV-YB-mMb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="npW-Yt-4Nv"/>
                             <constraint firstItem="zPV-YB-mMb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tu5-b8-M6L"/>
                             <constraint firstItem="pih-q4-p1t" firstAttribute="top" secondItem="hHp-tv-ip8" secondAttribute="bottom" constant="5" id="vDv-dw-fVl"/>
@@ -254,6 +255,7 @@
                     <connections>
                         <outlet property="alcoTextField" destination="sOC-lU-rPk" id="xdy-8v-GGV"/>
                         <outlet property="billLabel" destination="JAt-kS-q4h" id="NY4-uQ-UtP"/>
+                        <outlet property="billTapped" destination="Wvn-wP-Xrr" id="3ov-nL-8gH"/>
                         <outlet property="coffeeTextField" destination="4XE-5X-hOO" id="IXt-QE-IgE"/>
                         <outlet property="dessertTextField" destination="MQ6-Hi-ulS" id="OUJ-vg-Rzb"/>
                         <outlet property="menuPadImage" destination="ztU-2I-uIN" id="oOX-4M-7Te"/>
@@ -273,11 +275,11 @@
             <objects>
                 <tableViewController id="KE1-U3-3Lk" customClass="HistoryTableViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="947-VZ-bNd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <navigationBar key="tableHeaderView" contentMode="scaleAspectFit" id="G8n-Oc-xno">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="barTintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <items>
@@ -286,10 +288,10 @@
                         </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TotalBillSaved" id="eN7-9n-gCE">
-                                <rect key="frame" x="0.0" y="99.5" width="375" height="43.5"/>
+                                <rect key="frame" x="0.0" y="99.5" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eN7-9n-gCE" id="bPC-xX-rKZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -313,10 +315,10 @@
             <objects>
                 <tableViewController id="ypD-Dp-vYe" customClass="BillListTableViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Tq-Vm-35Y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wAr-QA-4Go">
-                            <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="99.5" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.98039215690000003" green="0.40434630220000001" blue="0.34411464279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
@@ -325,10 +327,10 @@
                         </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BillRow" id="cfd-KY-fku">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cfd-KY-fku" id="l1P-z5-AC9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -375,7 +377,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nm4-Jm-wFg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipLabel: UILabel!
 //    @IBOutlet weak var saveTapped: UIButton!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var billTapped: UIButton!
     
     
     
@@ -49,6 +50,7 @@ class ViewController: UIViewController {
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         
+        billTapped.layer.cornerRadius = billTapped.frame.size.height / 6
 //        saveTapped.layer.cornerRadius = saveTapped.frame.size.height / 2
 
         setupNavigationBarItems()
