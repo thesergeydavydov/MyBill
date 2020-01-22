@@ -169,7 +169,6 @@
                                 </state>
                                 <connections>
                                     <action selector="saveTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="APc-ZF-mlv"/>
-                                    <segue destination="KE1-U3-3Lk" kind="show" id="pKR-Bw-v2q"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHp-tv-ip8">
@@ -257,9 +256,6 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="xrj-ZP-maF"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="niN-uQ-6yz">
                             <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="KE1-U3-3Lk" kind="show" id="sdl-P8-xUX"/>
-                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="onn-WZ-TxO">
                             <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -290,21 +286,21 @@
         <scene sceneID="ksK-6B-zPT">
             <objects>
                 <tableViewController id="KE1-U3-3Lk" customClass="HistoryTableViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="947-VZ-bNd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="947-VZ-bNd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RcI-sd-K4O">
-                            <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.37175488471984863" green="0.70424264669418335" blue="0.76026779413223267" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <navigationBar key="tableHeaderView" contentMode="scaleAspectFit" id="G8n-Oc-xno">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <items>
+                                <navigationItem title="History" id="pOK-yC-2KF"/>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TotalBillSaved" id="eN7-9n-gCE">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <rect key="frame" x="0.0" y="99.5" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eN7-9n-gCE" id="bPC-xX-rKZ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -317,23 +313,20 @@
                             <outlet property="delegate" destination="KE1-U3-3Lk" id="NGH-5J-YWH"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="dkb-Xl-Uut"/>
                     <navigationItem key="navigationItem" title="History" id="8Qq-GB-TVO"/>
-                    <connections>
-                        <outlet property="sumBillsLabel" destination="RcI-sd-K4O" id="UDT-ZO-I9v"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLs-S0-ZTP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069.5999999999999" y="884.70764617691157"/>
+            <point key="canvasLocation" x="954" y="904"/>
         </scene>
         <!--Bill-->
         <scene sceneID="dBP-Ta-lDP">
             <objects>
                 <tableViewController id="ypD-Dp-vYe" customClass="BillListTableViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Tq-Vm-35Y">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Tq-Vm-35Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wAr-QA-4Go">
                             <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -366,38 +359,6 @@
             </objects>
             <point key="canvasLocation" x="1840.8" y="138.98050974512745"/>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="gen-eS-q2g">
-            <objects>
-                <viewController id="i4u-4t-uRm" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Uhb-TR-ysA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="OSm-PT-hRU"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="oME-6D-Kb4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rEX-bq-hEz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1079" y="862"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="sn1-zt-1Si">
-            <objects>
-                <viewController id="LDE-Db-y2D" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TjM-8P-FPB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="EVs-I4-jj8"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Blb-yr-rqb"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z22-2G-u3U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-374" y="862"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="n8j-1X-ACd">
             <objects>
@@ -409,8 +370,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="WAN-cE-nYK" kind="relationship" relationship="viewControllers" id="uRy-xE-DbI"/>
-                        <segue destination="LDE-Db-y2D" kind="relationship" relationship="viewControllers" id="aZC-os-htl"/>
-                        <segue destination="i4u-4t-uRm" kind="relationship" relationship="viewControllers" id="w4U-uZ-Wvx"/>
+                        <segue destination="KE1-U3-3Lk" kind="relationship" relationship="viewControllers" id="Pf0-ws-TIJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poR-oP-sCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -446,6 +406,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="r6B-I6-59L"/>
-        <segue reference="sdl-P8-xUX"/>
     </inferredMetricsTieBreakers>
 </document>

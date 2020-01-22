@@ -12,12 +12,12 @@ class HistoryTableViewController: UITableViewController {
     
     @IBOutlet weak var sumBillsLabel: UILabel!
     
-    var delegateTB: ViewController?
+    var delegateTB: [BillsEntity] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sumBillsHTVC()
+//        sumBillsHTVC()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -30,13 +30,13 @@ class HistoryTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         getCoreDataInfo()
-        sumBillsHTVC()
+//        sumBillsHTVC()
     }
     
     func getCoreDataInfo() {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             if let coreDataBill = try? context.fetch(BillsEntity.fetchRequest()) as? [BillsEntity]{
-                delegateTB?.totalBills = coreDataBill
+                delegateTB = coreDataBill
                 tableView.reloadData()
             }
         }
@@ -48,13 +48,13 @@ class HistoryTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return delegateTB!.totalBills.count
+        return delegateTB.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "TotalBillSaved")
-        cell.detailTextLabel?.text = delegateTB!.totalBills[indexPath.row].date
-        cell.textLabel?.text = delegateTB!.totalBills[indexPath.row].price
+        cell.detailTextLabel?.text = delegateTB[indexPath.row].date
+        cell.textLabel?.text = delegateTB[indexPath.row].price
         cell.imageView?.image = UIImage(named: "app-mini")
         // Configure the cell...
 
@@ -73,7 +73,7 @@ class HistoryTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let totalBill = delegateTB!.totalBills[indexPath.row]
+            let totalBill = delegateTB[indexPath.row]
             if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             context.delete(totalBill)
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
@@ -81,20 +81,20 @@ class HistoryTableViewController: UITableViewController {
             // Delete the row from the data source
 //            tableView.deleteRows(at: [indexPath], with: .fade)
 
-            sumBillsHTVC()
+//            sumBillsHTVC()
             }
         }
     }
     
-    func sumBillsHTVC() {
-        var total = 0.00
-        if let totalBills = delegateTB?.totalBills {
-            for totalBill in totalBills {
-                total += Double(totalBill.price!)!
-            }
-        }
-        sumBillsLabel.text = convertDoubleToCurrency(numb: total)
-    }
+//    func sumBillsHTVC() {
+//        var total = 0.00
+//        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+//            let sumBills = BillsEntity(context: context)
+//            print(sumBills.price)
+////            total += Double(sumBills.price!)!
+//        }
+//        sumBillsLabel.text = convertDoubleToCurrency(numb: total)
+//    }
     
     func convertDoubleToCurrency(numb:Double) -> String {
         let formatter = NumberFormatter()
