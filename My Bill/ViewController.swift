@@ -202,6 +202,7 @@ class ViewController: UIViewController {
         self.view.addSubview(popUpVC.view)
 
         popUpVC.didMove(toParent: self)
+        
     }
     
 //    func convertIntToCurrency(numb:Int) -> String {

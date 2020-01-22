@@ -319,18 +319,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bY1-fQ-9n9">
-                                <rect key="frame" x="60" y="169" width="200" height="230"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="60" y="209" width="200" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cleared!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1O-sG-SVX">
+                                        <rect key="frame" x="50" y="59.5" width="100.5" height="31.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="vkW-6V-ihb"/>
+                                    <constraint firstItem="o1O-sG-SVX" firstAttribute="centerX" secondItem="bY1-fQ-9n9" secondAttribute="centerX" id="RRW-3E-llt"/>
+                                    <constraint firstAttribute="height" constant="150" id="vkW-6V-ihb"/>
                                     <constraint firstAttribute="width" constant="200" id="wLO-yd-Vel"/>
+                                    <constraint firstItem="o1O-sG-SVX" firstAttribute="centerY" secondItem="bY1-fQ-9n9" secondAttribute="centerY" id="y0g-4F-uUG"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReW-zk-alL">
+                                <rect key="frame" x="20" y="20" width="280" height="528"/>
+                                <connections>
+                                    <action selector="closeTapped:" destination="4RA-e0-nYz" eventType="touchUpInside" id="cOh-5a-RHQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="bY1-fQ-9n9" firstAttribute="centerY" secondItem="kxZ-lh-aFQ" secondAttribute="centerY" id="3Fn-bN-Ecn"/>
+                            <constraint firstItem="ReW-zk-alL" firstAttribute="top" secondItem="M7a-18-90l" secondAttribute="top" constant="20" id="5yn-Xv-rIp"/>
+                            <constraint firstItem="ReW-zk-alL" firstAttribute="centerY" secondItem="kxZ-lh-aFQ" secondAttribute="centerY" id="FQe-cm-z4a"/>
                             <constraint firstItem="bY1-fQ-9n9" firstAttribute="centerX" secondItem="kxZ-lh-aFQ" secondAttribute="centerX" id="IMS-ly-63s"/>
+                            <constraint firstItem="ReW-zk-alL" firstAttribute="centerX" secondItem="kxZ-lh-aFQ" secondAttribute="centerX" id="ScE-jL-YJd"/>
+                            <constraint firstItem="M7a-18-90l" firstAttribute="bottom" secondItem="ReW-zk-alL" secondAttribute="bottom" constant="20" id="Ut1-j3-vA1"/>
+                            <constraint firstItem="ReW-zk-alL" firstAttribute="leading" secondItem="M7a-18-90l" secondAttribute="leading" constant="20" id="hnT-oT-oVm"/>
+                            <constraint firstItem="M7a-18-90l" firstAttribute="trailing" secondItem="ReW-zk-alL" secondAttribute="trailing" constant="20" id="s8H-D6-vHZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M7a-18-90l"/>
                     </view>
