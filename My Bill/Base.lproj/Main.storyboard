@@ -160,17 +160,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FH-6f-TeK">
-                                <rect key="frame" x="15" y="564" width="345" height="39"/>
-                                <color key="backgroundColor" red="1" green="0.44713640213012695" blue="0.36063635349273682" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="SAVE">
-                                    <color key="titleColor" red="0.91033118960000003" green="0.93782466649999996" blue="0.96153682470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="APc-ZF-mlv"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHp-tv-ip8">
                                 <rect key="frame" x="15" y="354" width="45" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
@@ -222,7 +211,6 @@
                             <constraint firstItem="JAt-kS-q4h" firstAttribute="top" secondItem="ztU-2I-uIN" secondAttribute="bottom" constant="5" id="6F0-q2-OqA"/>
                             <constraint firstItem="Wvn-wP-Xrr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7cV-cj-zwq"/>
                             <constraint firstItem="NY0-SN-hcZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="8c7-p8-SwJ"/>
-                            <constraint firstItem="7FH-6f-TeK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="8mx-qI-umR"/>
                             <constraint firstItem="L26-a9-fLc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9IM-e7-bw3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JAt-kS-q4h" secondAttribute="trailing" constant="15" id="9mc-gy-51z"/>
                             <constraint firstItem="L26-a9-fLc" firstAttribute="top" secondItem="Obl-gK-Geb" secondAttribute="bottom" constant="1" id="CKn-7a-YIk"/>
@@ -231,7 +219,6 @@
                             <constraint firstItem="hHp-tv-ip8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Hd1-Si-1aT"/>
                             <constraint firstItem="hHp-tv-ip8" firstAttribute="top" secondItem="ztU-2I-uIN" secondAttribute="bottom" constant="5" id="IaA-mW-q50"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Obl-gK-Geb" secondAttribute="trailing" constant="15" id="IkN-Ar-A0O"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7FH-6f-TeK" secondAttribute="bottom" constant="15" id="JFo-Zn-6LU"/>
                             <constraint firstItem="Obl-gK-Geb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ruq-Kc-TYt"/>
                             <constraint firstItem="NY0-SN-hcZ" firstAttribute="top" secondItem="6ib-Yc-Kla" secondAttribute="bottom" constant="5" id="TrH-Ae-aLe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oln-gH-4Dw" secondAttribute="trailing" constant="15" id="acB-sY-I28"/>
@@ -241,26 +228,26 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zPV-YB-mMb" secondAttribute="trailing" constant="15" id="cJ0-Ac-u7d"/>
                             <constraint firstItem="pih-q4-p1t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="k7B-Ex-M8F"/>
                             <constraint firstItem="Wvn-wP-Xrr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="kGl-Bz-Ngq"/>
-                            <constraint firstItem="7FH-6f-TeK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NY0-SN-hcZ" secondAttribute="bottom" constant="1" id="lGZ-tl-n9S"/>
                             <constraint firstItem="zPV-YB-mMb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="npW-Yt-4Nv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7FH-6f-TeK" secondAttribute="trailing" constant="15" id="s07-Fa-hrc"/>
                             <constraint firstItem="zPV-YB-mMb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tu5-b8-M6L"/>
                             <constraint firstItem="pih-q4-p1t" firstAttribute="top" secondItem="hHp-tv-ip8" secondAttribute="bottom" constant="5" id="vDv-dw-fVl"/>
                             <constraint firstItem="6ib-Yc-Kla" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="wkS-Te-DbC"/>
-                            <constraint firstItem="7FH-6f-TeK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="L26-a9-fLc" secondAttribute="bottom" constant="1" id="ygJ-af-QSs"/>
                             <constraint firstItem="Obl-gK-Geb" firstAttribute="top" secondItem="oln-gH-4Dw" secondAttribute="bottom" constant="5" id="z9R-kz-p43"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Bill" id="fks-Wg-CQu">
                         <barButtonItem key="backBarButtonItem" title="Back" id="xrj-ZP-maF"/>
-                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="niN-uQ-6yz">
-                            <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="onn-WZ-TxO">
-                            <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="onn-WZ-TxO">
+                            <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="refreshTapped:" destination="BYZ-38-t0r" id="FYp-4V-8fZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" image="save" id="niN-uQ-6yz">
+                            <color key="tintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="saveTapped:" destination="BYZ-38-t0r" id="Fkk-Pl-jt5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -272,7 +259,6 @@
                         <outlet property="menuPadImage" destination="ztU-2I-uIN" id="oOX-4M-7Te"/>
                         <outlet property="menuPadView" destination="zPV-YB-mMb" id="20E-FY-fzZ"/>
                         <outlet property="plateTextField" destination="6Oz-s3-ldv" id="flQ-dm-eio"/>
-                        <outlet property="saveTapped" destination="7FH-6f-TeK" id="HCF-mE-X19"/>
                         <outlet property="tipLabel" destination="Obl-gK-Geb" id="eVL-WR-WNV"/>
                         <outlet property="tipTextField" destination="oln-gH-4Dw" id="vhK-P0-fcn"/>
                         <outlet property="totalLabel" destination="L26-a9-fLc" id="1J1-rD-C8R"/>
@@ -313,7 +299,9 @@
                             <outlet property="delegate" destination="KE1-U3-3Lk" id="NGH-5J-YWH"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="dkb-Xl-Uut"/>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="dkb-Xl-Uut">
+                        <color key="badgeColor" red="1" green="0.45136243100000001" blue="0.36432915929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="History" id="8Qq-GB-TVO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLs-S0-ZTP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -367,6 +355,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="1" green="0.45136243100000001" blue="0.36432915929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="WAN-cE-nYK" kind="relationship" relationship="viewControllers" id="uRy-xE-DbI"/>
@@ -377,11 +366,13 @@
             </objects>
             <point key="canvasLocation" x="-726" y="137"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="8YR-DK-Yfv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WAN-cE-nYK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="xE1-0P-O7B"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="xE1-0P-O7B">
+                        <color key="badgeColor" red="1" green="0.45136243100000001" blue="0.36432915929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nm4-Jm-wFg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -401,10 +392,12 @@
         <image name="alco" width="80" height="80"/>
         <image name="coffee" width="80" height="80"/>
         <image name="dessert" width="80" height="80"/>
+        <image name="home" width="30" height="30"/>
         <image name="info" width="100" height="100"/>
         <image name="plate" width="80" height="80"/>
+        <image name="save" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="r6B-I6-59L"/>
+        <segue reference="gbe-LR-gxV"/>
     </inferredMetricsTieBreakers>
 </document>

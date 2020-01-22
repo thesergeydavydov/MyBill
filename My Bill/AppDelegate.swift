@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.toolbarTintColor = UIColor.coral
 //        IQKeyboardManager.shared.previousNextDisplayMode = .alwaysShow
+        UINavigationBar.appearance().tintColor = .systemGray
         
         // Override point for customization after application launch.
         return true
