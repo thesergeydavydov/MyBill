@@ -156,6 +156,7 @@ class ViewController: UIViewController {
             loadView()
             viewDidLoad()
             items.removeAll()
+            showPopUp()
         }
     }
     
@@ -191,6 +192,16 @@ class ViewController: UIViewController {
         let tip = convertCurrencyToDouble(input: tipLabel.text!)
         let totalSum = total! + tip!
         totalLabel.text = convertDoubleToCurrency(numb: totalSum)
+    }
+    
+    func showPopUp() {
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpVCid") as! PopUpViewController
+
+        self.addChild(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view)
+
+        popUpVC.didMove(toParent: self)
     }
     
 //    func convertIntToCurrency(numb:Int) -> String {
@@ -243,6 +254,6 @@ class ViewController: UIViewController {
         viewDidLoad()
         items.removeAll()
         viewWillAppear(true)
+        showPopUp()
     }
-
 }

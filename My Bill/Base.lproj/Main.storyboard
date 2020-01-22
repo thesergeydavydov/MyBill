@@ -268,7 +268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1069.5999999999999" y="138.0809595202399"/>
+            <point key="canvasLocation" x="713" y="138"/>
         </scene>
         <!--History-->
         <scene sceneID="ksK-6B-zPT">
@@ -308,7 +308,39 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLs-S0-ZTP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="904"/>
+            <point key="canvasLocation" x="-728" y="829"/>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="Zrt-3I-c6y">
+            <objects>
+                <viewController storyboardIdentifier="popUpVCid" id="4RA-e0-nYz" customClass="PopUpViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kxZ-lh-aFQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bY1-fQ-9n9">
+                                <rect key="frame" x="60" y="169" width="200" height="230"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="vkW-6V-ihb"/>
+                                    <constraint firstAttribute="width" constant="200" id="wLO-yd-Vel"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bY1-fQ-9n9" firstAttribute="centerY" secondItem="kxZ-lh-aFQ" secondAttribute="centerY" id="3Fn-bN-Ecn"/>
+                            <constraint firstItem="bY1-fQ-9n9" firstAttribute="centerX" secondItem="kxZ-lh-aFQ" secondAttribute="centerX" id="IMS-ly-63s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M7a-18-90l"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageView" destination="bY1-fQ-9n9" id="bvu-bn-NXx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="odL-NX-CGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="712.5" y="827.11267605633805"/>
         </scene>
         <!--Bill-->
         <scene sceneID="dBP-Ta-lDP">
@@ -347,7 +379,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qaa-ml-cf2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1840.8" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1457" y="137"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="n8j-1X-ACd">
@@ -387,7 +419,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZU-PP-GjG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="138.98050974512745"/>
+            <point key="canvasLocation" x="0.0" y="136"/>
         </scene>
     </scenes>
     <resources>
