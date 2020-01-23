@@ -274,21 +274,12 @@
         <scene sceneID="ksK-6B-zPT">
             <objects>
                 <tableViewController id="KE1-U3-3Lk" customClass="HistoryTableViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="947-VZ-bNd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="947-VZ-bNd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleAspectFit" id="G8n-Oc-xno">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="barTintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            <items>
-                                <navigationItem title="History" id="pOK-yC-2KF"/>
-                            </items>
-                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TotalBillSaved" id="eN7-9n-gCE">
-                                <rect key="frame" x="0.0" y="99.5" width="320" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eN7-9n-gCE" id="bPC-xX-rKZ">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -301,14 +292,11 @@
                             <outlet property="delegate" destination="KE1-U3-3Lk" id="NGH-5J-YWH"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" systemItem="history" id="dkb-Xl-Uut">
-                        <color key="badgeColor" red="1" green="0.45136243100000001" blue="0.36432915929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
                     <navigationItem key="navigationItem" title="History" id="8Qq-GB-TVO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLs-S0-ZTP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-728" y="829"/>
+            <point key="canvasLocation" x="0.0" y="828"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="Zrt-3I-c6y">
@@ -362,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odL-NX-CGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="712.5" y="827.11267605633805"/>
+            <point key="canvasLocation" x="1457" y="828"/>
         </scene>
         <!--Bill-->
         <scene sceneID="dBP-Ta-lDP">
@@ -415,7 +403,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="WAN-cE-nYK" kind="relationship" relationship="viewControllers" id="uRy-xE-DbI"/>
-                        <segue destination="KE1-U3-3Lk" kind="relationship" relationship="viewControllers" id="Pf0-ws-TIJ"/>
+                        <segue destination="WCj-HF-p6J" kind="relationship" relationship="viewControllers" id="Pf0-ws-TIJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poR-oP-sCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -442,6 +430,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZU-PP-GjG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="136"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tbK-Zs-zpk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WCj-HF-p6J" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="history" id="dkb-Xl-Uut">
+                        <color key="badgeColor" red="1" green="0.45136243100000001" blue="0.36432915929999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jxq-z2-E49">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KE1-U3-3Lk" kind="relationship" relationship="rootViewController" id="qyR-Gi-MdZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KFM-B8-569" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-729.375" y="828.16901408450701"/>
         </scene>
     </scenes>
     <resources>
