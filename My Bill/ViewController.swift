@@ -156,7 +156,7 @@ class ViewController: UIViewController {
             loadView()
             viewDidLoad()
             items.removeAll()
-            showPopUp()
+            showSavedPopUp()
         }
     }
     
@@ -202,6 +202,17 @@ class ViewController: UIViewController {
         self.view.addSubview(popUpVC.view)
 
         popUpVC.didMove(toParent: self)
+        
+    }
+    
+    func showSavedPopUp() {
+        let savePopUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "savedPopUpVCid") as! SavedPopUpViewController
+
+        self.addChild(savePopUpVC)
+        savePopUpVC.view.frame = self.view.frame
+        self.view.addSubview(savePopUpVC.view)
+
+        savePopUpVC.didMove(toParent: self)
         
     }
     
