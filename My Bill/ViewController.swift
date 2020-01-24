@@ -10,7 +10,7 @@ import UIKit
 //import IQKeyboardManagerSwift
 import Foundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
      
     @IBOutlet weak var menuPadView: roundView!
     @IBOutlet weak var menuPadImage: roundImageView!
@@ -33,11 +33,14 @@ class ViewController: UIViewController {
 
     var totalBills : [BillsEntity] = []
     
+    var photo = UIImagePickerController()
+    
     let currentdate = Date()
     let dateFormatter = DateFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
 
 //        plateTextField.addToolBar()
@@ -46,6 +49,8 @@ class ViewController: UIViewController {
 //        alcoTextField.addToolBar()
 //        tipTextField.addToolBar()
 //        IQKeyboardManager.shared.toolbarDoneBarButtonItemImage = UIImage(named: "app-mini")
+        
+        photo.delegate = self
         
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
@@ -216,6 +221,17 @@ class ViewController: UIViewController {
         
     }
     
+//    func showPhoto() {
+//        let photoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "photoVCid") as! PhotoViewController
+//
+//        self.addChild(photoVC)
+//        photoVC.view.frame = self.view.frame
+//        self.view.addSubview(photoVC.view)
+//
+//        photoVC.didMove(toParent: self)
+//
+//    }
+    
 //    func convertIntToCurrency(numb:Int) -> String {
 //        let formatter = NumberFormatter()
 //        formatter.groupingSeparator = " "
@@ -267,5 +283,9 @@ class ViewController: UIViewController {
         items.removeAll()
         viewWillAppear(true)
         showPopUp()
+    }
+    @IBAction func photoTapped(_ sender: Any) {
+        photo.sourceType = .camera
+        present(photo, animated: true, completion: nil)
     }
 }
