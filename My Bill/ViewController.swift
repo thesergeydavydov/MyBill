@@ -27,6 +27,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billTapped: UIButton!
     
+    @IBOutlet weak var photoView: UIImageView!
     
     
     var items : [Item] = []
@@ -49,6 +50,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //        alcoTextField.addToolBar()
 //        tipTextField.addToolBar()
 //        IQKeyboardManager.shared.toolbarDoneBarButtonItemImage = UIImage(named: "app-mini")
+        photoView.layer.cornerRadius = 14
         
         photo.delegate = self
         
@@ -157,6 +159,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let sumBT = BillsEntity(context: context)
             sumBT.price = String(format: "%g", total! + tip!)
             sumBT.date = "\(dateFormatter.string(from: currentdate))"
+            sumBT.image = photoView.image?.jpegData(compressionQuality: 1.0)
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
             loadView()
             viewDidLoad()
@@ -219,6 +222,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
         savePopUpVC.didMove(toParent: self)
         
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let selectedImage = info[.originalImage] as? UIImage {
+            photoView.image = selectedImage
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
     
 //    func showPhoto() {

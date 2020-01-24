@@ -45,17 +45,6 @@
                                             <action selector="addDessertTF:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="V43-lj-rr3"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJy-sU-5gQ">
-                                        <rect key="frame" x="125" y="127.5" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Ulg-F2-x7J"/>
-                                            <constraint firstAttribute="width" constant="40" id="tCT-LF-FPX"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="info"/>
-                                        <connections>
-                                            <segue destination="ypD-Dp-vYe" kind="show" id="r6B-I6-59L"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaU-B7-xMG">
                                         <rect key="frame" x="195" y="158" width="80" height="80"/>
                                         <state key="normal" image="alco"/>
@@ -113,26 +102,47 @@
                                             <action selector="addCoffeeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9G-0p-f2D"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bjn-FG-JOh">
+                                        <rect key="frame" x="105" y="107.5" width="80" height="80"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="GE7-Qd-DSQ"/>
+                                            <constraint firstAttribute="width" constant="80" id="idx-rV-lSJ"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vo-Je-YQE">
+                                        <rect key="frame" x="105" y="107.5" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="GKI-tD-M3H"/>
+                                            <constraint firstAttribute="height" constant="80" id="xy6-dx-Qch"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="photoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rpT-9y-dyl"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="sOC-lU-rPk" firstAttribute="leading" secondItem="ztU-2I-uIN" secondAttribute="trailing" constant="-95" id="3L3-gU-4jf"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="leading" secondItem="lCE-bb-Sie" secondAttribute="trailing" constant="-95" id="3np-8j-9oa"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="leading" secondItem="Bhs-Pe-Dfb" secondAttribute="trailing" constant="-95" id="3tI-LQ-ngW"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="centerX" secondItem="zPV-YB-mMb" secondAttribute="centerX" id="3wp-wJ-KHu"/>
+                                    <constraint firstItem="Bjn-FG-JOh" firstAttribute="centerY" secondItem="zPV-YB-mMb" secondAttribute="centerY" id="7wT-b6-LiV"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="top" secondItem="lCE-bb-Sie" secondAttribute="bottom" constant="-95" id="8Ok-SJ-L8j"/>
                                     <constraint firstAttribute="trailing" secondItem="ztU-2I-uIN" secondAttribute="trailing" id="96C-5S-5u2"/>
+                                    <constraint firstItem="9Vo-Je-YQE" firstAttribute="centerY" secondItem="zPV-YB-mMb" secondAttribute="centerY" id="BKf-6J-6A1"/>
                                     <constraint firstItem="MQ6-Hi-ulS" firstAttribute="leading" secondItem="ztU-2I-uIN" secondAttribute="trailing" constant="-95" id="EP2-n1-9lL"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="top" secondItem="zPV-YB-mMb" secondAttribute="top" id="FKk-84-dqW"/>
-                                    <constraint firstItem="LJy-sU-5gQ" firstAttribute="centerX" secondItem="zPV-YB-mMb" secondAttribute="centerX" id="FMO-kk-Kzf"/>
-                                    <constraint firstItem="LJy-sU-5gQ" firstAttribute="centerY" secondItem="zPV-YB-mMb" secondAttribute="centerY" id="Ikp-0O-neC"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="leading" secondItem="zPV-YB-mMb" secondAttribute="leading" id="Ttj-s6-HOv"/>
                                     <constraint firstItem="MQ6-Hi-ulS" firstAttribute="top" secondItem="Q4W-QB-yWw" secondAttribute="bottom" constant="8" id="Z6Y-FX-ahb"/>
                                     <constraint firstItem="4XE-5X-hOO" firstAttribute="top" secondItem="ztU-2I-uIN" secondAttribute="bottom" constant="-49" id="aLY-to-oh0"/>
                                     <constraint firstItem="4XE-5X-hOO" firstAttribute="top" secondItem="Bhs-Pe-Dfb" secondAttribute="bottom" constant="8" id="b4r-Mx-hym"/>
                                     <constraint firstItem="6Oz-s3-ldv" firstAttribute="top" secondItem="lCE-bb-Sie" secondAttribute="bottom" constant="8" id="c58-By-LeS"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="top" secondItem="Q4W-QB-yWw" secondAttribute="bottom" constant="-95" id="cg0-gb-AtZ"/>
+                                    <constraint firstItem="9Vo-Je-YQE" firstAttribute="centerX" secondItem="zPV-YB-mMb" secondAttribute="centerX" id="d6h-cG-xfB"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="centerX" secondItem="zPV-YB-mMb" secondAttribute="centerX" id="dAT-Pd-UU7"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="leading" secondItem="4XE-5X-hOO" secondAttribute="trailing" constant="-95" id="eBZ-cW-DM5"/>
+                                    <constraint firstItem="Bjn-FG-JOh" firstAttribute="centerX" secondItem="zPV-YB-mMb" secondAttribute="centerX" id="eue-wt-jVJ"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="centerY" secondItem="zPV-YB-mMb" secondAttribute="centerY" id="gn0-3v-xc5"/>
                                     <constraint firstItem="sOC-lU-rPk" firstAttribute="top" secondItem="ztU-2I-uIN" secondAttribute="bottom" constant="-49" id="kgD-nI-5Cj"/>
                                     <constraint firstAttribute="height" constant="295" id="m0X-1c-pkm"/>
@@ -203,14 +213,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vo-Je-YQE">
-                                <rect key="frame" x="137" y="91" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="photoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rpT-9y-dyl"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -268,6 +270,7 @@
                         <outlet property="dessertTextField" destination="MQ6-Hi-ulS" id="OUJ-vg-Rzb"/>
                         <outlet property="menuPadImage" destination="ztU-2I-uIN" id="oOX-4M-7Te"/>
                         <outlet property="menuPadView" destination="zPV-YB-mMb" id="20E-FY-fzZ"/>
+                        <outlet property="photoView" destination="Bjn-FG-JOh" id="ZsI-Xg-hy3"/>
                         <outlet property="plateTextField" destination="6Oz-s3-ldv" id="flQ-dm-eio"/>
                         <outlet property="tipLabel" destination="Obl-gK-Geb" id="eVL-WR-WNV"/>
                         <outlet property="tipTextField" destination="oln-gH-4Dw" id="vhK-P0-fcn"/>
@@ -519,11 +522,7 @@
         <image name="coffee" width="80" height="80"/>
         <image name="dessert" width="80" height="80"/>
         <image name="home" width="30" height="30"/>
-        <image name="info" width="100" height="100"/>
         <image name="plate" width="80" height="80"/>
         <image name="save" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="r6B-I6-59L"/>
-    </inferredMetricsTieBreakers>
 </document>
