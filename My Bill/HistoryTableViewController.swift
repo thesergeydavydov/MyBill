@@ -55,7 +55,10 @@ class HistoryTableViewController: UITableViewController {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "TotalBillSaved")
         cell.detailTextLabel?.text = delegateTB[indexPath.row].date
         cell.textLabel?.text = delegateTB[indexPath.row].price
-        cell.imageView?.image = UIImage(named: "app-mini")
+//        if let imageData = delegateTB[indexPath.row].image {
+//           cell.imageView?.image = UIImage (data: imageData)
+//        }
+//        cell.imageView?.image = UIImage(named: "app-mini")
         // Configure the cell...
 
         return cell
