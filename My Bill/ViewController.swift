@@ -25,7 +25,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billTapped: UIButton!
     
-    @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var photoView: roundImageView!
     
     
     var items : [Item] = []

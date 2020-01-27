@@ -102,9 +102,12 @@
                                             <action selector="addCoffeeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9G-0p-f2D"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bjn-FG-JOh" customClass="UIImageView">
+                                    <view contentMode="scaleAspectFill" semanticContentAttribute="playback" translatesAutoresizingMaskIntoConstraints="NO" id="Bjn-FG-JOh" customClass="roundImageView" customModule="My_Bill___Split___Tip" customModuleProvider="target">
                                         <rect key="frame" x="105" y="107.5" width="80" height="80"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" image="YES"/>
+                                        </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="GE7-Qd-DSQ"/>
                                             <constraint firstAttribute="width" constant="80" id="idx-rV-lSJ"/>
