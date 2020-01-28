@@ -255,8 +255,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         showPopUp()
     }
     
-    @IBAction func cameraTapped(_ sender: Any) {
+    @IBAction func takePhoto(_ sender: Any) {
         photo.sourceType = .camera
         present(photo, animated: true, completion: nil)
     }
+    
 }

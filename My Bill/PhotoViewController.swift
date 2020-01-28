@@ -17,7 +17,9 @@ class PhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        photosImageView = photoViewer?.photoView.image
+//        if let imageData = photoViewer?.photoView {
+//           photosImageView.image = UIImage (data: imageData)
+//        }
         
     }
     
