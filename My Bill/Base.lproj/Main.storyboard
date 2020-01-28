@@ -102,9 +102,9 @@
                                             <action selector="addCoffeeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9G-0p-f2D"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleAspectFill" semanticContentAttribute="playback" translatesAutoresizingMaskIntoConstraints="NO" id="Bjn-FG-JOh" customClass="roundImageView" customModule="My_Bill___Split___Tip" customModuleProvider="target">
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bjn-FG-JOh" customClass="roundImageView" customModule="My_Bill___Split___Tip" customModuleProvider="target">
                                         <rect key="frame" x="105" y="107.5" width="80" height="80"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" image="YES"/>
                                         </accessibility>
@@ -113,6 +113,16 @@
                                             <constraint firstAttribute="width" constant="80" id="idx-rV-lSJ"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goU-G2-dOR">
+                                        <rect key="frame" x="105" y="107.5" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Jy5-c9-3nW"/>
+                                            <constraint firstAttribute="width" constant="80" id="vfI-iM-Zqb"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="xDw-C2-CKj" kind="show" id="f6V-Bk-l2h"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="sOC-lU-rPk" firstAttribute="leading" secondItem="ztU-2I-uIN" secondAttribute="trailing" constant="-95" id="3L3-gU-4jf"/>
@@ -123,6 +133,7 @@
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="top" secondItem="lCE-bb-Sie" secondAttribute="bottom" constant="-95" id="8Ok-SJ-L8j"/>
                                     <constraint firstAttribute="trailing" secondItem="ztU-2I-uIN" secondAttribute="trailing" id="96C-5S-5u2"/>
                                     <constraint firstItem="MQ6-Hi-ulS" firstAttribute="leading" secondItem="ztU-2I-uIN" secondAttribute="trailing" constant="-95" id="EP2-n1-9lL"/>
+                                    <constraint firstItem="goU-G2-dOR" firstAttribute="centerX" secondItem="zPV-YB-mMb" secondAttribute="centerX" id="ESJ-WG-51E"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="top" secondItem="zPV-YB-mMb" secondAttribute="top" id="FKk-84-dqW"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="leading" secondItem="zPV-YB-mMb" secondAttribute="leading" id="Ttj-s6-HOv"/>
                                     <constraint firstItem="MQ6-Hi-ulS" firstAttribute="top" secondItem="Q4W-QB-yWw" secondAttribute="bottom" constant="8" id="Z6Y-FX-ahb"/>
@@ -134,6 +145,7 @@
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="leading" secondItem="4XE-5X-hOO" secondAttribute="trailing" constant="-95" id="eBZ-cW-DM5"/>
                                     <constraint firstItem="Bjn-FG-JOh" firstAttribute="centerX" secondItem="zPV-YB-mMb" secondAttribute="centerX" id="eue-wt-jVJ"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="centerY" secondItem="zPV-YB-mMb" secondAttribute="centerY" id="gn0-3v-xc5"/>
+                                    <constraint firstItem="goU-G2-dOR" firstAttribute="centerY" secondItem="zPV-YB-mMb" secondAttribute="centerY" id="jCm-jX-KN0"/>
                                     <constraint firstItem="sOC-lU-rPk" firstAttribute="top" secondItem="ztU-2I-uIN" secondAttribute="bottom" constant="-49" id="kgD-nI-5Cj"/>
                                     <constraint firstAttribute="height" constant="295" id="m0X-1c-pkm"/>
                                     <constraint firstItem="AaU-B7-xMG" firstAttribute="leading" secondItem="ztU-2I-uIN" secondAttribute="trailing" constant="-95" id="wQ7-u4-hhM"/>
@@ -511,6 +523,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFM-B8-569" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-729.375" y="828.16901408450701"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="hss-94-SOh">
+            <objects>
+                <viewController id="xDw-C2-CKj" customClass="PhotoViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8DR-gL-dlO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MRs-89-1Hc">
+                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MRs-89-1Hc" firstAttribute="leading" secondItem="lyd-h0-uDG" secondAttribute="leading" id="4db-24-6uj"/>
+                            <constraint firstItem="lyd-h0-uDG" firstAttribute="trailing" secondItem="MRs-89-1Hc" secondAttribute="trailing" id="g4S-qK-ZaR"/>
+                            <constraint firstItem="lyd-h0-uDG" firstAttribute="bottom" secondItem="MRs-89-1Hc" secondAttribute="bottom" id="xNq-07-0sU"/>
+                            <constraint firstItem="MRs-89-1Hc" firstAttribute="top" secondItem="lyd-h0-uDG" secondAttribute="top" id="zJk-cQ-EGF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lyd-h0-uDG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bOh-yA-Um8"/>
+                    <connections>
+                        <outlet property="photosImageView" destination="MRs-89-1Hc" id="jj2-cw-SRz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wda-ZU-dlb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="713" y="-554"/>
         </scene>
     </scenes>
     <resources>

@@ -40,7 +40,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        photoView.layer.cornerRadius = 14
+//        photoView.layer.cornerRadius = 14
         
         photo.delegate = self
         
@@ -50,6 +50,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         billTapped.layer.cornerRadius = billTapped.frame.size.height / 6
 
         setupNavigationBarItems()
+        
+        photoView.image = UIImage(named: "photoview")
+        
+//        photoView.layer.borderWidth = 1.0
+//        self.photoView.layer.borderColor = UIColor(red:180/255, green:169/255, blue:159/255, alpha: 1).cgColor
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -233,7 +238,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let sumBT = BillsEntity(context: context)
             sumBT.price = String(format: "%g", total! + tip!)
             sumBT.date = "\(dateFormatter.string(from: currentdate))"
-//            sumBT.image = photoView.image?.jpegData(compressionQuality: 1.0)
+            sumBT.image = photoView.image?.jpegData(compressionQuality: 1.0)
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
             loadView()
             viewDidLoad()

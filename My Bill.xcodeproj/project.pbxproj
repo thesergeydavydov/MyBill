@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		290E1CDB23D9A62700D1855A /* SavedPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290E1CDA23D9A62700D1855A /* SavedPopUpViewController.swift */; };
+		291CFBE823E01FEE00D466EB /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291CFBE723E01FEE00D466EB /* PhotoViewController.swift */; };
 		2943B7C4238D29CA00E2D3A9 /* TextFieldExtantions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2943B7C3238D29CA00E2D3A9 /* TextFieldExtantions.swift */; };
 		294C78B623A8E15500A67E11 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294C78B523A8E15500A67E11 /* HistoryTableViewController.swift */; };
 		29758B0B23B390F200D7917B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29758B0A23B390F200D7917B /* SceneDelegate.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		290E1CDA23D9A62700D1855A /* SavedPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPopUpViewController.swift; sourceTree = "<group>"; };
+		291CFBE723E01FEE00D466EB /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		2943B7C3238D29CA00E2D3A9 /* TextFieldExtantions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtantions.swift; sourceTree = "<group>"; };
 		294C78B523A8E15500A67E11 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		29758B0A23B390F200D7917B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				294C78B523A8E15500A67E11 /* HistoryTableViewController.swift */,
 				29912646239A4403001508B7 /* Item.swift */,
 				29DF75A123858D6400F8DF30 /* Main.storyboard */,
+				291CFBE723E01FEE00D466EB /* PhotoViewController.swift */,
 				290E1CDA23D9A62700D1855A /* SavedPopUpViewController.swift */,
 				29E70A4823D88D3600B8121F /* PopUpViewController.swift */,
 				299E3F9023ACFEEE005FC3CC /* Extensions */,
@@ -201,6 +204,7 @@
 				299E3F8723ACE8BB005FC3CC /* UIImageView Round.swift in Sources */,
 				29DF759C23858D6400F8DF30 /* AppDelegate.swift in Sources */,
 				29758B0B23B390F200D7917B /* SceneDelegate.swift in Sources */,
+				291CFBE823E01FEE00D466EB /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
