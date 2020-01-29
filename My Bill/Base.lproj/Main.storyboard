@@ -286,7 +286,7 @@
         <scene sceneID="ksK-6B-zPT">
             <objects>
                 <tableViewController id="KE1-U3-3Lk" customClass="HistoryTableViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="947-VZ-bNd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="947-VZ-bNd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
@@ -297,6 +297,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Jns-Qe-AqT" kind="show" identifier="goToDetailHistory" id="ZGB-dk-2LO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -517,35 +520,35 @@
             </objects>
             <point key="canvasLocation" x="-729.375" y="828.16901408450701"/>
         </scene>
-        <!--Photo View Controller-->
-        <scene sceneID="hss-94-SOh">
+        <!--Detail History View Controller-->
+        <scene sceneID="LnA-DX-Uqx">
             <objects>
-                <viewController id="xDw-C2-CKj" customClass="PhotoViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8DR-gL-dlO">
+                <viewController id="Jns-Qe-AqT" customClass="DetailHistoryViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="va7-xA-paG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MRs-89-1Hc">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VNE-eF-OCu">
+                                <rect key="frame" x="40" y="148" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Qt-w1-OEO">
+                                <rect key="frame" x="40" y="12" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="MRs-89-1Hc" firstAttribute="leading" secondItem="lyd-h0-uDG" secondAttribute="leading" id="4db-24-6uj"/>
-                            <constraint firstItem="lyd-h0-uDG" firstAttribute="trailing" secondItem="MRs-89-1Hc" secondAttribute="trailing" id="g4S-qK-ZaR"/>
-                            <constraint firstItem="lyd-h0-uDG" firstAttribute="bottom" secondItem="MRs-89-1Hc" secondAttribute="bottom" id="xNq-07-0sU"/>
-                            <constraint firstItem="MRs-89-1Hc" firstAttribute="top" secondItem="lyd-h0-uDG" secondAttribute="top" id="zJk-cQ-EGF"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="lyd-h0-uDG"/>
+                        <viewLayoutGuide key="safeArea" id="J1f-x8-9g0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bOh-yA-Um8"/>
+                    <navigationItem key="navigationItem" id="aDf-xC-StK"/>
                     <connections>
-                        <outlet property="photosImageView" destination="MRs-89-1Hc" id="jj2-cw-SRz"/>
+                        <outlet property="photoDetailImageView" destination="3Qt-w1-OEO" id="h9W-wy-HOb"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wda-ZU-dlb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iKe-1J-lnG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="713" y="-554"/>
+            <point key="canvasLocation" x="0.0" y="1534"/>
         </scene>
     </scenes>
     <resources>

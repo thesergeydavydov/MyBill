@@ -15,7 +15,7 @@ class HistoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        sumBillsHTVC()
+    //        sumBillsHTVC()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -54,7 +54,7 @@ class HistoryTableViewController: UITableViewController {
         cell.detailTextLabel?.text = delegateTB[indexPath.row].date
         cell.textLabel?.text = delegateTB[indexPath.row].price
         if let imageData = delegateTB[indexPath.row].image {
-            cell.imageView?.image = UIImage (data: imageData)?.circleMask
+            cell.imageView?.image = UIImage(data: imageData)
         }
         return cell
     }
@@ -80,6 +80,19 @@ class HistoryTableViewController: UITableViewController {
 //            tableView.deleteRows(at: [indexPath], with: .fade)
 
 //            sumBillsHTVC()
+            }
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedHistory = delegateTB[indexPath.row]
+        performSegue(withIdentifier: "goToDetailHistory", sender: selectedHistory)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailHistoryVC = segue.destination as? DetailHistoryViewController {
+            if let detailHistory = sender as? BillsEntity {
+                detailHistoryVC.historyDetail = detailHistory
             }
         }
     }
@@ -131,20 +144,20 @@ class HistoryTableViewController: UITableViewController {
 
 }
 
-extension UIImage {
-var circleMask: UIImage {
-    let square = size.width < size.height ? CGSize(width: size.width, height: size.width) : CGSize(width: size.height, height: size.height)
-    let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: square))
-    imageView.contentMode = UIView.ContentMode.scaleAspectFill
-    imageView.image = self
-    imageView.layer.cornerRadius = square.width/2
-    imageView.layer.borderColor = UIColor.white.cgColor
-    imageView.layer.borderWidth = 5
-    imageView.layer.masksToBounds = true
-    UIGraphicsBeginImageContext(imageView.bounds.size)
-    imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
-    let result = UIGraphicsGetImageFromCurrentImageContext()!
-    UIGraphicsEndImageContext()
-    return result
-    }
-}
+//extension UIImage {
+//var circleMask: UIImage {
+//    let square = size.width < size.height ? CGSize(width: size.width, height: size.width) : CGSize(width: size.height, height: size.height)
+//    let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: square))
+//    imageView.contentMode = UIView.ContentMode.scaleAspectFill
+//    imageView.image = self
+//    imageView.layer.cornerRadius = square.width/2
+//    imageView.layer.borderColor = UIColor.white.cgColor
+//    imageView.layer.borderWidth = 5
+//    imageView.layer.masksToBounds = true
+//    UIGraphicsBeginImageContext(imageView.bounds.size)
+//    imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+//    let result = UIGraphicsGetImageFromCurrentImageContext()!
+//    UIGraphicsEndImageContext()
+//    return result
+//    }
+//}
