@@ -54,7 +54,9 @@ class HistoryTableViewController: UITableViewController {
         cell.detailTextLabel?.text = delegateTB[indexPath.row].date
         cell.textLabel?.text = delegateTB[indexPath.row].price
         if let imageData = delegateTB[indexPath.row].image {
-            cell.imageView?.image = UIImage(data: imageData)
+            cell.imageView?.image = UIImage(data: imageData)?.circleMask
+//            cell.imageView?.layer.cornerRadius = 5
+//            cell.imageView?.clipsToBounds = true
         }
         return cell
     }
@@ -144,20 +146,20 @@ class HistoryTableViewController: UITableViewController {
 
 }
 
-//extension UIImage {
-//var circleMask: UIImage {
-//    let square = size.width < size.height ? CGSize(width: size.width, height: size.width) : CGSize(width: size.height, height: size.height)
-//    let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: square))
-//    imageView.contentMode = UIView.ContentMode.scaleAspectFill
-//    imageView.image = self
-//    imageView.layer.cornerRadius = square.width/2
-//    imageView.layer.borderColor = UIColor.white.cgColor
-//    imageView.layer.borderWidth = 5
-//    imageView.layer.masksToBounds = true
-//    UIGraphicsBeginImageContext(imageView.bounds.size)
-//    imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
-//    let result = UIGraphicsGetImageFromCurrentImageContext()!
-//    UIGraphicsEndImageContext()
-//    return result
-//    }
-//}
+extension UIImage {
+var circleMask: UIImage {
+    let square = size.width < size.height ? CGSize(width: size.width, height: size.width) : CGSize(width: size.height, height: size.height)
+    let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: square))
+    imageView.contentMode = UIView.ContentMode.scaleAspectFill
+    imageView.image = self
+    imageView.layer.cornerRadius = square.width/2
+    imageView.layer.borderColor = UIColor.white.cgColor
+    imageView.layer.borderWidth = 5
+    imageView.layer.masksToBounds = true
+    UIGraphicsBeginImageContext(imageView.bounds.size)
+    imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+    let result = UIGraphicsGetImageFromCurrentImageContext()!
+    UIGraphicsEndImageContext()
+    return result
+    }
+}

@@ -528,27 +528,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VNE-eF-OCu">
-                                <rect key="frame" x="40" y="148" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Qt-w1-OEO">
-                                <rect key="frame" x="40" y="12" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Qt-w1-OEO">
+                                <rect key="frame" x="50" y="64" width="220" height="280"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="G1d-Hi-Nhg"/>
+                                    <constraint firstAttribute="width" constant="220" id="w3f-A1-Qn7"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onk-ba-bdH">
+                                <rect key="frame" x="50" y="371" width="220" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3Qt-w1-OEO" firstAttribute="centerX" secondItem="va7-xA-paG" secondAttribute="centerX" id="P2G-DJ-M7x"/>
+                            <constraint firstItem="3Qt-w1-OEO" firstAttribute="top" secondItem="J1f-x8-9g0" secondAttribute="top" constant="20" id="fCF-CC-VMc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="J1f-x8-9g0"/>
                     </view>
                     <navigationItem key="navigationItem" id="aDf-xC-StK"/>
                     <connections>
                         <outlet property="photoDetailImageView" destination="3Qt-w1-OEO" id="h9W-wy-HOb"/>
+                        <outlet property="priceDetailLabel" destination="onk-ba-bdH" id="WXN-Z5-dXT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKe-1J-lnG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="1534"/>
+            <point key="canvasLocation" x="0.0" y="1533.8028169014085"/>
         </scene>
     </scenes>
     <resources>

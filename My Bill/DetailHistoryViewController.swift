@@ -12,12 +12,20 @@ class DetailHistoryViewController: UIViewController {
 
     @IBOutlet weak var photoDetailImageView: UIImageView!
     
+    @IBOutlet weak var priceDetailLabel: UILabel!
+    
+    
     var historyDetail : BillsEntity?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if let image = historyDetail?.image {
             photoDetailImageView.image = UIImage(data: image)
+        }
+        
+        if let priceHistory = historyDetail?.price {
+            priceDetailLabel.text = priceHistory
         }
         // Do any additional setup after loading the view.
     }
