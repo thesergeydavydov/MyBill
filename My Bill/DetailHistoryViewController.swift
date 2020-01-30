@@ -24,12 +24,15 @@ class DetailHistoryViewController: UIViewController {
         
         title = historyDetail?.date
         
+        
+        
         if let image = historyDetail?.image {
             photoDetailImageView.image = UIImage(data: image)
         }
         
         if let priceHistory = historyDetail?.bill {
-            billDetailLabel.text = priceHistory
+            billDetailLabel.text = convertDoubleToCurrency(numb: Double(priceHistory)!)
+            
         }
         
         if let priceHistory = historyDetail?.tipPersentage {
@@ -37,18 +40,41 @@ class DetailHistoryViewController: UIViewController {
         }
         
         if let priceHistory = historyDetail?.tip {
-            tipDetailLabel.text = priceHistory
+            tipDetailLabel.text = convertDoubleToCurrency(numb: Double(priceHistory)!)
            }
         
         if let priceHistory = historyDetail?.price {
-            totalDetailLabel.text = priceHistory
+            totalDetailLabel.text = convertDoubleToCurrency(numb: Double(priceHistory)!)
         }
         
         
         // Do any additional setup after loading the view.
     }
     
-
+    func convertStringToDouble(input: String) -> Double? {
+        let formatter = NumberFormatter()
+        return formatter.number(from: input)?.doubleValue
+    }
+    
+    func convertDoubleToCurrency(numb:Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.groupingSeparator = " "
+        formatter.decimalSeparator = "."
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+        return formatter.string(from: NSNumber(value: numb))!
+    }
+    
+    func convertCurrencyToDouble(input: String) -> Double? {
+        let formatter = NumberFormatter()
+        formatter.groupingSeparator = " "
+        formatter.decimalSeparator = "."
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+        return formatter.number(from: input)?.doubleValue
+    }
     /*
     // MARK: - Navigation
 

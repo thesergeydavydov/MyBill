@@ -164,8 +164,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         tipLabel.text = "0.00"
         totalLabel.text = "0.00"
         photoView.image = UIImage(named: "photoview")
-        
-        
     }
     
     @IBAction func addPlateTapped(_ sender: Any) {
