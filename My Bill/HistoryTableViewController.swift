@@ -58,7 +58,7 @@ class HistoryTableViewController: UITableViewController {
 //        if case cell.textLabel?.text = delegateTB[indexPath.row].price {
 //            cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 5.0)
 //        }
-//        if let imageData = delegateTB[indexPath.row].image {
+//        if let imageData = delegateTB[indexPath.row].imageMini {
 //            cell.imageView?.image = UIImage(data: imageData)?.circleMask
 ////            cell.imageView?.layer.cornerRadius = 5
 ////            cell.imageView?.clipsToBounds = true
