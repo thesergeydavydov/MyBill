@@ -234,9 +234,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func saveTapped(_ sender: Any) {
         let total = convertCurrencyToDouble(input: billLabel.text!)
         let tip = convertCurrencyToDouble(input: tipLabel.text!)
+        let bill = convertCurrencyToDouble(input: billLabel.text!)
+        let tipPersentage = convertCurrencyToDouble(input: tipTextField.text!)
+        
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             let sumBT = BillsEntity(context: context)
             sumBT.price = String(format: "%g", total! + tip!)
+            sumBT.total = String(format: "%g", total!)
+            sumBT.tip = String(format: "%g", tip!)
+            sumBT.bill = String(format: "%g", bill!)
+            sumBT.tipPersentage = String(format: "%g", tipPersentage!)
             sumBT.date = "\(dateFormatter.string(from: currentdate))"
             sumBT.image = photoView.image?.jpegData(compressionQuality: 1.0)
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()

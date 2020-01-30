@@ -53,11 +53,16 @@ class HistoryTableViewController: UITableViewController {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "TotalBillSaved")
         cell.detailTextLabel?.text = delegateTB[indexPath.row].date
         cell.textLabel?.text = delegateTB[indexPath.row].price
-        if let imageData = delegateTB[indexPath.row].image {
-            cell.imageView?.image = UIImage(data: imageData)?.circleMask
-//            cell.imageView?.layer.cornerRadius = 5
-//            cell.imageView?.clipsToBounds = true
-        }
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 24, weight: UIFont.Weight.medium)
+        cell.imageView?.image = UIImage(named: "app-mini")
+//        if case cell.textLabel?.text = delegateTB[indexPath.row].price {
+//            cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 5.0)
+//        }
+//        if let imageData = delegateTB[indexPath.row].image {
+//            cell.imageView?.image = UIImage(data: imageData)?.circleMask
+////            cell.imageView?.layer.cornerRadius = 5
+////            cell.imageView?.clipsToBounds = true
+//        }
         return cell
     }
     
