@@ -6,6 +6,6 @@
         <attribute name="price" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="BillsEntity" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="BillsEntity" positionX="-18" positionY="27" width="128" height="88"/>
     </elements>
 </model>

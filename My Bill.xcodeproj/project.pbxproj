@@ -17,12 +17,12 @@
 		299E3F8923ACE940005FC3CC /* UIView Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299E3F8823ACE940005FC3CC /* UIView Round.swift */; };
 		299E3F8B23ACE9E2005FC3CC /* UITextField Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299E3F8A23ACE9E2005FC3CC /* UITextField Round.swift */; };
 		299E3F8D23ACEAFD005FC3CC /* UIColor Coral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299E3F8C23ACEAFD005FC3CC /* UIColor Coral.swift */; };
+		29AC150423E2D41E00553D7B /* My_Bill.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29AC150223E2D41E00553D7B /* My_Bill.xcdatamodeld */; };
 		29D4366D23914428003E1668 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 29D4366C23914428003E1668 /* IQKeyboardManagerSwift */; };
 		29D6A09A23E1C3930087D48F /* DetailHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D6A09923E1C3930087D48F /* DetailHistoryViewController.swift */; };
 		29DF759C23858D6400F8DF30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DF759B23858D6400F8DF30 /* AppDelegate.swift */; };
 		29DF75A023858D6400F8DF30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DF759F23858D6400F8DF30 /* ViewController.swift */; };
 		29DF75A323858D6400F8DF30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29DF75A123858D6400F8DF30 /* Main.storyboard */; };
-		29DF75A623858D6400F8DF30 /* My_Bill.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 29DF75A423858D6400F8DF30 /* My_Bill.xcdatamodeld */; };
 		29DF75A823858D6500F8DF30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29DF75A723858D6500F8DF30 /* Assets.xcassets */; };
 		29DF75AB23858D6500F8DF30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29DF75A923858D6500F8DF30 /* LaunchScreen.storyboard */; };
 		29E70A4923D88D3600B8121F /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E70A4823D88D3600B8121F /* PopUpViewController.swift */; };
@@ -40,12 +40,12 @@
 		299E3F8823ACE940005FC3CC /* UIView Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView Round.swift"; sourceTree = "<group>"; };
 		299E3F8A23ACE9E2005FC3CC /* UITextField Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField Round.swift"; sourceTree = "<group>"; };
 		299E3F8C23ACEAFD005FC3CC /* UIColor Coral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor Coral.swift"; sourceTree = "<group>"; };
+		29AC150323E2D41E00553D7B /* My_Bill.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = My_Bill.xcdatamodel; sourceTree = "<group>"; };
 		29D6A09923E1C3930087D48F /* DetailHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHistoryViewController.swift; sourceTree = "<group>"; };
 		29DF759823858D6400F8DF30 /* My Bill - Split & Tip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Bill - Split & Tip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29DF759B23858D6400F8DF30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29DF759F23858D6400F8DF30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		29DF75A223858D6400F8DF30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		29DF75A523858D6400F8DF30 /* My_Bill.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = My_Bill.xcdatamodel; sourceTree = "<group>"; };
 		29DF75A723858D6500F8DF30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29DF75AA23858D6500F8DF30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29DF75AC23858D6500F8DF30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				29DF759A23858D6400F8DF30 /* My Bill */,
+				29AC150223E2D41E00553D7B /* My_Bill.xcdatamodeld */,
 				29DF759923858D6400F8DF30 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,7 +112,6 @@
 				29DF75A723858D6500F8DF30 /* Assets.xcassets */,
 				29DF75A923858D6500F8DF30 /* LaunchScreen.storyboard */,
 				29DF75AC23858D6500F8DF30 /* Info.plist */,
-				29DF75A423858D6400F8DF30 /* My_Bill.xcdatamodeld */,
 			);
 			path = "My Bill";
 			sourceTree = "<group>";
@@ -194,10 +194,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				29D6A09A23E1C3930087D48F /* DetailHistoryViewController.swift in Sources */,
-				29DF75A623858D6400F8DF30 /* My_Bill.xcdatamodeld in Sources */,
 				29DF75A023858D6400F8DF30 /* ViewController.swift in Sources */,
 				29EAC6EB239923D500A126CC /* BillListTableViewController.swift in Sources */,
 				299E3F8D23ACEAFD005FC3CC /* UIColor Coral.swift in Sources */,
+				29AC150423E2D41E00553D7B /* My_Bill.xcdatamodeld in Sources */,
 				299E3F8B23ACE9E2005FC3CC /* UITextField Round.swift in Sources */,
 				299E3F8923ACE940005FC3CC /* UIView Round.swift in Sources */,
 				2943B7C4238D29CA00E2D3A9 /* TextFieldExtantions.swift in Sources */,
@@ -437,13 +437,14 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		29DF75A423858D6400F8DF30 /* My_Bill.xcdatamodeld */ = {
+		29AC150223E2D41E00553D7B /* My_Bill.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				29DF75A523858D6400F8DF30 /* My_Bill.xcdatamodel */,
+				29AC150323E2D41E00553D7B /* My_Bill.xcdatamodel */,
 			);
-			currentVersion = 29DF75A523858D6400F8DF30 /* My_Bill.xcdatamodel */;
-			path = My_Bill.xcdatamodeld;
+			currentVersion = 29AC150323E2D41E00553D7B /* My_Bill.xcdatamodel */;
+			name = My_Bill.xcdatamodeld;
+			path = "My Bill/My_Bill.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
