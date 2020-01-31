@@ -27,7 +27,7 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4W-QB-yWw">
-                                        <rect key="frame" x="195" y="-65" width="160" height="160"/>
+                                        <rect key="frame" x="195" y="15" width="80" height="80"/>
                                         <state key="normal" image="dessert"/>
                                         <connections>
                                             <action selector="addDessertTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UFG-Sx-6Hr"/>
@@ -46,14 +46,14 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaU-B7-xMG">
-                                        <rect key="frame" x="195" y="73" width="160" height="160"/>
+                                        <rect key="frame" x="195" y="153" width="80" height="80"/>
                                         <state key="normal" image="alco"/>
                                         <connections>
                                             <action selector="addAlcoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wpE-UK-OJC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCE-bb-Sie">
-                                        <rect key="frame" x="-65" y="-65" width="160" height="160"/>
+                                        <rect key="frame" x="15" y="15" width="80" height="80"/>
                                         <state key="normal" image="plate"/>
                                         <connections>
                                             <action selector="addPlateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idC-e8-fmS"/>
@@ -96,7 +96,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhs-Pe-Dfb">
-                                        <rect key="frame" x="-65" y="73" width="160" height="160"/>
+                                        <rect key="frame" x="15" y="153" width="80" height="80"/>
                                         <state key="normal" image="coffee"/>
                                         <connections>
                                             <action selector="addCoffeeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9G-0p-f2D"/>
@@ -311,7 +311,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLs-S0-ZTP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="828"/>
+            <point key="canvasLocation" x="0.0" y="827"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="Zrt-3I-c6y">
@@ -365,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odL-NX-CGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="713" y="828"/>
+            <point key="canvasLocation" x="401" y="-537"/>
         </scene>
         <!--Saved Pop Up View Controller-->
         <scene sceneID="GeB-o7-sss">
@@ -418,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGZ-Ta-27C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1418" y="828"/>
+            <point key="canvasLocation" x="1024" y="-537"/>
         </scene>
         <!--Bill-->
         <scene sceneID="dBP-Ta-lDP">
@@ -518,7 +518,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFM-B8-569" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-729.375" y="828.16901408450701"/>
+            <point key="canvasLocation" x="-728" y="827"/>
         </scene>
         <!--Detail History View Controller-->
         <scene sceneID="LnA-DX-Uqx">
@@ -611,6 +611,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owk-vA-agk">
+                                <rect key="frame" x="137" y="184" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="photoTapped:" destination="Jns-Qe-AqT" eventType="touchUpInside" id="VzU-MH-QPb"/>
+                                    <segue destination="d0h-Nt-i0d" kind="show" identifier="goToPhotoDetailVC" id="Qk3-lW-NTJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -666,7 +675,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKe-1J-lnG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="1533.8028169014085"/>
+            <point key="canvasLocation" x="713" y="826"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="Bu7-Rr-88S">
+            <objects>
+                <viewController id="d0h-Nt-i0d" customClass="PhotoDetailViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Oj-nN-JLl" customClass="Photo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A5T-aA-v6s">
+                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Tw3-9f-CQc" firstAttribute="bottom" secondItem="A5T-aA-v6s" secondAttribute="bottom" id="Nrb-nv-vS2"/>
+                            <constraint firstItem="A5T-aA-v6s" firstAttribute="top" secondItem="Tw3-9f-CQc" secondAttribute="top" id="fbU-sy-GFq"/>
+                            <constraint firstItem="A5T-aA-v6s" firstAttribute="leading" secondItem="Tw3-9f-CQc" secondAttribute="leading" id="mLJ-Rm-BIE"/>
+                            <constraint firstItem="Tw3-9f-CQc" firstAttribute="trailing" secondItem="A5T-aA-v6s" secondAttribute="trailing" id="x4P-UE-vc8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tw3-9f-CQc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hWt-rp-25T"/>
+                    <connections>
+                        <outlet property="photoDetailZoomImageView" destination="A5T-aA-v6s" id="1jy-g8-Ihg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jwi-jt-9JP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1418" y="826"/>
         </scene>
     </scenes>
     <resources>

@@ -77,6 +77,21 @@ class DetailHistoryViewController: UIViewController {
         formatter.minimumFractionDigits = 2
         return formatter.number(from: input)?.doubleValue
     }
+    
+//    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+//        let selectedPhoto = historyDetail?.image
+//        performSegue(withIdentifier: "goToPhotoDetailVC", sender: selectedPhoto)
+//    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let photoDetailVC = segue.destination as? PhotoDetailViewController {
+            photoDetailVC.photoHistoryDetail = self
+            }
+    }
+    
+    @IBAction func photoTapped(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

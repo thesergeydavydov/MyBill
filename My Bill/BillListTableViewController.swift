@@ -43,7 +43,12 @@ class BillListTableViewController: UITableViewController {
 //        cell.detailTextLabel?.text = delegate!.items[indexPath.row].date
         cell.detailTextLabel?.text = String(format: "%g", delegate!.items[indexPath.row].price)
         cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 24, weight: UIFont.Weight.medium)
-        cell.detailTextLabel?.textColor = .black
+        if #available(iOS 13.0, *) {
+            cell.detailTextLabel?.textColor = .label
+        } else {
+            cell.detailTextLabel?.textColor = .black
+            // Fallback on earlier versions
+        }
         cell.imageView?.image = delegate!.items[indexPath.row].image
 
         // Configure the cell...
