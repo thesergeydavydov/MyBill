@@ -16,6 +16,7 @@ class DetailHistoryViewController: UIViewController {
     @IBOutlet weak var tipDetailLabel: UILabel!
     @IBOutlet weak var totalDetailLabel: UILabel!
   
+    @IBOutlet weak var billBackgroundColorView: UIView!
     
     var historyDetail : BillsEntity?
     
@@ -24,7 +25,7 @@ class DetailHistoryViewController: UIViewController {
         
         title = historyDetail?.date
         
-        
+        billBackgroundColorView.layer.cornerRadius = billBackgroundColorView.frame.size.height / 6
         
         if let image = historyDetail?.image {
             photoDetailImageView.image = UIImage(data: image)

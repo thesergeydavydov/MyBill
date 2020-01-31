@@ -25,7 +25,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billTapped: UIButton!
     
-    @IBOutlet weak var photoView: roundImageView!
+    @IBOutlet weak var photoView: UIImageView!
     
     
     var items : [Item] = []
@@ -48,6 +48,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dateFormatter.timeStyle = .none
         
         billTapped.layer.cornerRadius = billTapped.frame.size.height / 6
+        
+        photoView.layer.cornerRadius = photoView.frame.size.height / 2
+        photoView.layer.masksToBounds = true
 
         setupNavigationBarItems()
         
