@@ -25,6 +25,7 @@
 		29DF75A323858D6400F8DF30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29DF75A123858D6400F8DF30 /* Main.storyboard */; };
 		29DF75A823858D6500F8DF30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29DF75A723858D6500F8DF30 /* Assets.xcassets */; };
 		29DF75AB23858D6500F8DF30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29DF75A923858D6500F8DF30 /* LaunchScreen.storyboard */; };
+		29E44B6223E420BA00CE0C66 /* UIView Round6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E44B6123E420BA00CE0C66 /* UIView Round6.swift */; };
 		29E70A4923D88D3600B8121F /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E70A4823D88D3600B8121F /* PopUpViewController.swift */; };
 		29EAC6EB239923D500A126CC /* BillListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EAC6EA239923D500A126CC /* BillListTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		29DF75A723858D6500F8DF30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29DF75AA23858D6500F8DF30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29DF75AC23858D6500F8DF30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29E44B6123E420BA00CE0C66 /* UIView Round6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView Round6.swift"; sourceTree = "<group>"; };
 		29E70A4823D88D3600B8121F /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		29EAC6EA239923D500A126CC /* BillListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 				299E3F8C23ACEAFD005FC3CC /* UIColor Coral.swift */,
 				299E3F8623ACE8BB005FC3CC /* UIImageView Round.swift */,
 				299E3F8823ACE940005FC3CC /* UIView Round.swift */,
+				29E44B6123E420BA00CE0C66 /* UIView Round6.swift */,
 				2943B7C3238D29CA00E2D3A9 /* TextFieldExtantions.swift */,
 			);
 			path = Extensions;
@@ -204,6 +207,7 @@
 				290E1CDB23D9A62700D1855A /* SavedPopUpViewController.swift in Sources */,
 				29E70A4923D88D3600B8121F /* PopUpViewController.swift in Sources */,
 				294C78B623A8E15500A67E11 /* HistoryTableViewController.swift in Sources */,
+				29E44B6223E420BA00CE0C66 /* UIView Round6.swift in Sources */,
 				29912647239A4403001508B7 /* Item.swift in Sources */,
 				299E3F8723ACE8BB005FC3CC /* UIImageView Round.swift in Sources */,
 				29DF759C23858D6400F8DF30 /* AppDelegate.swift in Sources */,

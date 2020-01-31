@@ -16,7 +16,10 @@ class DetailHistoryViewController: UIViewController {
     @IBOutlet weak var tipDetailLabel: UILabel!
     @IBOutlet weak var totalDetailLabel: UILabel!
   
-    @IBOutlet weak var billBackgroundColorView: UIView!
+    @IBOutlet weak var billBackgroundColorView: Round6View!
+    @IBOutlet weak var tipPersentageBGCView: Round6View!
+    @IBOutlet weak var tipBGCView: Round6View!
+    @IBOutlet weak var totalBGCView: Round6View!
     
     var historyDetail : BillsEntity?
     
@@ -24,8 +27,6 @@ class DetailHistoryViewController: UIViewController {
         super.viewDidLoad()
         
         title = historyDetail?.date
-        
-        billBackgroundColorView.layer.cornerRadius = billBackgroundColorView.frame.size.height / 6
         
         if let image = historyDetail?.image {
             photoDetailImageView.image = UIImage(data: image)
