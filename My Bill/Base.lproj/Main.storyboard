@@ -611,10 +611,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owk-vA-agk">
-                                <rect key="frame" x="137" y="184" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owk-vA-agk">
+                                <rect key="frame" x="57.5" y="54" width="205" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="MVa-9d-Qct"/>
+                                    <constraint firstAttribute="width" constant="205" id="Tgi-Ca-nz3"/>
+                                </constraints>
                                 <connections>
                                     <action selector="photoTapped:" destination="Jns-Qe-AqT" eventType="touchUpInside" id="VzU-MH-QPb"/>
                                     <segue destination="d0h-Nt-i0d" kind="show" identifier="goToPhotoDetailVC" id="Qk3-lW-NTJ"/>
@@ -623,6 +625,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="B5r-kn-Mk5" firstAttribute="top" secondItem="Owk-vA-agk" secondAttribute="bottom" constant="10" id="0Sp-cD-EGi"/>
                             <constraint firstItem="5Qn-F4-T7O" firstAttribute="top" secondItem="JTv-zW-x9B" secondAttribute="bottom" constant="6" id="5dG-87-8UT"/>
                             <constraint firstItem="72B-vw-2JK" firstAttribute="top" secondItem="iQd-fp-N9V" secondAttribute="bottom" constant="5" id="7ZZ-2X-hp5"/>
                             <constraint firstItem="5Qn-F4-T7O" firstAttribute="leading" secondItem="J1f-x8-9g0" secondAttribute="leading" constant="10" id="7qm-qv-rVi"/>
@@ -631,6 +634,7 @@
                             <constraint firstItem="qUz-ER-jdb" firstAttribute="leading" secondItem="J1f-x8-9g0" secondAttribute="leading" constant="10" id="Ejq-Mh-2HK"/>
                             <constraint firstItem="72B-vw-2JK" firstAttribute="centerX" secondItem="va7-xA-paG" secondAttribute="centerX" id="FLO-9Y-xmf"/>
                             <constraint firstItem="J1f-x8-9g0" firstAttribute="trailing" secondItem="Bnf-hd-amG" secondAttribute="trailing" constant="10" id="IOa-5n-MXS"/>
+                            <constraint firstItem="Owk-vA-agk" firstAttribute="centerX" secondItem="va7-xA-paG" secondAttribute="centerX" id="IXY-Mx-QJX"/>
                             <constraint firstItem="Ifp-N7-2lS" firstAttribute="top" secondItem="B5r-kn-Mk5" secondAttribute="bottom" constant="5" id="LVu-SM-gyy"/>
                             <constraint firstItem="J1f-x8-9g0" firstAttribute="trailing" secondItem="onk-ba-bdH" secondAttribute="trailing" constant="15" id="Mjt-tc-AzK"/>
                             <constraint firstItem="JTv-zW-x9B" firstAttribute="top" secondItem="Bnf-hd-amG" secondAttribute="bottom" constant="6" id="Myl-Za-cPv"/>
@@ -651,6 +655,7 @@
                             <constraint firstItem="tfY-K3-Acs" firstAttribute="top" secondItem="Ifp-N7-2lS" secondAttribute="bottom" constant="5" id="qmL-JF-xPl"/>
                             <constraint firstItem="J1f-x8-9g0" firstAttribute="trailing" secondItem="iQd-fp-N9V" secondAttribute="trailing" constant="15" id="rNh-ZA-IGS"/>
                             <constraint firstItem="J1f-x8-9g0" firstAttribute="trailing" secondItem="qUz-ER-jdb" secondAttribute="trailing" constant="10" id="tqi-94-OpN"/>
+                            <constraint firstItem="Owk-vA-agk" firstAttribute="top" secondItem="J1f-x8-9g0" secondAttribute="top" constant="10" id="ubO-kq-7ci"/>
                             <constraint firstItem="3Qt-w1-OEO" firstAttribute="top" secondItem="J1f-x8-9g0" secondAttribute="top" constant="10" id="v6a-s0-gU1"/>
                             <constraint firstItem="tfY-K3-Acs" firstAttribute="leading" secondItem="J1f-x8-9g0" secondAttribute="leading" constant="15" id="wDg-hh-GGG"/>
                             <constraint firstItem="Ifp-N7-2lS" firstAttribute="leading" secondItem="J1f-x8-9g0" secondAttribute="leading" constant="15" id="wsQ-VV-iVA"/>
@@ -675,7 +680,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKe-1J-lnG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="713" y="826"/>
+            <point key="canvasLocation" x="712.5" y="825"/>
         </scene>
         <!--Photo Detail View Controller-->
         <scene sceneID="Bu7-Rr-88S">
