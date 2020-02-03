@@ -366,7 +366,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = sergey.davydov.MyBill;
 				PRODUCT_NAME = "My Bill - Split & Tip";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -389,7 +389,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = sergey.davydov.MyBill;
 				PRODUCT_NAME = "My Bill - Split & Tip";
 				PROVISIONING_PROFILE_SPECIFIER = "";
