@@ -84,7 +84,7 @@ class DetailHistoryViewController: UIViewController {
 //    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let photoDetailVC = segue.destination as? PhotoDetailViewController {
+        if let photoDetailVC = segue.destination as? PhotoViewController {
             photoDetailVC.photoHistoryDetail = self
             }
     }

@@ -2,26 +2,31 @@
 //  PhotoViewController.swift
 //  My Bill
 //
-//  Created by Sergey Davydov on 28/01/2020.
+//  Created by Sergey Davydov on 03/02/2020.
 //  Copyright © 2020 Sergey Davydov. All rights reserved.
 //
 
 import UIKit
 
-class PhotoViewController: UIViewController {
+class PhotoViewController: UIViewController, UIScrollViewDelegate {
+
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var photoZoomView: UIImageView!
     
-    @IBOutlet weak var photosImageView: UIImageView!
     
-    var photoViewer : ViewController?
+    var photoHistoryDetail: DetailHistoryViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        if let imageData = photoViewer?.photoView {
-//           photosImageView.image = UIImage (data: imageData)
-//        }
-        
+
+        photoZoomView.image = photoHistoryDetail?.photoDetailImageView.image
+        // Do any additional setup after loading the view.
     }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return photoZoomView
+    }
+        
     
 
     /*

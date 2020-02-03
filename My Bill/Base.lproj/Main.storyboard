@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hqv-J5-jmo">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -13,28 +13,28 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPV-YB-mMb" customClass="roundView" customModule="My_Bill___Split___Tip" customModuleProvider="target">
-                                <rect key="frame" x="15" y="54" width="290" height="290"/>
+                                <rect key="frame" x="15" y="54" width="345" height="290"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ztU-2I-uIN" customClass="roundImageView" customModule="My_Bill___Split___Tip" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="290"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="290"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="290" id="8st-VB-5Lk"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4W-QB-yWw">
-                                        <rect key="frame" x="195" y="15" width="80" height="80"/>
+                                        <rect key="frame" x="250" y="15" width="80" height="80"/>
                                         <state key="normal" image="dessert"/>
                                         <connections>
                                             <action selector="addDessertTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UFG-Sx-6Hr"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="..." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="MQ6-Hi-ulS" customClass="roundTextField" customModule="My_Bill___Split___Tip" customModuleProvider="target">
-                                        <rect key="frame" x="195" y="103" width="80" height="34"/>
+                                        <rect key="frame" x="250" y="103" width="80" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="X5J-Eg-wth"/>
                                             <constraint firstAttribute="height" constant="34" id="o9W-2P-Ijr"/>
@@ -46,7 +46,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaU-B7-xMG">
-                                        <rect key="frame" x="195" y="153" width="80" height="80"/>
+                                        <rect key="frame" x="250" y="153" width="80" height="80"/>
                                         <state key="normal" image="alco"/>
                                         <connections>
                                             <action selector="addAlcoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wpE-UK-OJC"/>
@@ -60,7 +60,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="..." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="sOC-lU-rPk" customClass="roundTextField" customModule="My_Bill___Split___Tip" customModuleProvider="target">
-                                        <rect key="frame" x="195" y="241" width="80" height="34"/>
+                                        <rect key="frame" x="250" y="241" width="80" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="QPz-Zb-vSA"/>
                                             <constraint firstAttribute="height" constant="34" id="RcH-xb-tZa"/>
@@ -103,7 +103,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bjn-FG-JOh" customClass="UIImageView">
-                                        <rect key="frame" x="105" y="105" width="80" height="80"/>
+                                        <rect key="frame" x="132.5" y="105" width="80" height="80"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" image="YES"/>
@@ -114,7 +114,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goU-G2-dOR">
-                                        <rect key="frame" x="105" y="105" width="80" height="80"/>
+                                        <rect key="frame" x="132.5" y="105" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="Jy5-c9-3nW"/>
                                             <constraint firstAttribute="width" constant="80" id="vfI-iM-Zqb"/>
@@ -155,20 +155,20 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvn-wP-Xrr">
-                                <rect key="frame" x="10" y="355" width="300" height="30"/>
+                                <rect key="frame" x="10" y="355" width="355" height="30"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="ypD-Dp-vYe" kind="show" id="gbe-LR-gxV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAt-kS-q4h">
-                                <rect key="frame" x="15" y="354" width="290" height="32.5"/>
+                                <rect key="frame" x="15" y="354" width="345" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obl-gK-Geb">
-                                <rect key="frame" x="15" y="428.5" width="290" height="32.5"/>
+                                <rect key="frame" x="15" y="428.5" width="345" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -192,7 +192,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15" borderStyle="roundedRect" placeholder="%" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="oln-gH-4Dw">
-                                <rect key="frame" x="262" y="391.5" width="43" height="36"/>
+                                <rect key="frame" x="317" y="391.5" width="43" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="7yB-7Z-Z3G"/>
                                     <constraint firstAttribute="width" constant="43" id="uqc-U7-gEh"/>
@@ -210,7 +210,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L26-a9-fLc">
-                                <rect key="frame" x="15" y="466" width="290" height="32.5"/>
+                                <rect key="frame" x="15" y="466" width="345" height="32.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -287,14 +287,14 @@
             <objects>
                 <tableViewController id="KE1-U3-3Lk" customClass="HistoryTableViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="947-VZ-bNd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TotalBillSaved" id="eN7-9n-gCE">
-                                <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eN7-9n-gCE" id="bPC-xX-rKZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -318,14 +318,14 @@
             <objects>
                 <viewController storyboardIdentifier="popUpVCid" id="4RA-e0-nYz" customClass="PopUpViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kxZ-lh-aFQ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bY1-fQ-9n9">
-                                <rect key="frame" x="60" y="209" width="200" height="150"/>
+                                <rect key="frame" x="87.5" y="258.5" width="200" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cleared!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1O-sG-SVX">
-                                        <rect key="frame" x="50" y="59.5" width="100.5" height="31.5"/>
+                                        <rect key="frame" x="49.5" y="59.5" width="101" height="31"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -340,7 +340,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReW-zk-alL">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
                                     <action selector="closeTapped:" destination="4RA-e0-nYz" eventType="touchUpInside" id="cOh-5a-RHQ"/>
                                 </connections>
@@ -372,11 +372,11 @@
             <objects>
                 <viewController storyboardIdentifier="savedPopUpVCid" id="fky-kj-Yfg" customClass="SavedPopUpViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Esd-sE-4Wi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pe0-Ye-1l1">
-                                <rect key="frame" x="60" y="209" width="200" height="150"/>
+                                <rect key="frame" x="87.5" y="258.5" width="200" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saved!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54O-Vp-bdn">
                                         <rect key="frame" x="59" y="59" width="82" height="31.5"/>
@@ -393,7 +393,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAq-5X-CYe">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
                                     <action selector="closeTapped:" destination="fky-kj-Yfg" eventType="touchUpInside" id="3I8-Fq-S3q"/>
                                 </connections>
@@ -425,10 +425,10 @@
             <objects>
                 <tableViewController id="ypD-Dp-vYe" customClass="BillListTableViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Tq-Vm-35Y">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wAr-QA-4Go">
-                            <rect key="frame" x="0.0" y="99.5" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.98039215690000003" green="0.40434630220000001" blue="0.34411464279999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
@@ -437,10 +437,10 @@
                         </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BillRow" id="cfd-KY-fku">
-                                <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cfd-KY-fku" id="l1P-z5-AC9">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -487,7 +487,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nm4-Jm-wFg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -508,7 +508,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jxq-z2-E49">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -525,58 +525,58 @@
             <objects>
                 <viewController id="Jns-Qe-AqT" customClass="DetailHistoryViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="va7-xA-paG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Qt-w1-OEO" customClass="roundImageView" customModule="My_Bill___Split___Tip" customModuleProvider="target">
-                                <rect key="frame" x="57.5" y="54" width="205" height="290"/>
+                                <rect key="frame" x="85" y="54" width="205" height="290"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="290" id="G1d-Hi-Nhg"/>
                                     <constraint firstAttribute="width" constant="205" id="w3f-A1-Qn7"/>
                                 </constraints>
                             </imageView>
                             <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bnf-hd-amG" customClass="Round6View" customModule="My_Bill___Split___Tip" customModuleProvider="target">
-                                <rect key="frame" x="10" y="353" width="300" height="32"/>
+                                <rect key="frame" x="10" y="353" width="355" height="32"/>
                                 <color key="backgroundColor" red="0.37175488470000001" green="0.70424264670000003" blue="0.76026779410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="J5O-PS-Avj"/>
                                 </constraints>
                             </view>
                             <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JTv-zW-x9B" customClass="Round6View" customModule="My_Bill___Split___Tip" customModuleProvider="target">
-                                <rect key="frame" x="10" y="391" width="300" height="32"/>
+                                <rect key="frame" x="10" y="391" width="355" height="32"/>
                                 <color key="backgroundColor" red="0.37175488470000001" green="0.70424264670000003" blue="0.76026779410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="G3d-3s-UxY"/>
                                 </constraints>
                             </view>
                             <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Qn-F4-T7O" customClass="Round6View" customModule="My_Bill___Split___Tip" customModuleProvider="target">
-                                <rect key="frame" x="10" y="429" width="300" height="32"/>
+                                <rect key="frame" x="10" y="429" width="355" height="32"/>
                                 <color key="backgroundColor" red="0.37175488470000001" green="0.70424264670000003" blue="0.76026779410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="RSx-Jo-G99"/>
                                 </constraints>
                             </view>
                             <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qUz-ER-jdb" customClass="Round6View" customModule="My_Bill___Split___Tip" customModuleProvider="target">
-                                <rect key="frame" x="10" y="467" width="300" height="32"/>
+                                <rect key="frame" x="10" y="467" width="355" height="32"/>
                                 <color key="backgroundColor" red="0.37175488470000001" green="0.70424264670000003" blue="0.76026779410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="kjd-7x-oXj"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQd-fp-N9V">
-                                <rect key="frame" x="15" y="354" width="290" height="32.5"/>
+                                <rect key="frame" x="15" y="354" width="345" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72B-vw-2JK">
-                                <rect key="frame" x="15" y="391.5" width="290" height="32.5"/>
+                                <rect key="frame" x="15" y="391.5" width="345" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uX8-ZA-KOH">
-                                <rect key="frame" x="15" y="429" width="290" height="32.5"/>
+                                <rect key="frame" x="15" y="429" width="345" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -606,20 +606,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onk-ba-bdH">
-                                <rect key="frame" x="15" y="466.5" width="290" height="32.5"/>
+                                <rect key="frame" x="15" y="466.5" width="345" height="32.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owk-vA-agk">
-                                <rect key="frame" x="57.5" y="54" width="205" height="290"/>
+                                <rect key="frame" x="85" y="54" width="205" height="290"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="290" id="MVa-9d-Qct"/>
                                     <constraint firstAttribute="width" constant="205" id="Tgi-Ca-nz3"/>
                                 </constraints>
                                 <connections>
                                     <action selector="photoTapped:" destination="Jns-Qe-AqT" eventType="touchUpInside" id="VzU-MH-QPb"/>
-                                    <segue destination="d0h-Nt-i0d" kind="show" identifier="goToPhotoDetailVC" id="Qk3-lW-NTJ"/>
+                                    <segue destination="lQg-Fj-t9G" kind="show" identifier="goToPhotoDetailVC" id="fL8-eQ-G2L"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -682,35 +682,52 @@
             </objects>
             <point key="canvasLocation" x="712.5" y="825"/>
         </scene>
-        <!--Photo Detail View Controller-->
-        <scene sceneID="Bu7-Rr-88S">
+        <!--Photo View Controller-->
+        <scene sceneID="dbO-ch-qMx">
             <objects>
-                <viewController id="d0h-Nt-i0d" customClass="PhotoDetailViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5Oj-nN-JLl" customClass="Photo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <viewController id="lQg-Fj-t9G" customClass="PhotoViewController" customModule="My_Bill___Split___Tip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OXE-oE-qzn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A5T-aA-v6s">
-                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="52O-q2-zwA">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NO7-Cu-hkj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="NO7-Cu-hkj" firstAttribute="leading" secondItem="52O-q2-zwA" secondAttribute="leading" id="2BR-4c-Bnj"/>
+                                    <constraint firstItem="NO7-Cu-hkj" firstAttribute="height" secondItem="52O-q2-zwA" secondAttribute="height" id="bjR-Rk-27j"/>
+                                    <constraint firstItem="NO7-Cu-hkj" firstAttribute="width" secondItem="52O-q2-zwA" secondAttribute="width" id="eQb-96-Jgz"/>
+                                    <constraint firstItem="NO7-Cu-hkj" firstAttribute="top" secondItem="52O-q2-zwA" secondAttribute="top" id="kpF-aE-cYV"/>
+                                    <constraint firstAttribute="bottom" secondItem="NO7-Cu-hkj" secondAttribute="bottom" id="vUr-FV-Msa"/>
+                                    <constraint firstAttribute="trailing" secondItem="NO7-Cu-hkj" secondAttribute="trailing" id="zcv-DQ-U3Y"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="lQg-Fj-t9G" id="AKm-IW-mqe"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Tw3-9f-CQc" firstAttribute="bottom" secondItem="A5T-aA-v6s" secondAttribute="bottom" id="Nrb-nv-vS2"/>
-                            <constraint firstItem="A5T-aA-v6s" firstAttribute="top" secondItem="Tw3-9f-CQc" secondAttribute="top" id="fbU-sy-GFq"/>
-                            <constraint firstItem="A5T-aA-v6s" firstAttribute="leading" secondItem="Tw3-9f-CQc" secondAttribute="leading" id="mLJ-Rm-BIE"/>
-                            <constraint firstItem="Tw3-9f-CQc" firstAttribute="trailing" secondItem="A5T-aA-v6s" secondAttribute="trailing" id="x4P-UE-vc8"/>
+                            <constraint firstItem="d8h-Kf-MOw" firstAttribute="trailing" secondItem="52O-q2-zwA" secondAttribute="trailing" id="OJe-R9-XFX"/>
+                            <constraint firstItem="52O-q2-zwA" firstAttribute="top" secondItem="d8h-Kf-MOw" secondAttribute="top" id="S1w-bk-hx0"/>
+                            <constraint firstItem="52O-q2-zwA" firstAttribute="leading" secondItem="d8h-Kf-MOw" secondAttribute="leading" id="eku-Z7-Bap"/>
+                            <constraint firstItem="d8h-Kf-MOw" firstAttribute="bottom" secondItem="52O-q2-zwA" secondAttribute="bottom" id="omk-nJ-ONZ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Tw3-9f-CQc"/>
+                        <viewLayoutGuide key="safeArea" id="d8h-Kf-MOw"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hWt-rp-25T"/>
+                    <navigationItem key="navigationItem" id="wOA-A3-PO3"/>
                     <connections>
-                        <outlet property="photoDetailZoomImageView" destination="A5T-aA-v6s" id="1jy-g8-Ihg"/>
+                        <outlet property="photoZoomView" destination="NO7-Cu-hkj" id="k3j-xH-zZo"/>
+                        <outlet property="scrollView" destination="52O-q2-zwA" id="dwE-sf-HZc"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jwi-jt-9JP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Owl-3f-tD6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1418" y="826"/>
+            <point key="canvasLocation" x="1365.5999999999999" y="825.33733133433293"/>
         </scene>
     </scenes>
     <resources>
