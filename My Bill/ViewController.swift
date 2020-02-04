@@ -40,8 +40,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        photoView.layer.cornerRadius = 14
-        
         photo.delegate = self
         
         dateFormatter.dateStyle = .medium
@@ -55,9 +53,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         setupNavigationBarItems()
         
         photoView.image = UIImage(named: "photoview")
-        
-//        photoView.layer.borderWidth = 1.0
-//        self.photoView.layer.borderColor = UIColor(red:180/255, green:169/255, blue:159/255, alpha: 1).cgColor
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,8 +64,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let billListTVC = segue.destination as? BillListTableViewController
         billListTVC?.delegate = self
-//        let historyTVC = segue.destination as? HistoryTableViewController
-//        historyTVC?.delegateTB = self
         }
     
     private func setupNavigationBarItems() {
@@ -258,22 +251,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             sumBT.tipPersentage = String(format: "%g", tipPersentage!)
             sumBT.date = "\(dateFormatter.string(from: currentdate))"
             sumBT.image = photoView.image?.jpegData(compressionQuality: 1.0)
-//            sumBT.imageMini = photoView.image?.resizeImage(70, opaque: true)
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-//            loadView()
-//            viewDidLoad()
-//            items.removeAll()
+
             clearText()
             showSavedPopUp()
         }
     }
     
     @IBAction func refreshTapped(_ sender: Any) {
-//        loadView()
-//        viewDidLoad()
-//        items.removeAll()
         clearText()
-        viewWillAppear(true)
         showPopUp()
     }
     
@@ -283,44 +269,3 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
 }
-//extension UIImage {
-//    func resizeImage(_ dimension: CGFloat, opaque: Bool, contentMode: UIView.ContentMode = .scaleAspectFit) -> UIImage {
-//        var width: CGFloat
-//        var height: CGFloat
-//        var newImage: UIImage
-//
-//        let size = self.size
-//        let aspectRatio =  size.width/size.height
-//
-//        switch contentMode {
-//            case .scaleAspectFit:
-//                if aspectRatio > 1 {                            // Landscape image
-//                    width = dimension
-//                    height = dimension / aspectRatio
-//                } else {                                        // Portrait image
-//                    height = dimension
-//                    width = dimension * aspectRatio
-//                }
-//
-//        default:
-//            fatalError("UIIMage.resizeToFit(): FATAL: Unimplemented ContentMode")
-//        }
-//
-//        if #available(iOS 10.0, *) {
-//            let renderFormat = UIGraphicsImageRendererFormat.default()
-//            renderFormat.opaque = opaque
-//            let renderer = UIGraphicsImageRenderer(size: CGSize(width: width, height: height), format: renderFormat)
-//            newImage = renderer.image {
-//                (context) in
-//                self.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
-//            }
-//        } else {
-//            UIGraphicsBeginImageContextWithOptions(CGSize(width: width, height: height), opaque, 0)
-//                self.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
-//                newImage = UIGraphicsGetImageFromCurrentImageContext()!
-//            UIGraphicsEndImageContext()
-//        }
-//
-//        return newImage
-//    }
-//}
