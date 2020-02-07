@@ -9,6 +9,15 @@
 import UIKit
 import Foundation
 
+struct Course: Decodable {
+//    var id: Int
+    var name: String
+//    var link: String
+//    var imageUrl: String
+//    var number_of_lessons: Int
+    var colors: [String]
+}
+
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
      
     @IBOutlet weak var menuPadView: roundView!
@@ -53,6 +62,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         setupNavigationBarItems()
         
         photoView.image = UIImage(named: "photoview")
+        
+//        let myCourse = Course(id: 1, name: "w", link: "e", imageUrl: "t", number_of_lessons: 3)
+//        print(myCourse)
+        let jsonUrlString = "https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json"
+        guard let url = URL(string: jsonUrlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else { return }
+//            let dataAsString = String(data: data, encoding: .utf8)
+//            print(dataAsString)
+            do {
+                let courses = try JSONDecoder().decode([Course].self, from: data)
+                print(courses)
+                
+            } catch let jsonError {
+                print("Error", jsonError)
+            }
+        }.resume()
     }
     
     override func viewWillAppear(_ animated: Bool) {

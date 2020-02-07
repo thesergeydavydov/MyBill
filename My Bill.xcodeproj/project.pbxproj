@@ -358,7 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66K9C8VT35;
 				INFOPLIST_FILE = "My Bill/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -366,7 +366,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = sergey.davydov.MyBill;
 				PRODUCT_NAME = "My Bill - Split & Tip";
 				PROVISIONING_PROFILE_SPECIFIER = "MyBill App Store";
@@ -381,7 +381,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 66K9C8VT35;
 				INFOPLIST_FILE = "My Bill/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -389,7 +389,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = sergey.davydov.MyBill;
 				PRODUCT_NAME = "My Bill - Split & Tip";
 				PROVISIONING_PROFILE_SPECIFIER = "MyBill App Store";
