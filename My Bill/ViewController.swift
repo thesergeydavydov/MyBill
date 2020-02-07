@@ -9,13 +9,19 @@
 import UIKit
 import Foundation
 
-struct Course: Decodable {
-//    var id: Int
+struct WebSiteDescription: Decodable {
     var name: String
-//    var link: String
-//    var imageUrl: String
-//    var number_of_lessons: Int
-    var colors: [String]
+    var description: String
+    var courses: [Course]
+}
+
+struct Course: Decodable {
+    var id: Int?
+    var name: String?
+    var link: String?
+    var imageUrl: String?
+    var number_of_lessons: Int?
+//    var colors: [String]
 }
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -65,7 +71,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
 //        let myCourse = Course(id: 1, name: "w", link: "e", imageUrl: "t", number_of_lessons: 3)
 //        print(myCourse)
-        let jsonUrlString = "https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json"
+        let jsonUrlString = "https://api.letsbuildthatapp.com/jsondecodable/courses_missing_fields"
         guard let url = URL(string: jsonUrlString) else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -73,6 +79,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //            let dataAsString = String(data: data, encoding: .utf8)
 //            print(dataAsString)
             do {
+//                let websitedescription = try JSONDecoder().decode(WebSiteDescription.self, from: data)
+//                print(websitedescription.name, websitedescription.description)
                 let courses = try JSONDecoder().decode([Course].self, from: data)
                 print(courses)
                 
