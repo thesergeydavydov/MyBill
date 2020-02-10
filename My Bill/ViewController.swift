@@ -39,6 +39,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     var photo = UIImagePickerController()
     
+    var counter = 0
+    
     let currentdate = Date()
     let dateFormatter = DateFormatter()
 
@@ -60,7 +62,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         photoView.image = UIImage(named: "photoview")
         
-        self.setGradientBackground()
+        setGradientBackground()
         
 //        let jsonUrlString = "https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json"
 //        guard let url = URL(string: jsonUrlString) else { return }
@@ -89,7 +91,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         sum()
         calculateTip()
         totalSum()
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -113,25 +114,35 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             guard let data = data else { return }
             
             do {
-                
                 let gradients = try JSONDecoder().decode([Gradients].self, from: data)
+                let newGradient = gradients[self.counter]
+                
+                let newGradient1 = gradients[self.counter].colors[1]
+                let newGradient2 = gradients[self.counter].colors[0]
+                
+                print(newGradient)
+                print(newGradient1)
+                print(newGradient2)
+                
                 DispatchQueue.main.sync {
-//                    self.menuPadImage.backgroundColor = UIColor(hexString: "\(gradients[0].colors[2])")
-//                    self.setGradientBackground()
                     
-                    let colorTop =  UIColor(hexString: "\(gradients[4].colors[1])").cgColor
-//                    let colorCenter = UIColor(hexString: "\(gradients[1].colors[1])").cgColor
-                    let colorBottom = UIColor(hexString: "\(gradients[4].colors[0])").cgColor
-                    
+                    let colorTop =  UIColor(hexString: "\(newGradient1)").cgColor
+                    let colorBottom = UIColor(hexString: "\(newGradient2)").cgColor
+                    print(colorTop)
+                    print(colorBottom)
                     
                     let gradientLayer = CAGradientLayer()
                     gradientLayer.colors = [colorTop, colorBottom]
                     gradientLayer.locations = [0.0, 1.0]
                     gradientLayer.frame = self.menuPadImage.bounds
                     
-                    self.menuPadImage.layer.insertSublayer(gradientLayer, at:0)
+                    self.menuPadImage.layer.addSublayer(gradientLayer)
                 }
                 
+                self.counter += 1
+                if self.counter > gradients.count {
+                    self.counter = 0
+                }
                 
             } catch let jsonError {
                 print("Error", jsonError)
@@ -326,6 +337,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func refreshTapped(_ sender: Any) {
         clearText()
         showPopUp()
+        setGradientBackground()
     }
     
     @IBAction func takePhoto(_ sender: Any) {
