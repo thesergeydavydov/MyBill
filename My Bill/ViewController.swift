@@ -9,19 +9,9 @@
 import UIKit
 import Foundation
 
-struct WebSiteDescription: Decodable {
+struct Gradients: Decodable {
     var name: String
-    var description: String
-    var courses: [Course]
-}
-
-struct Course: Decodable {
-    var id: Int?
-    var name: String?
-    var link: String?
-    var imageUrl: String?
-    var number_of_lessons: Int?
-//    var colors: [String]
+    var colors: [String]
 }
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -55,6 +45,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        menuPadImage.backgroundColor = UIColor(hexString: "091E3A")
         photo.delegate = self
         
         dateFormatter.dateStyle = .medium
@@ -69,31 +60,36 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         photoView.image = UIImage(named: "photoview")
         
-//        let myCourse = Course(id: 1, name: "w", link: "e", imageUrl: "t", number_of_lessons: 3)
-//        print(myCourse)
-        let jsonUrlString = "https://api.letsbuildthatapp.com/jsondecodable/courses_missing_fields"
-        guard let url = URL(string: jsonUrlString) else { return }
+        self.setGradientBackground()
         
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let data = data else { return }
-//            let dataAsString = String(data: data, encoding: .utf8)
-//            print(dataAsString)
-            do {
-//                let websitedescription = try JSONDecoder().decode(WebSiteDescription.self, from: data)
-//                print(websitedescription.name, websitedescription.description)
-                let courses = try JSONDecoder().decode([Course].self, from: data)
-                print(courses)
-                
-            } catch let jsonError {
-                print("Error", jsonError)
-            }
-        }.resume()
+//        let jsonUrlString = "https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json"
+//        guard let url = URL(string: jsonUrlString) else { return }
+//
+//        URLSession.shared.dataTask(with: url) { (data, response, error) in
+//            guard let data = data else { return }
+//
+//            do {
+//
+//                let gradients = try JSONDecoder().decode([Gradients].self, from: data)
+//                DispatchQueue.main.sync {
+////                    self.menuPadImage.backgroundColor = UIColor(hexString: "\(gradients[0].colors[2])")
+////                    self.setGradientBackground()
+//
+//                    print(gradients[0].colors)
+//                }
+//
+//
+//            } catch let jsonError {
+//                print("Error", jsonError)
+//            }
+//        }.resume()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         sum()
         calculateTip()
         totalSum()
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -107,6 +103,40 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         titleImageView.contentMode = .scaleAspectFit
         
         navigationItem.titleView = titleImageView
+    }
+    
+    func setGradientBackground() {
+        let jsonUrlString = "https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json"
+        guard let url = URL(string: jsonUrlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else { return }
+            
+            do {
+                
+                let gradients = try JSONDecoder().decode([Gradients].self, from: data)
+                DispatchQueue.main.sync {
+//                    self.menuPadImage.backgroundColor = UIColor(hexString: "\(gradients[0].colors[2])")
+//                    self.setGradientBackground()
+                    
+                    let colorTop =  UIColor(hexString: "\(gradients[4].colors[1])").cgColor
+//                    let colorCenter = UIColor(hexString: "\(gradients[1].colors[1])").cgColor
+                    let colorBottom = UIColor(hexString: "\(gradients[4].colors[0])").cgColor
+                    
+                    
+                    let gradientLayer = CAGradientLayer()
+                    gradientLayer.colors = [colorTop, colorBottom]
+                    gradientLayer.locations = [0.0, 1.0]
+                    gradientLayer.frame = self.menuPadImage.bounds
+                    
+                    self.menuPadImage.layer.insertSublayer(gradientLayer, at:0)
+                }
+                
+                
+            } catch let jsonError {
+                print("Error", jsonError)
+            }
+        }.resume()
     }
     
     func calculateTip() {
@@ -303,4 +333,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(photo, animated: true, completion: nil)
     }
     
+}
+
+extension UIColor {
+    convenience init(hexString: String) {
+        let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int = UInt64()
+        Scanner(string: hex).scanHexInt64(&int)
+        let a, r, g, b: UInt64
+        switch hex.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (255, 0, 0, 0)
+        }
+        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
+    }
 }
