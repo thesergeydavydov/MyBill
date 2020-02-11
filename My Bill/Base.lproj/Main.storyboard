@@ -102,6 +102,13 @@
                                             <action selector="addCoffeeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9G-0p-f2D"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y2s-yu-bzj">
+                                        <rect key="frame" x="130" y="102.5" width="85" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="42h-ZR-OGq"/>
+                                            <constraint firstAttribute="height" constant="85" id="RIR-LN-bR5"/>
+                                        </constraints>
+                                    </imageView>
                                     <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bjn-FG-JOh" customClass="UIImageView">
                                         <rect key="frame" x="132.5" y="105" width="80" height="80"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -148,6 +155,8 @@
                                     <constraint firstItem="goU-G2-dOR" firstAttribute="centerY" secondItem="zPV-YB-mMb" secondAttribute="centerY" id="jCm-jX-KN0"/>
                                     <constraint firstItem="sOC-lU-rPk" firstAttribute="top" secondItem="ztU-2I-uIN" secondAttribute="bottom" constant="-49" id="kgD-nI-5Cj"/>
                                     <constraint firstAttribute="height" constant="290" id="m0X-1c-pkm"/>
+                                    <constraint firstItem="Y2s-yu-bzj" firstAttribute="centerY" secondItem="zPV-YB-mMb" secondAttribute="centerY" id="tlU-RC-iSL"/>
+                                    <constraint firstItem="Y2s-yu-bzj" firstAttribute="centerX" secondItem="zPV-YB-mMb" secondAttribute="centerX" id="u34-no-qO4"/>
                                     <constraint firstItem="AaU-B7-xMG" firstAttribute="leading" secondItem="ztU-2I-uIN" secondAttribute="trailing" constant="-95" id="wQ7-u4-hhM"/>
                                     <constraint firstItem="ztU-2I-uIN" firstAttribute="leading" secondItem="6Oz-s3-ldv" secondAttribute="trailing" constant="-95" id="weg-NA-saq"/>
                                     <constraint firstItem="sOC-lU-rPk" firstAttribute="top" secondItem="AaU-B7-xMG" secondAttribute="bottom" constant="8" id="wpa-f0-4rZ"/>
@@ -271,6 +280,7 @@
                         <outlet property="dessertTextField" destination="MQ6-Hi-ulS" id="OUJ-vg-Rzb"/>
                         <outlet property="menuPadImage" destination="ztU-2I-uIN" id="oOX-4M-7Te"/>
                         <outlet property="menuPadView" destination="zPV-YB-mMb" id="20E-FY-fzZ"/>
+                        <outlet property="photoPadImageView" destination="Y2s-yu-bzj" id="geh-tq-xDv"/>
                         <outlet property="photoView" destination="Bjn-FG-JOh" id="ZsI-Xg-hy3"/>
                         <outlet property="plateTextField" destination="6Oz-s3-ldv" id="flQ-dm-eio"/>
                         <outlet property="tipLabel" destination="Obl-gK-Geb" id="eVL-WR-WNV"/>

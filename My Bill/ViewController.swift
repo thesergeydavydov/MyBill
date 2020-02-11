@@ -15,7 +15,7 @@ struct Gradients: Decodable {
 }
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-     
+    
     @IBOutlet weak var menuPadView: roundView!
     @IBOutlet weak var menuPadImage: roundImageView!
     
@@ -31,10 +31,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var billTapped: UIButton!
     
     @IBOutlet weak var photoView: UIImageView!
-    
+    @IBOutlet weak var photoPadImageView: UIImageView!
     
     var items : [Item] = []
-
+    
     var totalBills : [BillsEntity] = []
     
     var photo = UIImagePickerController()
@@ -43,11 +43,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     let currentdate = Date()
     let dateFormatter = DateFormatter()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        menuPadImage.backgroundColor = UIColor(hexString: "091E3A")
+        //        menuPadImage.backgroundColor = UIColor(hexString: "091E3A")
         photo.delegate = self
         
         dateFormatter.dateStyle = .medium
@@ -57,46 +57,50 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         photoView.layer.cornerRadius = photoView.frame.size.height / 2
         photoView.layer.masksToBounds = true
-
+        
+        photoPadImageView.layer.cornerRadius = photoPadImageView.frame.size.height / 2
+        photoPadImageView.layer.masksToBounds = true
+        
         setupNavigationBarItems()
         
         photoView.image = UIImage(named: "photoview")
         
         setGradientBackground()
         
-//        let jsonUrlString = "https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json"
-//        guard let url = URL(string: jsonUrlString) else { return }
-//
-//        URLSession.shared.dataTask(with: url) { (data, response, error) in
-//            guard let data = data else { return }
-//
-//            do {
-//
-//                let gradients = try JSONDecoder().decode([Gradients].self, from: data)
-//                DispatchQueue.main.sync {
-////                    self.menuPadImage.backgroundColor = UIColor(hexString: "\(gradients[0].colors[2])")
-////                    self.setGradientBackground()
-//
-//                    print(gradients[0].colors)
-//                }
-//
-//
-//            } catch let jsonError {
-//                print("Error", jsonError)
-//            }
-//        }.resume()
+        //        let jsonUrlString = "https://raw.githubusercontent.com/ghosh/uiGradients/master/gradients.json"
+        //        guard let url = URL(string: jsonUrlString) else { return }
+        //
+        //        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        //            guard let data = data else { return }
+        //
+        //            do {
+        //
+        //                let gradients = try JSONDecoder().decode([Gradients].self, from: data)
+        //                DispatchQueue.main.sync {
+        ////                    self.menuPadImage.backgroundColor = UIColor(hexString: "\(gradients[0].colors[2])")
+        ////                    self.setGradientBackground()
+        //
+        //                    print(gradients[0].colors)
+        //                }
+        //
+        //
+        //            } catch let jsonError {
+        //                print("Error", jsonError)
+        //            }
+        //        }.resume()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         sum()
         calculateTip()
         totalSum()
+        setGradientBackground()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let billListTVC = segue.destination as? BillListTableViewController
         billListTVC?.delegate = self
-        }
+    }
     
     private func setupNavigationBarItems() {
         let titleImageView = UIImageView(image: UIImage(named: "title_icon-1"))
@@ -134,9 +138,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     let gradientLayer = CAGradientLayer()
                     gradientLayer.colors = [colorTop, colorBottom]
                     gradientLayer.locations = [0.0, 1.0]
-                    gradientLayer.frame = self.menuPadImage.bounds
+                    gradientLayer.frame = self.photoPadImageView.bounds
                     
-                    self.menuPadImage.layer.addSublayer(gradientLayer)
+                    self.photoPadImageView.layer.addSublayer(gradientLayer)
                 }
                 
                 self.counter += 1
@@ -155,10 +159,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let tip = 0.00
             return tipLabel.text = convertDoubleToCurrency(numb: tip)
         } else {
-        let total = convertCurrencyToDouble(input: billLabel.text!)
-        let tipPercetage = Double(tipTextField.text!)!
-        let tip = total! * tipPercetage / 100
-        tipLabel.text = convertDoubleToCurrency(numb: tip)
+            let total = convertCurrencyToDouble(input: billLabel.text!)
+            let tipPercetage = Double(tipTextField.text!)!
+            let tip = total! * tipPercetage / 100
+            tipLabel.text = convertDoubleToCurrency(numb: tip)
         }
     }
     
@@ -166,7 +170,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var total = 0.00
         for item in items {
             total += Double(item.price)
-            }
+        }
         billLabel.text = convertDoubleToCurrency(numb: total)
     }
     
@@ -179,21 +183,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func showPopUp() {
         let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpVCid") as! PopUpViewController
-
+        
         self.addChild(popUpVC)
         popUpVC.view.frame = self.view.frame
         self.view.addSubview(popUpVC.view)
-
+        
         popUpVC.didMove(toParent: self)
     }
     
     func showSavedPopUp() {
         let savePopUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "savedPopUpVCid") as! SavedPopUpViewController
-
+        
         self.addChild(savePopUpVC)
         savePopUpVC.view.frame = self.view.frame
         self.view.addSubview(savePopUpVC.view)
-
+        
         savePopUpVC.didMove(toParent: self)
     }
     
@@ -241,7 +245,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func addPlateTapped(_ sender: Any) {
         plateTextField.becomeFirstResponder()
     }
-
+    
     @IBAction func addPlateTF(_ sender: Any) {
         if let text = convertStringToDouble(input: plateTextField.text!) {
             let newItem = Item()
@@ -254,11 +258,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         calculateTip()
         totalSum()
     }
-
+    
     @IBAction func addDessertTapped(_ sender: Any) {
         dessertTextField.becomeFirstResponder()
     }
-
+    
     @IBAction func addDessertTF(_ sender: Any) {
         if let text = convertStringToDouble(input: dessertTextField.text!) {
             let newItem = Item()
@@ -271,11 +275,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         calculateTip()
         totalSum()
     }
-
+    
     @IBAction func addCoffeeTapped(_ sender: Any) {
         coffeeTextField.becomeFirstResponder()
     }
-
+    
     @IBAction func addCoffeeTF(_ sender: Any) {
         if let text = convertStringToDouble(input: coffeeTextField.text!) {
             let newItem = Item()
@@ -288,7 +292,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         calculateTip()
         totalSum()
     }
-
+    
     @IBAction func addAlcoTapped(_ sender: Any) {
         alcoTextField.becomeFirstResponder()
     }
@@ -328,9 +332,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             sumBT.date = "\(dateFormatter.string(from: currentdate))"
             sumBT.image = photoView.image?.jpegData(compressionQuality: 1.0)
             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
-
+            
             clearText()
             showSavedPopUp()
+            setGradientBackground()
         }
     }
     

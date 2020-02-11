@@ -9,13 +9,13 @@
 import UIKit
 
 class DetailHistoryViewController: UIViewController {
-
+    
     @IBOutlet weak var photoDetailImageView: roundImageView!
     @IBOutlet weak var billDetailLabel: UILabel!
     @IBOutlet weak var tipPercentageDetailLabel: UILabel!
     @IBOutlet weak var tipDetailLabel: UILabel!
     @IBOutlet weak var totalDetailLabel: UILabel!
-  
+    
     @IBOutlet weak var billBackgroundColorView: Round6View!
     @IBOutlet weak var tipPersentageBGCView: Round6View!
     @IBOutlet weak var tipBGCView: Round6View!
@@ -43,7 +43,7 @@ class DetailHistoryViewController: UIViewController {
         
         if let priceHistory = historyDetail?.tip {
             tipDetailLabel.text = convertDoubleToCurrency(numb: Double(priceHistory)!)
-           }
+        }
         
         if let priceHistory = historyDetail?.price {
             totalDetailLabel.text = convertDoubleToCurrency(numb: Double(priceHistory)!)
@@ -78,28 +78,28 @@ class DetailHistoryViewController: UIViewController {
         return formatter.number(from: input)?.doubleValue
     }
     
-//    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-//        let selectedPhoto = historyDetail?.image
-//        performSegue(withIdentifier: "goToPhotoDetailVC", sender: selectedPhoto)
-//    }
+    //    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+    //        let selectedPhoto = historyDetail?.image
+    //        performSegue(withIdentifier: "goToPhotoDetailVC", sender: selectedPhoto)
+    //    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let photoDetailVC = segue.destination as? PhotoViewController {
             photoDetailVC.photoHistoryDetail = self
-            }
+        }
     }
     
     @IBAction func photoTapped(_ sender: Any) {
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

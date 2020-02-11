@@ -9,7 +9,7 @@
 import UIKit
 
 class BillListTableViewController: UITableViewController {
-
+    
     @IBOutlet weak var totalLabel: UILabel!
     
     var delegate: ViewController?
@@ -18,29 +18,29 @@ class BillListTableViewController: UITableViewController {
         super.viewDidLoad()
         
         sumTVC()
-         
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     // MARK: - Table view data source
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
+    
+    //    override func numberOfSections(in tableView: UITableView) -> Int {
+    //        // #warning Incomplete implementation, return the number of sections
+    //        return 0
+    //    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return delegate!.items.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "BillRow")
-//        cell.detailTextLabel?.text = delegate!.items[indexPath.row].date
+        //        cell.detailTextLabel?.text = delegate!.items[indexPath.row].date
         cell.detailTextLabel?.text = String(format: "%g", delegate!.items[indexPath.row].price)
         cell.detailTextLabel?.font = UIFont.systemFont(ofSize: 24, weight: UIFont.Weight.medium)
         if #available(iOS 13.0, *) {
@@ -50,30 +50,30 @@ class BillListTableViewController: UITableViewController {
             // Fallback on earlier versions
         }
         cell.imageView?.image = delegate!.items[indexPath.row].image
-
+        
         // Configure the cell...
-
+        
         return cell
     }
     
     /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
+     // Override to support conditional editing of the table view.
+     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the specified item to be editable.
+     return true
+     }
+     */
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             delegate!.items.remove(at: indexPath.row)
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
-
+            
             sumTVC()
         }
-
+        
     }
     
     func convertDoubleToCurrency(numb:Double) -> String {
@@ -85,40 +85,40 @@ class BillListTableViewController: UITableViewController {
         formatter.minimumFractionDigits = 2
         return formatter.string(from: NSNumber(value: numb))!
     }
-        
+    
     func sumTVC() {
         var total = 0.00
         if let items = delegate?.items {
             for item in items {
                 total += Double(item.price)
-                }
             }
-            totalLabel.text = convertDoubleToCurrency(numb: total)
+        }
+        totalLabel.text = convertDoubleToCurrency(numb: total)
     }
     
     /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
+     // Override to support rearranging the table view.
+     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+     
+     }
+     */
+    
     /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
+     // Override to support conditional rearranging of the table view.
+     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
 }

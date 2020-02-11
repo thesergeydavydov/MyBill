@@ -9,7 +9,7 @@
 import UIKit
 
 class PopUpViewController: UIViewController {
-
+    
     @IBOutlet weak var messageView: UIView!
     
     override func viewDidLoad() {
@@ -41,5 +41,5 @@ class PopUpViewController: UIViewController {
             self.view.removeFromSuperview()
         }
     }
-
+    
 }
