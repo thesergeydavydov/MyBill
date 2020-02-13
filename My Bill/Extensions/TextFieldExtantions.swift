@@ -16,16 +16,16 @@ extension UITextField {
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let done = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(clikedDone))
 //        let clear = UIBarButtonItem(title: "Clear", style: .plain, target: self, action: #selector(clikedClear))
-
+        
         toolBar.setItems([flexSpace, done], animated: true)
-
+        
         self.inputAccessoryView = toolBar
     }
-
+    
     @objc func clikedDone() {
         self.endEditing(true)
     }
-
+    
     @objc func clikedClear() {
         self.text = ""
     }

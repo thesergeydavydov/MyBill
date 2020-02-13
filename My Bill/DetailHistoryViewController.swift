@@ -34,7 +34,6 @@ class DetailHistoryViewController: UIViewController {
         
         if let priceHistory = historyDetail?.bill {
             billDetailLabel.text = convertDoubleToCurrency(numb: Double(priceHistory)!)
-            
         }
         
         if let priceHistory = historyDetail?.tipPersentage {
@@ -48,9 +47,6 @@ class DetailHistoryViewController: UIViewController {
         if let priceHistory = historyDetail?.price {
             totalDetailLabel.text = convertDoubleToCurrency(numb: Double(priceHistory)!)
         }
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     func convertStringToDouble(input: String) -> Double? {
@@ -78,11 +74,6 @@ class DetailHistoryViewController: UIViewController {
         return formatter.number(from: input)?.doubleValue
     }
     
-    //    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-    //        let selectedPhoto = historyDetail?.image
-    //        performSegue(withIdentifier: "goToPhotoDetailVC", sender: selectedPhoto)
-    //    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let photoDetailVC = segue.destination as? PhotoViewController {
             photoDetailVC.photoHistoryDetail = self
@@ -91,15 +82,5 @@ class DetailHistoryViewController: UIViewController {
     
     @IBAction func photoTapped(_ sender: Any) {
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
